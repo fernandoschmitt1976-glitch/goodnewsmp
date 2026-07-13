@@ -2,471 +2,401 @@
 {
   "name": "Boas Noticias Mp",
   "schemaVersion": 1,
-  "description": "Curadoria diária Me Poupe! — boas notícias subnoticiadas do Brasil e do mundo. Edição 03/07/26."
+  "description": "Curadoria diária Me Poupe! — boas notícias subnoticiadas do Brasil e do mundo. Edição 13/07/26."
 }
 </script>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodNewsMP-03/07/26 · Boas notícias que o Brasil não viu</title>
+<title>GoodNewsMP-13/07/26 · Boas notícias que o Brasil não viu</title>
 <style>
   :root{
     --bg:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af;
-    --fio:rgba(255,255,255,.10); --fio2:rgba(255,255,255,.16);
-    --txt:#f4f2fb; --txt2:rgba(244,242,251,.62); --txt3:rgba(244,242,251,.40);
+    --hair:rgba(255,255,255,.10); --txt:#fff; --mut:rgba(255,255,255,.55); --mut2:rgba(255,255,255,.38);
   }
   *{box-sizing:border-box}
-  body{
-    margin:0;background:var(--bg);color:var(--txt);
+  body{background:var(--bg);color:var(--txt);margin:0;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;line-height:1.5;
-  }
-  .wrap{max-width:960px;margin:0 auto;padding:56px 28px 80px}
-  a{color:inherit;text-decoration:none;border-bottom:1px solid var(--fio2)}
-  a:hover{border-color:var(--lilas)}
-
-  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--lilas);font-weight:600}
-  h1.title{font-weight:300;letter-spacing:-.03em;line-height:1.02;margin:14px 0 0;
-    font-size:clamp(34px,6vw,62px)}
-  h1.title b{font-weight:600}
-  .meta-row{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-top:22px;color:var(--txt2);font-size:13px}
-  .stamp{font-variant-numeric:tabular-nums;letter-spacing:.02em;color:var(--txt)}
-  .pill{border:1px solid var(--fio2);border-radius:999px;padding:4px 12px;font-size:12px;letter-spacing:.02em;color:var(--txt2)}
-
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:940px;margin:0 auto;padding:56px 28px 80px}
+  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--lilas);font-weight:600}
+  h1{font-weight:500;letter-spacing:-.03em;font-size:44px;line-height:1.04;margin:14px 0 18px}
+  .meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;color:var(--mut);font-size:13px}
+  .tag{border:1px solid var(--hair);border-radius:999px;padding:4px 12px;color:var(--mut)}
+  .code{color:var(--verde);font-variant-numeric:tabular-nums}
   /* KPIs */
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:44px 0 8px;border-top:1px solid var(--fio)}
-  .kpi{padding:22px 18px 20px;border-bottom:1px solid var(--fio)}
-  .kpi + .kpi{border-left:1px solid var(--fio)}
-  .kpi .n{font-size:40px;font-weight:300;letter-spacing:-.03em;line-height:1}
-  .kpi .l{margin-top:8px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt3)}
-  .kpi .sub{margin-top:3px;font-size:12px;color:var(--txt2)}
-  .kpi.v .n{color:var(--verde)} .kpi.d .n{color:var(--vermelho)} .kpi.f .n{color:var(--amarelo)}
-  @media(max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}.kpi:nth-child(3){border-left:none}}
-
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:44px 0 8px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .kpi{padding:22px 18px;border-right:1px solid var(--hair)}
+  .kpi:last-child{border-right:none}
+  .kpi .n{font-size:34px;font-weight:500;letter-spacing:-.03em;line-height:1}
+  .kpi .l{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin-top:9px}
+  .kpi .sub{font-size:12px;color:var(--mut2);margin-top:3px}
   /* Section headers */
-  .sec{margin:72px 0 0}
-  .sec-h{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--fio);padding-bottom:14px}
-  .sec-h .k{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--txt3)}
-  .sec-h h2{font-weight:400;letter-spacing:-.02em;font-size:22px;margin:0}
-
-  /* Story */
-  .story{position:relative;padding:38px 0 6px}
-  .ghost{position:absolute;top:14px;right:-6px;font-size:112px;font-weight:700;letter-spacing:-.04em;
-    color:rgba(131,138,255,.09);line-height:.8;pointer-events:none;z-index:0}
-  .story.grid .ghost{font-size:78px;top:20px}
-  .story > *{position:relative;z-index:1}
-  .cat{font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--lilas);font-weight:600;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-  .flag{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--fio2);border-radius:999px;
-    padding:2px 9px;font-size:11px;letter-spacing:.04em;text-transform:none;color:var(--txt2);font-weight:500}
-  .flag .fe{font-size:13px;line-height:1}
-  h3.head{font-weight:400;letter-spacing:-.022em;line-height:1.12;margin:14px 0 0;
-    font-size:clamp(23px,3.3vw,33px)}
-  .hero h3.head{font-size:clamp(27px,4.2vw,42px);font-weight:300}
-  .dek{color:var(--txt2);font-size:16px;margin:12px 0 0;max-width:62ch}
-  .src{margin:14px 0 0;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--txt3)}
-  .src a{color:var(--txt2);border-bottom-color:var(--fio)}
-  .orig{margin:5px 0 0;font-size:12px;color:var(--txt3);font-style:italic;letter-spacing:.01em}
-
-  .callout{margin:20px 0 0;padding:12px 0 12px 16px;border-left:2px solid var(--amarelo);max-width:60ch}
-  .callout .cl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--amarelo);font-weight:600}
-  .callout p{margin:6px 0 0;font-size:14.5px;color:var(--txt)}
-
-  .metrics{display:flex;flex-wrap:wrap;gap:22px 30px;align-items:center;margin:22px 0 0}
-  .mp{display:flex;align-items:center;gap:12px}
-  .mp .lbl{font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--txt3)}
+  .sec{margin:64px 0 6px}
+  .sec .eyebrow{color:var(--mut)}
+  .sec h2{font-weight:500;letter-spacing:-.02em;font-size:24px;margin:8px 0 0}
+  /* Hero */
+  .hero{position:relative;padding:40px 0 44px;border-top:1px solid var(--hair);margin-top:22px}
+  .ghost{position:absolute;top:6px;right:0;font-size:150px;font-weight:600;line-height:.8;color:rgba(255,255,255,.045);letter-spacing:-.04em;pointer-events:none}
+  .cat{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilas);font-weight:600}
+  .hero h3{font-weight:500;letter-spacing:-.02em;font-size:32px;line-height:1.12;margin:12px 0 14px;max-width:80%}
+  .dek{color:var(--mut);font-size:16px;max-width:80%;margin:0 0 16px}
+  .src{font-size:12.5px;color:var(--mut2);margin:0 0 4px}
+  .src a{color:var(--lilas);text-decoration:none}
+  .orig{font-size:12px;color:var(--mut2);font-style:italic;margin:0 0 18px}
+  .callout{border-left:3px solid var(--amarelo);padding:10px 0 10px 16px;margin:18px 0;max-width:80%}
+  .callout .cl-l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amarelo);font-weight:600}
+  .callout p{margin:6px 0 0;font-size:15px;color:#efeaff}
+  .mp{display:flex;align-items:center;gap:12px;margin:16px 0}
   .bars{display:flex;gap:4px}
-  .bars i{width:22px;height:9px;border-radius:2px;background:rgba(255,255,255,.13);display:block}
-  .bars i.on{background:var(--amarelo)}
-  .mp .val{font-variant-numeric:tabular-nums;font-size:13px;color:var(--txt);font-weight:600}
-  .status{font-size:12.5px;letter-spacing:.02em}
+  .bar{width:26px;height:8px;border-radius:2px;background:rgba(255,255,255,.14)}
+  .bar.on{background:var(--verde)}
+  .mp .val{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums}
+  .status{font-size:13px;margin:6px 0 0}
   .status.ok{color:var(--verde)} .status.warn{color:var(--amarelo)}
-
-  .why{margin:20px 0 0;max-width:62ch}
-  .why .wl{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);font-weight:600}
-  .why p{margin:6px 0 0;font-size:15px;color:var(--txt)}
-
-  details{margin:18px 0 0;border-top:1px solid var(--fio);padding-top:14px}
-  summary{cursor:pointer;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--lilas);list-style:none;font-weight:600}
-  summary::-webkit-details-marker{display:none}
-  summary::before{content:"→ ";color:var(--txt3)}
-  details[open] summary::before{content:"↓ "}
-  .ig{margin:12px 0 0;font-size:14px;color:var(--txt2);max-width:60ch}
-  .ig p{margin:0 0 9px} .ig .tags{color:var(--lilas);font-size:12.5px;letter-spacing:.01em}
-
-  .story.grid + .story.grid{border-top:1px solid var(--fio)}
-  @media(min-width:720px){
-    .grid-wrap{display:grid;grid-template-columns:1fr 1fr;gap:0 44px}
-    .grid-wrap .story.grid{border-top:1px solid var(--fio)}
+  .why{font-size:14.5px;color:#d9d3ef;max-width:80%;margin:14px 0 0}
+  .why b{color:#fff;font-weight:600}
+  details{margin:16px 0 0;max-width:82%}
+  summary{cursor:pointer;font-size:13px;color:var(--lilas);letter-spacing:.02em}
+  details .copy{border:1px solid var(--hair);border-radius:10px;padding:16px 18px;margin-top:12px;font-size:14px;color:#e7e2f6;white-space:pre-wrap}
+  .hash{color:var(--lilas)}
+  /* Grid */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:22px;border-top:1px solid var(--hair)}
+  .item{padding:32px 28px 34px;border-bottom:1px solid var(--hair);position:relative}
+  .item:nth-child(odd){border-right:1px solid var(--hair);padding-left:0}
+  .item:nth-child(even){padding-right:0}
+  .num{font-size:13px;color:var(--mut2);font-variant-numeric:tabular-nums;font-weight:600}
+  .item h4{font-weight:500;letter-spacing:-.015em;font-size:20px;line-height:1.16;margin:10px 0 12px}
+  .item .dek{font-size:14.5px;max-width:100%;margin-bottom:12px}
+  .item .callout{max-width:100%}
+  .item .why{max-width:100%}
+  .item details{max-width:100%}
+  .flag{display:inline-block;font-size:12px;color:var(--mut);margin-left:6px}
+  /* Discard + closing */
+  .discard{margin:60px 0 0;padding:20px 22px;border:1px solid var(--hair);border-radius:12px;color:var(--mut);font-size:13.5px}
+  .discard b{color:var(--vermelho);font-weight:600}
+  .closing{margin:56px 0 0;padding:40px 0 0;border-top:1px solid var(--hair)}
+  .closing .eyebrow{color:var(--amarelo)}
+  .closing p{font-size:19px;line-height:1.5;letter-spacing:-.01em;color:#efeaff;max-width:88%;margin:14px 0 0}
+  footer{margin:56px 0 0;padding-top:22px;border-top:1px solid var(--hair);color:var(--mut2);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  @media(max-width:720px){
+    h1{font-size:32px}.kpis{grid-template-columns:1fr 1fr}
+    .kpi:nth-child(2){border-right:none}.kpi{border-bottom:1px solid var(--hair)}
+    .grid{grid-template-columns:1fr}
+    .item:nth-child(odd){border-right:none;padding-left:0}
+    .item{padding-left:0;padding-right:0}
+    .hero h3,.dek,.callout,.why,.hero .src{max-width:100%}
+    .ghost{font-size:96px;opacity:.7}
   }
-
-  .note{margin:60px 0 0;padding:20px 0 0;border-top:1px solid var(--fio)}
-  .note .nl{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--vermelho);font-weight:600}
-  .note p{margin:10px 0 0;font-size:13.5px;color:var(--txt2);max-width:80ch}
-
-  .close{margin:64px 0 0;padding:34px 0;border-top:1px solid var(--fio2);border-bottom:1px solid var(--fio2)}
-  .close p{font-size:clamp(19px,2.6vw,26px);font-weight:300;letter-spacing:-.02em;line-height:1.3;margin:0;max-width:32ch;color:var(--txt)}
-  .close b{font-weight:600;color:var(--amarelo)}
-
-  footer{margin:40px 0 0;font-size:12px;color:var(--txt3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+  <!-- CABEÇALHO -->
   <header>
     <div class="eyebrow">Me Poupe! · Curadoria diária</div>
-    <h1 class="title">Boas notícias<br>que o Brasil <b>não viu</b></h1>
-    <div class="meta-row">
-      <span class="stamp">GoodNewsMP-03/07/26</span>
-      <span class="pill">Janela: últimos 5 dias</span>
+    <h1>Boas notícias que o Brasil não viu</h1>
+    <div class="meta">
+      <span class="code">GoodNewsMP-13/07/26</span>
+      <span class="tag">Janela: últimos 5 dias</span>
+      <span>Enquanto a Copa e o câmbio dominavam as manchetes, quatro meninas colocaram a ciência brasileira na Estação Espacial — e essa quase ninguém viu.</span>
     </div>
   </header>
 
-  <section class="kpis" aria-label="Indicadores da edição">
-    <div class="kpi">
-      <div class="n">8</div>
-      <div class="l">Histórias</div>
-      <div class="sub">3 nac · 5 int</div>
-    </div>
-    <div class="kpi v">
-      <div class="n">8</div>
-      <div class="l">Verificadas ✅</div>
-      <div class="sub">0 alerta ⚠️</div>
-    </div>
-    <div class="kpi d">
-      <div class="n">7</div>
-      <div class="l">Descartadas 🚫</div>
-      <div class="sub">janela · repetição</div>
-    </div>
-    <div class="kpi f">
-      <div class="n">3,9</div>
-      <div class="l">Fator MP médio</div>
-      <div class="sub">de 5,0</div>
-    </div>
+  <!-- KPIs -->
+  <section class="kpis">
+    <div class="kpi"><div class="n">8</div><div class="l">Histórias</div><div class="sub">4 nac · 4 int</div></div>
+    <div class="kpi"><div class="n">6</div><div class="l">Verificadas ✅</div><div class="sub">+ 2 em ⚠️ (Nível 2)</div></div>
+    <div class="kpi"><div class="n">7</div><div class="l">Descartadas 🚫</div><div class="sub">fora da janela / repetidas / fracas</div></div>
+    <div class="kpi"><div class="n">4.0</div><div class="l">Fator MP médio</div><div class="sub">de 5</div></div>
   </section>
 
-  <!-- ============ DESTAQUE NACIONAL ============ -->
-  <section class="sec">
-    <div class="sec-h"><span class="k">01</span><h2>Destaque nacional do dia</h2></div>
+  <!-- DESTAQUE NACIONAL -->
+  <div class="sec"><div class="eyebrow">Brasil</div><h2>Destaque nacional do dia</h2></div>
+  <article class="hero">
+    <div class="ghost">01</div>
+    <div class="cat">Educação · Ciência · Primeiro da história</div>
+    <h3>Quatro meninas de escola pública de ciência colocaram o Brasil no topo — e o experimento delas vai à Estação Espacial</h3>
+    <p class="dek">Alunas do 8º e 9º ano do Colégio Ser, de Jundiaí (SP), venceram o ISS Journey, programa internacional que desafia estudantes a criar experimentos para a microgravidade. Foi a primeira vez que uma equipe brasileira ganha: mais de 70 times participaram, só dez chegaram à final. Beatriz (14), Giovanna (14), Lavínia (14) e Sara (15) pesquisam câncer de mama, e o projeto irá à Estação Espacial Internacional em missão prevista para setembro e outubro de 2026.</p>
+    <p class="src">Fonte: Agência Brasil — <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/alunas-vencem-competicao-internacional-com-projeto-de-cancer-de-mama">ver matéria</a> · 08/07/2026</p>
+    <div class="callout">
+      <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+      <p>Não é sorte, é método: curiosidade + mentoria + oportunidade. O maior retorno do país não está na Bolsa — está na cabeça de quatro adolescentes que decidiram estudar o que ninguém tinha estudado.</p>
+    </div>
+    <div class="mp">
+      <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+      <span class="val">Fator MP 5/5</span>
+    </div>
+    <p class="status ok">✅ Verificada · Nível 1 (Agência Brasil / ISS Journey — International School, Arco Educação)</p>
+    <p class="why"><b>Por que merece mais atenção:</b> quatro meninas venceram uma competição científica internacional pela primeira vez para o Brasil — e o tema é câncer de mama, doença que atinge uma em cada oito mulheres. É ciência de ponta feita por adolescentes, o retrato exato de quebra de ciclo: talento que existe em toda parte, só faltava a porta.</p>
+    <details>
+      <summary>Copy Instagram · Me Poupe!</summary>
+      <div class="copy">Quatro meninas. Um experimento. Destino: o espaço.
 
-    <article class="story hero">
-      <div class="ghost">01</div>
-      <div class="cat">Economia · Microempreendedorismo</div>
-      <h3 class="head">Os pequenos criaram 6 de cada 10 empregos do Brasil em 2026</h3>
-      <p class="dek">Entre janeiro e maio, as micro e pequenas empresas geraram 450.393 das 767.326 vagas formais do país — 59% do total. Só em maio, o pequeno negócio abriu quase três vezes mais postos que a média e a grande empresa somadas. O motor do emprego não é o gigante da bolsa: é a padaria da esquina.</p>
-      <div class="src">Fonte: <a href="https://agenciasebrae.com.br/dados/micro-e-pequenas-empresas-respondem-por-quase-seis-em-cada-dez-empregos-criados-no-pais-em-2026/">Agência Sebrae de Notícias</a> · 02/07/2026 · levantamento do Sebrae com base no Caged</div>
+Alunas do 8º e 9º ano de Jundiaí venceram uma competição científica internacional — a primeira vez que o Brasil ganha o ISS Journey. Mais de 70 times, só elas no topo.
+
+O projeto? Câncer de mama. E vai ser feito na Estação Espacial.
+
+Talento não falta no Brasil. O que falta é porta aberta.
+
+Ciência é o investimento que rende pra um país inteiro. E o dividendo dessas quatro já está subindo pra órbita.
+
+<span class="hash">#MePoupe #Ciencia #Educacao #Meninas #CancerDeMama #Jundiai #EstacaoEspacial #STEM #Brasil #QuebraDeCiclo #Orgulho</span></div>
+    </details>
+  </article>
+
+  <!-- DEMAIS NACIONAIS -->
+  <div class="sec"><div class="eyebrow">Brasil</div><h2>As demais histórias</h2></div>
+  <div class="grid">
+
+    <article class="item">
+      <div class="num">02</div>
+      <div class="cat">Educação · Ciência</div>
+      <h4>Menino de 10 anos descobre padrão matemático inédito numa lição de casa — e vai apresentá-lo na Bienal</h4>
+      <p class="dek">Marcel Augusto Calassa Alcântara, 10 anos, da Asa Norte (Brasília), reparou num ciclo curioso entre os números 13 e 16 durante um exercício de escola. Em vez de só resolver, investigou: descobriu que essas sequências sempre formam ciclos dentro de um conjunto finito. A Sociedade Brasileira de Matemática aprovou o trabalho para a 12ª Bienal de Matemática, em agosto, em Natal. Membro da Mensa, ele já foi convidado a ensinar matemática para outras crianças.</p>
+      <p class="src">Fonte: Só Notícia Boa — <a href="https://www.sonoticiaboa.com.br/2026/07/09/menino-brasileiro-superdotado-descoberta-matematica-apresentada-bienal">ver matéria</a> · 09/07/2026</p>
       <div class="callout">
-        <div class="cl">Proposta de leitura · Me Poupe!</div>
-        <p>Quando a gente ensina alguém a abrir e cuidar do próprio negócio, não muda uma vida: alimenta a máquina que carrega quase metade das carteiras assinadas do país.</p>
+        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+        <p>Toda grande descoberta começou com uma pergunta que ninguém pagou pra fazer. Curiosidade é capital que rende sozinho — e o dele já vira aula pros outros.</p>
       </div>
-      <div class="metrics">
-        <div class="mp">
-          <span class="lbl">Fator MP</span>
-          <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
-          <span class="val">5/5</span>
-        </div>
-        <div class="status ok">✅ Verificada — Sebrae / Caged (Ministério do Trabalho)</div>
+      <div class="mp">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+        <span class="val">Fator MP 4/5</span>
       </div>
-      <div class="why">
-        <div class="wl">Por que merece mais atenção</div>
-        <p>Segundo o presidente do Sebrae, Rodrigo Soares, os pequenos negócios já respondem por cerca de 50% do estoque de empregos e 40% da massa salarial do Brasil. Em maio, Serviços (26,5 mil vagas), Construção (17 mil) e Comércio (1,3 mil) puxaram a fila. O emprego não vem de cima: brota de baixo, do CNPJ pequeno que ninguém noticia.</p>
-      </div>
+      <p class="status warn">⚠️ Verificada com ressalva · Nível 2 (SNB, com nome, família e seleção da SBM citados)</p>
+      <p class="why"><b>Por que merece mais atenção:</b> não é gênio de vitrine — é curiosidade que virou pesquisa e, agora, projeto social ensinando matemática para outras crianças. Conhecimento que se multiplica em vez de se guardar. É exatamente o ciclo que a educação abre.</p>
       <details>
-        <summary>Copy para Instagram</summary>
-        <div class="ig">
-          <p>Quem emprega o Brasil?</p>
-          <p>Não é o gigante da Faria Lima.</p>
-          <p>É o pequeno negócio: 6 de cada 10 vagas formais criadas em 2026 saíram da micro e pequena empresa. A padaria, o salão, a oficina. O maior empregador do país cabe na esquina — e quase nunca vira manchete.</p>
-          <p class="tags">#Empreendedorismo #PequenoNegócio #MEI #MePoupe #Emprego #EducaçãoFinanceira #Sebrae #Caged #EconomiaReal #BoaNotícia #OPovoTrabalha</p>
-        </div>
+        <summary>Copy Instagram · Me Poupe!</summary>
+        <div class="copy">Uma lição de casa. Um padrão que ninguém tinha visto.
+
+Marcel, 10 anos, de Brasília, reparou num ciclo estranho entre 13 e 16 numa aula. Em vez de só resolver, foi investigar.
+
+Virou pesquisa. A Sociedade Brasileira de Matemática chamou pra Bienal.
+
+E o melhor: ele já vai ensinar matemática pra outras crianças.
+
+Curiosidade é o único ativo que rende multiplicando. E ele já está distribuindo dividendo.
+
+<span class="hash">#MePoupe #Matematica #Educacao #Curiosidade #Brasilia #Ciencia #Superdotado #Bienal #Conhecimento #Inspiracao</span></div>
       </details>
     </article>
-  </section>
 
-  <!-- ============ BRASIL — DEMAIS ============ -->
-  <section class="sec">
-    <div class="sec-h"><span class="k">Brasil</span><h2>As demais histórias</h2></div>
-
-    <div class="grid-wrap">
-
-      <article class="story grid">
-        <div class="ghost">02</div>
-        <div class="cat">Cultura · Microempreendedorismo</div>
-        <h3 class="head">300 artesãos do país inteiro entram na disputa do maior prêmio do artesanato brasileiro</h3>
-        <p class="dek">O Sebrae divulgou os 300 classificados rumo ao Top 100 do Prêmio Sebrae Top 100 de Artesanato — mãos que transformam barro, fibra, madeira e linha em renda de verdade, de todas as regiões do Brasil.</p>
-        <div class="src">Fonte: <a href="https://agenciasebrae.com.br/cultura-empreendedora/rumo-ao-top-100-sebrae-anuncia-os-300-classificados-para-o-maior-premio-do-artesanato-brasileiro/">Agência Sebrae de Notícias</a> · 02/07/2026</div>
-        <div class="callout">
-          <div class="cl">Proposta de leitura · Me Poupe!</div>
-          <p>Artesanato não é hobby: é cadeia produtiva que sustenta milhares de famílias. Prêmio aqui vira vitrine, e vitrine vira faturamento.</p>
-        </div>
-        <div class="metrics">
-          <div class="mp">
-            <span class="lbl">Fator MP</span>
-            <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
-            <span class="val">4/5</span>
-          </div>
-          <div class="status ok">✅ Verificada — Sebrae</div>
-        </div>
-        <div class="why">
-          <div class="wl">Por que merece mais atenção</div>
-          <p>Boa parte desses artesãos são a única fonte de renda da casa e trabalham longe dos holofotes, no interior do país. Um selo nacional abre porta para feiras, exportação e preço justo — economia criativa que gira dinheiro na base.</p>
-        </div>
-        <details>
-          <summary>Copy para Instagram</summary>
-          <div class="ig">
-            <p>Você chama de “artesanato”.</p>
-            <p>O IR chama de renda.</p>
-            <p>300 artesãos do Brasil inteiro estão na disputa do maior prêmio do setor. Barro, fibra e linha viram faturamento — e sustento de família. Feito à mão, pago em dinheiro.</p>
-            <p class="tags">#Artesanato #EconomiaCriativa #MePoupe #Empreendedorismo #FeitoNoBrasil #RendaExtra #Sebrae #CulturaPopular #BoaNotícia #MãosQueGeramRenda</p>
-          </div>
-        </details>
-      </article>
-
-      <article class="story grid">
-        <div class="ghost">03</div>
-        <div class="cat">Negócios · Turismo</div>
-        <h3 class="head">Pequenos negócios do turismo ganham uma trilha para vender lá fora</h3>
-        <p class="dek">Sebrae e Embratur lançaram uma trilha de internacionalização para levar pousadas, receptivos e experiências locais ao mercado externo — capacitação para o pequeno empreendedor faturar em dólar sem sair do próprio destino.</p>
-        <div class="src">Fonte: <a href="https://agenciasebrae.com.br/cultura-empreendedora/pequenos-negocios-do-turismo-ganham-trilha-de-internacionalizacao/">Agência Sebrae de Notícias</a> · 02/07/2026 · parceria Sebrae / Embratur</div>
-        <div class="callout">
-          <div class="cl">Proposta de leitura · Me Poupe!</div>
-          <p>Internacionalizar deixou de ser coisa só de multinacional. A pousada de família também pode receber turista gringo — e câmbio a favor.</p>
-        </div>
-        <div class="metrics">
-          <div class="mp">
-            <span class="lbl">Fator MP</span>
-            <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
-            <span class="val">3/5</span>
-          </div>
-          <div class="status ok">✅ Verificada — Sebrae / Embratur</div>
-        </div>
-        <div class="why">
-          <div class="wl">Por que merece mais atenção</div>
-          <p>O turista estrangeiro gasta mais e ajuda a proteger o negócio contra a sazonalidade e o sobe-e-desce da economia interna. Dar método a quem só tinha talento é o que separa a boa ideia do bom balanço.</p>
-        </div>
-        <details>
-          <summary>Copy para Instagram</summary>
-          <div class="ig">
-            <p>Faturar em dólar parece coisa de multinacional.</p>
-            <p>Não é mais.</p>
-            <p>Sebrae e Embratur montaram uma trilha pra pousada, receptivo e experiência local venderem pro turista de fora. O câmbio jogando a favor de quem é pequeno — pra variar, uma vez.</p>
-            <p class="tags">#Turismo #PequenoNegócio #MePoupe #Internacionalização #Empreendedorismo #Câmbio #Embratur #Sebrae #RendaEmDólar #BoaNotícia</p>
-          </div>
-        </details>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ============ DESTAQUE INTERNACIONAL ============ -->
-  <section class="sec">
-    <div class="sec-h"><span class="k">01</span><h2>Destaque internacional do dia</h2></div>
-
-    <article class="story hero">
-      <div class="ghost">01</div>
-      <div class="cat">Ciência · Inovação social
-        <span class="flag"><span class="fe">🇺🇸</span>Estados Unidos</span>
-      </div>
-      <h3 class="head">Cientistas criam jaqueta que puxa água potável do ar — até quase 1 litro por dia</h3>
-      <p class="dek">Engenheiros da Universidade do Texas em Austin desenvolveram um tecido, batizado de AirGel, que captura a umidade do ambiente e a transforma em água de beber: de 400 a 900 mililitros por dia, conforme a umidade. A ideia é servir a quem passa horas longe de água — trabalhadores do campo, socorristas e comunidades em regiões áridas.</p>
-      <div class="src">Fonte: <a href="https://www.goodnewsnetwork.org/prototype-high-tech-jacket-pulls-drinking-water-from-thin-air/">Good News Network</a> · 28/06/2026 · estudos publicados na Science Advances e na Nature Water (UT Austin)</div>
-      <div class="orig">Título original: “High Tech Jacket Prototype Pulls Drinking Water From Thin Air – Up to 1.5 Pints Per Day”</div>
+    <article class="item">
+      <div class="num">03</div>
+      <div class="cat">Saúde · Superação</div>
+      <h4>Disseram que ele seria cadeirante para sempre; a fisioterapeuta insistiu — e o menino andou</h4>
+      <p class="dek">Pedro Henrique nasceu com mielomeningocele, malformação que compromete os movimentos das pernas. Vários profissionais disseram que dependeria de cadeira de rodas. A fisioterapeuta Mariana Muñoz, de São Paulo, não seguiu o encaminhamento: apostou na avaliação própria e em 18 meses de trabalho diário. Antes de um exercício, o menino olhou para ela e disse “Tia Mari, eu confio em você”. Hoje Pedro anda sozinho.</p>
+      <p class="src">Fonte: Só Notícia Boa — <a href="https://www.sonoticiaboa.com.br/2026/07/09/fisoterapeuta-ajuda-menino-paralisia-andar-vitoria-video-emocionante">ver matéria</a> · 09/07/2026</p>
       <div class="callout">
-        <div class="cl">Proposta de leitura · Me Poupe!</div>
-        <p>Água de graça saindo do ar parece mágica — mas é engenharia. E é a base de tudo: sem água não há saúde, trabalho nem futuro para poupar.</p>
+        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+        <p>Prognóstico não é sentença. Alguém que investe tempo, técnica e confiança muda um destino — e prova que o retorno de acreditar não cabe em planilha.</p>
       </div>
-      <div class="metrics">
-        <div class="mp">
-          <span class="lbl">Fator MP</span>
-          <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>
-          <span class="val">5/5</span>
-        </div>
-        <div class="status ok">✅ Verificada — UT Austin / Science Advances / Nature Water</div>
+      <div class="mp">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+        <span class="val">Fator MP 4/5</span>
       </div>
-      <div class="why">
-        <div class="wl">Por que merece mais atenção</div>
-        <p>O tecido rendeu de 3 a 10 vezes mais que os materiais convencionais, e a mesma equipe já colheu 1,3 litro por dia num aparelho movido a energia solar — no deserto e na cidade. Uma tecnologia que promete tirar da falta de água milhões de pessoas em regiões sem infraestrutura. Já há pedido de patente.</p>
-      </div>
+      <p class="status warn">⚠️ Verificada com ressalva · Nível 2 (SNB, com entrevista à profissional e vídeo do caso)</p>
+      <p class="why"><b>Por que merece mais atenção:</b> é a subversão de um prognóstico fechado — e mostra que persistência informada rompe o ciclo do “não tem jeito”. A confiança entre profissional e paciente virou movimento real; sensível, mas com nome, história e resultado.</p>
       <details>
-        <summary>Copy para Instagram</summary>
-        <div class="ig">
-          <p>Água caindo do céu você conhece.</p>
-          <p>Agora tem água saindo do ar.</p>
-          <p>Cientistas do Texas criaram uma jaqueta que puxa até quase 1 litro de água potável da umidade — todo dia. Pra quem trabalha longe da torneira, isso não é gadget: é sobrevivência com etiqueta.</p>
-          <p class="tags">#Ciência #Inovação #ÁguaÉVida #MePoupe #Tecnologia #SustentabilidadeReal #BoaNotícia #EngenhariaDoBem #AcessoÀÁgua #FuturoPossível</p>
-        </div>
+        <summary>Copy Instagram · Me Poupe!</summary>
+        <div class="copy">“Ele vai ser cadeirante pra sempre.” Ela não aceitou.
+
+Pedro Henrique nasceu com mielomeningocele. Vários disseram que não andaria. A fisioterapeuta Mariana insistiu — 18 meses de trabalho, todo dia.
+
+Antes de um exercício, ele disse: “Tia Mari, eu confio em você”.
+
+Hoje o Pedro anda sozinho.
+
+Prognóstico não é sentença. Persistência com técnica muda o final da história.
+
+<span class="hash">#MePoupe #Saude #Superacao #Fisioterapia #Confianca #Persistencia #Inclusao #Brasil #Inspiracao #NuncaDesista</span></div>
       </details>
     </article>
-  </section>
 
-  <!-- ============ MUNDO — GRID ============ -->
-  <section class="sec">
-    <div class="sec-h"><span class="k">Mundo</span><h2>Notícias internacionais</h2></div>
+    <article class="item">
+      <div class="num">04</div>
+      <div class="cat">Saúde · Cultura · Primeiro da história</div>
+      <h4>Amazônia ganha a primeira rádio dedicada só à saúde da população da floresta</h4>
+      <p class="dek">A Rádio Nacional da Amazônia, da EBC, estreou o programa <em>Bem-Viver Amazônia</em> — a primeira produção radiofônica brasileira dedicada exclusivamente à saúde da população amazônica. Vai ao ar semanalmente, às 9h de Brasília. O episódio de estreia trouxe Jorge Guerra, professor da UFAM e especialista em doenças tropicais, falando sobre leishmaniose: sintomas, prevenção e tratamento, em linguagem acessível a quem vive longe dos grandes centros.</p>
+      <p class="src">Fonte: Agência Brasil — <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/radio-nacional-estreia-programa-bem-viver-amazonia-neste-sabado">ver matéria</a> · 11/07/2026</p>
+      <div class="callout">
+        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+        <p>Informação de saúde é ativo de sobrevivência. Levá-la de graça, no rádio, a quem está longe de tudo é a distribuição mais justa que existe.</p>
+      </div>
+      <div class="mp">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
+        <span class="val">Fator MP 3/5</span>
+      </div>
+      <p class="status ok">✅ Verificada · Nível 1 (Agência Brasil / EBC — Rádio Nacional da Amazônia)</p>
+      <p class="why"><b>Por que merece mais atenção:</b> num país continental, o rádio ainda é a mídia que chega onde a internet não vai. Um programa gratuito de saúde feito para a Amazônia é inclusão de informação — o tipo de acesso que muda desfechos sem custar nada a quem ouve.</p>
+      <details>
+        <summary>Copy Instagram · Me Poupe!</summary>
+        <div class="copy">Saúde de graça. No rádio. Pra quem vive na floresta.
 
-    <div class="grid-wrap">
+A Amazônia ganhou a primeira rádio dedicada só à saúde da sua população: o Bem-Viver Amazônia, da Rádio Nacional da Amazônia.
 
-      <article class="story grid">
-        <div class="ghost">02</div>
-        <div class="cat">Microempreendedorismo · Educação
-          <span class="flag"><span class="fe">🇺🇸</span>Estados Unidos</span>
-        </div>
-        <h3 class="head">Nova lei protege a barraquinha de limonada das crianças da burocracia</h3>
-        <p class="dek">Depois que fiscais passaram a cobrar taxas de crianças que vendiam limonada, o estado de Michigan aprovou na Câmara um projeto que libera menores de operar um pequeno negócio de bebidas em propriedade privada, sem taxa nenhuma, desde que faturem menos de US$ 5 mil ao ano. Texas e Geórgia já fizeram o mesmo.</p>
-        <div class="src">Fonte: <a href="https://www.goodnewsnetwork.org/new-law-would-protect-kids-lemonade-stands-after-state-employees-were-caught-demanding-fees/">Good News Network</a> · 01/07/2026 · via CBS News (Projeto de Lei 6007, Michigan)</div>
-        <div class="orig">Título original: “New Law Will Protect Kids’ Lemonade Stands After State Employees Were Caught Demanding Fees”</div>
-        <div class="callout">
-          <div class="cl">Proposta de leitura · Me Poupe!</div>
-          <p>O primeiro negócio da vida quase sempre é uma barraquinha. Tirar a burocracia do caminho da criança é a aula de educação financeira mais barata que existe.</p>
-        </div>
-        <div class="metrics">
-          <div class="mp">
-            <span class="lbl">Fator MP</span>
-            <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
-            <span class="val">4/5</span>
-          </div>
-          <div class="status ok">✅ Verificada</div>
-        </div>
-        <div class="why">
-          <div class="wl">Por que merece mais atenção</div>
-          <p>O deputado autor diz que a mudança dá à garotada “experiência real de negócio e senso de responsabilidade”. É o abecê do empreendedorismo: caixa, preço, cliente e lucro — aprendido no copo de limonada, não na prova.</p>
-        </div>
-        <details>
-          <summary>Copy para Instagram</summary>
-          <div class="ig">
-            <p>Barraquinha de limonada levando multa.</p>
-            <p>De criança.</p>
-            <p>Aí um estado inteiro cansou e aprovou lei pra proteger o primeiro negócio da vida da molecada. Preço, troco e cliente: a primeira aula de dinheiro cabe num copo de 2 reais.</p>
-            <p class="tags">#EducaçãoFinanceira #Empreendedorismo #MePoupe #CriançasQueEmpreendem #PrimeiroNegócio #MenosBurocracia #BoaNotícia #DinheiroDesdeCedo #Limonada #FuturoEmpreendedor</p>
-          </div>
-        </details>
-      </article>
+Toda semana, informação que salva — em linguagem que qualquer um entende.
 
-      <article class="story grid">
-        <div class="ghost">03</div>
-        <div class="cat">Saúde · Quebra de ciclo
-          <span class="flag"><span class="fe">🇻🇳🇰🇭🇱🇦</span>Vietnã · Camboja · Laos</span>
-        </div>
-        <h3 class="head">O Sudeste Asiático chega perto de zerar a malária: queda de 67% em 15 anos</h3>
-        <p class="dek">Vietnã, Camboja e Laos viram a transmissão da malária despencar dois terços desde 2010 e agora contam casos na casa das centenas. Em cúpula regional no Laos, líderes reafirmaram a meta de eliminar a doença até 2030.</p>
-        <div class="src">Fonte: <a href="https://www.goodnewsnetwork.org/southeast-asia-nears-malaria-elimination-down-two-thirds-since-2010/">Good News Network</a> · 02/07/2026 · Asia Pacific Leaders Malaria Alliance (APLMA)</div>
-        <div class="orig">Título original: “Southeast Asia Nears Malaria Elimination, Down Two-Thirds Since 2010”</div>
-        <div class="callout">
-          <div class="cl">Proposta de leitura · Me Poupe!</div>
-          <p>Doença endêmica é imposto invisível sobre o pobre: tira dia de trabalho, esvazia a poupança, trava o desenvolvimento. Zerar malária é destravar economia.</p>
-        </div>
-        <div class="metrics">
-          <div class="mp">
-            <span class="lbl">Fator MP</span>
-            <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>
-            <span class="val">4/5</span>
-          </div>
-          <div class="status ok">✅ Verificada — APLMA</div>
-        </div>
-        <div class="why">
-          <div class="wl">Por que merece mais atenção</div>
-          <p>Para ser declarado livre da malária, um país precisa quebrar o ciclo de transmissão por três anos seguidos — feito que o Egito acaba de alcançar. A vigilância e a cooperação entre vizinhos mostram que a doença que parecia eterna tem prazo de validade.</p>
-        </div>
-        <details>
-          <summary>Copy para Instagram</summary>
-          <div class="ig">
-            <p>Malária parece problema sem fim.</p>
-            <p>Milênios de mosquito.</p>
-            <p>Só que Vietnã, Camboja e Laos cortaram a doença em 67% e miram o zero até 2030. O ciclo que parecia eterno agora tem data pra acabar.</p>
-            <p class="tags">#Saúde #MePoupe #SaúdeGlobal #CicloQuebrado #Malária #ProgressoHumano #BoaNotícia #SudesteAsiático #PolíticaPública #Esperança</p>
-          </div>
-        </details>
-      </article>
+Onde a internet não chega, o rádio chega.
 
-      <article class="story grid">
-        <div class="ghost">04</div>
-        <div class="cat">Meio ambiente · Política pública
-          <span class="flag"><span class="fe">🇪🇺</span>Europa</span>
-        </div>
-        <h3 class="head">A poluição do ar despenca na Europa depois de décadas de política ambiental</h3>
-        <p class="dek">Dados do serviço Copernicus (CAMS), da União Europeia, mostram que as emissões de óxidos de enxofre e nitrogênio caem cerca de 3% a 5% ao ano no continente — puxadas pela indústria e pelo transporte rodoviário, com ajuda da frota elétrica.</p>
-        <div class="src">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-27-of-2026/">Positive News</a> · 03/07/2026 · relatório anual do Copernicus Atmosphere Monitoring Service (CAMS)</div>
-        <div class="orig">Título original: “Air pollution plummeted in Europe”</div>
-        <div class="callout">
-          <div class="cl">Proposta de leitura · Me Poupe!</div>
-          <p>Ar limpo é economia de saúde: menos internação, menos remédio, menos dia perdido. Política ambiental paga dividendo — só demora a aparecer no extrato.</p>
-        </div>
-        <div class="metrics">
-          <div class="mp">
-            <span class="lbl">Fator MP</span>
-            <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
-            <span class="val">3/5</span>
-          </div>
-          <div class="status ok">✅ Verificada — Copernicus / CAMS (UE)</div>
-        </div>
-        <div class="why">
-          <div class="wl">Por que merece mais atenção</div>
-          <p>É o retorno composto de decisões tomadas há décadas: o transporte europeu emitiu 1,05 bilhão de toneladas de CO₂ em 2024, ante 1,1 bilhão em 2019. A regra vale para o ar e para o dinheiro — consistência ao longo do tempo é o que muda o resultado.</p>
-        </div>
-        <details>
-          <summary>Copy para Instagram</summary>
-          <div class="ig">
-            <p>Política ambiental parece papo que não anda.</p>
-            <p>Décadas de reunião.</p>
-            <p>Aí você olha o dado: a poluição do ar despencou na Europa, ano após ano. Foi juro composto do bem. Consistência chata hoje, resultado bonito amanhã — igualzinho investir.</p>
-            <p class="tags">#MeioAmbiente #MePoupe #ArLimpo #PolíticaPública #Sustentabilidade #Europa #JuroCompostoDoBem #BoaNotícia #LongoPrazo #ProgressoReal</p>
-          </div>
-        </details>
-      </article>
+Informação certa é ativo de sobrevivência. E aqui ela é distribuída pra quem mais precisa.
 
-      <article class="story grid">
-        <div class="ghost">05</div>
-        <div class="cat">Ciência · Biodiversidade
-          <span class="flag"><span class="fe">🇵🇬</span>Papua-Nova Guiné</span>
-        </div>
-        <h3 class="head">Descoberta uma nova espécie de tubarão que caminha no fundo do mar</h3>
-        <p class="dek">Numa noite de mergulho na costa da Papua-Nova Guiné, a cientista Christine Dudgeon encontrou a décima espécie conhecida de “tubarão que caminha” — um pequeno tubarão que usa as nadadeiras para andar pelo fundo. A descoberta já acende o alerta para proteger seu habitat restrito.</p>
-        <div class="src">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-27-of-2026/">Positive News</a> · 03/07/2026 · descoberta da Dra. Christine Dudgeon</div>
-        <div class="orig">Título original: “A new species of walking shark was discovered”</div>
-        <div class="callout">
-          <div class="cl">Proposta de leitura · Me Poupe!</div>
-          <p>Tem bicho novo aparecendo num planeta que a gente jurava já conhecer. O mundo ainda guarda surpresa boa — basta olhar direito.</p>
-        </div>
-        <div class="metrics">
-          <div class="mp">
-            <span class="lbl">Fator MP</span>
-            <span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>
-            <span class="val">3/5</span>
-          </div>
-          <div class="status ok">✅ Verificada</div>
-        </div>
-        <div class="why">
-          <div class="wl">Por que merece mais atenção</div>
-          <p>“Espécie nova de tubarão não aparece toda hora”, diz a pesquisadora, que volta ao local em outubro para estudar como conservá-la. Numa era de más notícias sobre extinção, o oceano lembrou que ainda tem novidade viva para mostrar.</p>
-        </div>
-        <details>
-          <summary>Copy para Instagram</summary>
-          <div class="ig">
-            <p>Tubarão nada, todo mundo sabe.</p>
-            <p>Esse aqui caminha.</p>
-            <p>Cientistas acharam uma nova espécie de tubarão que anda no fundo do mar da Papua-Nova Guiné. O planeta que a gente achava decifrado ainda tem carta na manga.</p>
-            <p class="tags">#Ciência #Biodiversidade #MePoupe #Descoberta #Oceano #NaturezaSurpreende #BoaNotícia #Tubarão #VidaMarinha #PlanetaVivo</p>
-          </div>
-        </details>
-      </article>
+<span class="hash">#MePoupe #Saude #Amazonia #Radio #Inclusao #Informacao #SaudePublica #Brasil #AcessoAJustica #BemViver</span></div>
+      </details>
+    </article>
 
-    </div>
-  </section>
-
-  <!-- ============ DESCARTES ============ -->
-  <div class="note">
-    <div class="nl">🚫 7 descartadas</div>
-    <p>Por exclusão editorial: tragédia (terremoto na Venezuela e a série de resgates — comovente, mas fora da pauta de final feliz estrutural) e resultado esportivo cotidiano (Brasil x Japão nas oitavas; Paraguai elimina a Alemanha). Por celebridade consagrada: casal que escalou o Empire State e a Netflix; filme sobre Michael Jackson candidato ao Oscar. Fora do foco / sem quebra de ciclo verificável: Ford recontratando engenheiros humanos após IA. Por fonte frágil ou não confirmável: a garantia de vagas no IBGE a candidatos com autismo (Agência Brasil com página fora do ar por regra eleitoral). Por repetição já publicada: foto do centro da Via Láctea, rinocerontes de Moçambique e bisões do Azerbaijão.</p>
   </div>
 
-  <!-- ============ FECHO ============ -->
-  <div class="close">
-    <p>Enquanto o país olhava para o placar e para os escombros, o <b>pequeno negócio</b> seguia carregando o Brasil nas costas — e quase ninguém noticiou. Amanhã, a revanche.</p>
+  <!-- DESTAQUE INTERNACIONAL -->
+  <div class="sec"><div class="eyebrow">Mundo</div><h2>Destaque internacional do dia</h2></div>
+  <article class="hero">
+    <div class="ghost">01</div>
+    <div class="cat">🇬🇧 Reino Unido · Saúde global · Quebra de ciclo</div>
+    <h3>O cientista da vacina de malária mais barata do mundo acaba de ganhar o maior prêmio de inovação da Europa</h3>
+    <p class="dek">Sir Adrian Hill e a equipe da Universidade de Oxford venceram o Prêmio Europeu do Inventor 2026 pela vacina R21/Matrix-M, que atinge cerca de 75%–80% de proteção contra a malária. A cada dose custa aproximadamente £2,50, é estável por até dois anos em refrigeração comum e pode ser produzida em escala — o que a torna viável em regiões remotas. Gana foi o primeiro país a aprová-la, em 2023; desde então cerca de 20 nações a adotaram, evitando dezenas de milhares de mortes.</p>
+    <p class="src">Fonte: Positive News — <a href="https://www.positive.news/society/good-news-stories-from-week-28-of-2026/">ver matéria</a> · 10/07/2026</p>
+    <p class="orig">Título original: “Malaria vaccine inventor wins top award”</p>
+    <div class="callout">
+      <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+      <p>Barato, estável e escalável: a inovação que muda o mundo não é a mais cara, é a que chega. £2,50 por dose é o preço de quebrar um ciclo de morte de séculos.</p>
+    </div>
+    <div class="mp">
+      <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+      <span class="val">Fator MP 5/5</span>
+    </div>
+    <p class="status ok">✅ Verificada · Nível 1 (Positive News / European Patent Office — OMS recomendou a R21 em 2021)</p>
+    <p class="why"><b>Por que merece mais atenção:</b> a malária mata sobretudo crianças, e a barreira sempre foi custo e logística. Uma vacina de £2,50 que aguenta geladeira comum e roda em escala é engenharia a serviço dos mais pobres — inovação que se mede em vidas, não em margem.</p>
+    <details>
+      <summary>Copy Instagram · Me Poupe!</summary>
+      <div class="copy">A vacina que salva milhares custa £2,50 a dose.
+
+O cientista por trás da vacina de malária mais barata do mundo — a R21, de Oxford — acaba de levar o maior prêmio de inovação da Europa.
+
+75% a 80% de proteção. Aguenta geladeira comum. Produção em escala.
+
+Gana aprovou em 2023. Já são ~20 países. Dezenas de milhares de mortes evitadas.
+
+Inovação de verdade não é a mais cara. É a que chega em quem precisa.
+
+<span class="hash">#MePoupe #Saude #Vacina #Malaria #Inovacao #Ciencia #SaudeGlobal #Oxford #ImpactoSocial #QuebraDeCiclo</span></div>
+    </details>
+  </article>
+
+  <!-- MUNDO — DEMAIS -->
+  <div class="sec"><div class="eyebrow">Mundo</div><h2>Notícias internacionais</h2></div>
+  <div class="grid">
+
+    <article class="item">
+      <div class="num">02</div>
+      <div class="cat">🇬🇧 Reino Unido · Saúde</div>
+      <h4>Exame de sangue com IA detecta câncer com 99% de acerto — e pode poupar milhares de mulheres de um exame invasivo</h4>
+      <p class="dek">O teste PinPoint usa inteligência artificial para analisar marcadores no sangue e estimar o risco de câncer de útero, o quarto mais comum entre mulheres no Reino Unido. Testado em 16.481 mulheres em hospitais de Yorkshire, teve 99% de acerto tanto para detectar quanto para descartar a doença. Na prática: quem tem alto risco é diagnosticada mais cedo, e quem tem baixo risco pode evitar o ultrassom transvaginal desnecessário.</p>
+      <p class="src">Fonte: Positive News — <a href="https://www.positive.news/society/good-news-stories-from-week-28-of-2026/">ver matéria</a> · 10/07/2026</p>
+      <p class="orig">Título original: “New test could spare women from invasive cancer exam”</p>
+      <div class="callout">
+        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+        <p>Diagnóstico cedo é o desconto mais caro que existe: economiza tratamento, tempo e vida. Tecnologia que tira barreira de acesso é dividendo de saúde pública.</p>
+      </div>
+      <div class="mp">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+        <span class="val">Fator MP 4/5</span>
+      </div>
+      <p class="status ok">✅ Verificada · Nível 1 (Positive News / estudo PinPoint, hospitais de Yorkshire)</p>
+      <p class="why"><b>Por que merece mais atenção:</b> une precisão altíssima e menos exame invasivo — um ganho concreto de acesso e dignidade. Detecção precoce muda desfecho e reduz custo de tratamento; é a rara inovação que serve paciente e sistema ao mesmo tempo.</p>
+      <details>
+        <summary>Copy Instagram · Me Poupe!</summary>
+        <div class="copy">Um exame de sangue. 99% de acerto. Menos sofrimento.
+
+No Reino Unido, o teste PinPoint usa IA pra prever o risco de câncer de útero no sangue. Testado em 16 mil mulheres, acertou 99% — pra detectar e pra descartar.
+
+Quem tem risco, descobre cedo. Quem não tem, escapa do exame invasivo.
+
+Diagnóstico precoce é o melhor desconto da saúde: custa menos e salva mais.
+
+<span class="hash">#MePoupe #Saude #Cancer #IA #Tecnologia #SaudeDaMulher #DiagnosticoPrecoce #Inovacao #Ciencia #Prevencao</span></div>
+      </details>
+    </article>
+
+    <article class="item">
+      <div class="num">03</div>
+      <div class="cat">🇺🇸 EUA · Meio ambiente</div>
+      <h4>A “maior recuperação florestal da história” aconteceu sem ninguém plantar nada</h4>
+      <p class="dek">Quando colonos europeus chegaram à Nova Inglaterra, derrubaram as florestas para a agricultura — Massachusetts perdeu cerca de 90% da mata. Em meados do século 19, as fazendas foram abandonadas por terras no interior, e a natureza preencheu o vazio. Hoje Massachusetts é estimada em 60% de floresta. “É a maior recuperação florestal da história do mundo”, diz Bill Moomaw, do Woodwell Climate Research Center — resultado do que ele chama de “negligência benigna”.</p>
+      <p class="src">Fonte: Positive News — <a href="https://www.positive.news/society/good-news-stories-from-week-28-of-2026/">ver matéria</a> · 10/07/2026</p>
+      <p class="orig">Título original: “Scientists hailed the world’s ‘greatest forest recovery’”</p>
+      <div class="callout">
+        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+        <p>Às vezes o melhor investimento é parar de destruir e deixar recompor. A natureza tem juros compostos próprios — e paga em floresta.</p>
+      </div>
+      <div class="mp">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+        <span class="val">Fator MP 4/5</span>
+      </div>
+      <p class="status ok">✅ Verificada · Nível 1 (Positive News / Woodwell Climate Research Center)</p>
+      <p class="why"><b>Por que merece mais atenção:</b> é a prova viva de que ecossistemas se recuperam quando lhes dão espaço — um recado para um Brasil que discute reflorestamento. Cem anos depois, o que voltou não foi plantado: foi deixado voltar.</p>
+      <details>
+        <summary>Copy Instagram · Me Poupe!</summary>
+        <div class="copy">A maior recuperação de floresta da história? Ninguém plantou.
+
+Na Nova Inglaterra (EUA), colonos derrubaram até 90% da mata. Aí abandonaram as fazendas — e a natureza voltou sozinha. Massachusetts está de novo 60% florestada.
+
+“Negligência benigna”, diz o cientista. Ou seja: deram espaço, ela se recompôs.
+
+Tem retorno que vem de parar de destruir. A natureza tem juros compostos.
+
+<span class="hash">#MePoupe #MeioAmbiente #Floresta #Natureza #Reflorestamento #Sustentabilidade #Clima #EUA #Regeneracao #Esperanca</span></div>
+      </details>
+    </article>
+
+    <article class="item">
+      <div class="num">04</div>
+      <div class="cat">🇪🇪 Estônia · Meio ambiente</div>
+      <h4>A Europa lidera o combate à poluição no mundo — e uma pequena Estônia está no topo</h4>
+      <p class="dek">O Índice de Desempenho Ambiental (EPI), parceria bienal das universidades Yale e Columbia, avaliou 177 países em 47 indicadores ecológicos. No topo aparece a Estônia, elogiada pela “redução dramática” de emissões, seguida de Luxemburgo e Reino Unido. O Japão (16º) é o único não europeu entre os 20 primeiros. O relatório celebra o avanço global contra a poluição, mas alerta: poucos países estão no ritmo de zerar emissões até 2050.</p>
+      <p class="src">Fonte: Positive News — <a href="https://www.positive.news/society/good-news-stories-from-week-28-of-2026/">ver matéria</a> · 10/07/2026</p>
+      <p class="orig">Título original: “Europe leading the world in tackling pollution”</p>
+      <div class="callout">
+        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
+        <p>Meta clara + política constante = resultado que aparece em ranking. Sustentabilidade não é slogan: é gestão de longo prazo, e dá pra medir.</p>
+      </div>
+      <div class="mp">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
+        <span class="val">Fator MP 3/5</span>
+      </div>
+      <p class="status ok">✅ Verificada · Nível 1 (Positive News / Environmental Performance Index — Yale &amp; Columbia)</p>
+      <p class="why"><b>Por que merece mais atenção:</b> mostra que política ambiental consistente rende posição de liderança — e que país pequeno pode estar à frente de gigantes. Prova de que ambição climática é gestão mensurável, não retórica.</p>
+      <details>
+        <summary>Copy Instagram · Me Poupe!</summary>
+        <div class="copy">Poluição em queda. E quem lidera é a pequena Estônia.
+
+O Índice de Desempenho Ambiental de Yale e Columbia mediu 177 países. No topo: Estônia, por cortar emissões de forma “dramática”. Depois, Luxemburgo e Reino Unido.
+
+A Europa puxa o combate à poluição no mundo.
+
+O recado? Meta clara + política constante = resultado que aparece. Sustentabilidade é gestão de longo prazo — e dá pra medir.
+
+<span class="hash">#MePoupe #MeioAmbiente #Sustentabilidade #Poluicao #Clima #Estonia #Europa #GestaoAmbiental #Futuro #Dados</span></div>
+      </details>
+    </article>
+
+  </div>
+
+  <!-- DESCARTES -->
+  <div class="discard">
+    <b>🚫 7 descartadas.</b> Fora da janela de 5 dias: alta de 14% na abertura de pequenos negócios (levantamento Sebrae de 26/05). Retida por falta de confirmação de fonte primária Nível 1 nesta execução: vacina experimental alemã contra tumor cerebral (atribuída à DKFZ / <em>Nature</em>, sem checagem direta hoje). Conflito com a missão de educação financeira / cheiro de reclame: adesivo de intolerância à lactose “Dear Dairy” (produto comercial de empresa privada, sem validação independente). Fracas ou de celebridade: ranking dos melhores hotéis do mundo e vídeo de jogador para sósia mirim. Fora de escopo: resgates do terremoto na Venezuela (tragédia) e resultados diários da Copa do Mundo (esporte cotidiano).
+  </div>
+
+  <!-- FECHAMENTO -->
+  <div class="closing">
+    <div class="eyebrow">Fecho da curadoria</div>
+    <p>O noticiário do dia foi Copa, dólar e política — mas o que quebra ciclo aconteceu no canto da página: quatro meninas de Jundiaí mandando ciência brasileira para a órbita, um menino de 10 anos descobrindo um padrão que ninguém tinha visto, uma vacina de £2,50 salvando crianças no mundo todo. Menos manchete, mais lastro. É disso que a Me Poupe! fala todo dia — o retorno de verdade se constrói com educação, ciência e persistência.</p>
   </div>
 
   <footer>
-    <span>GoodNewsMP-03/07/26</span>
-    <span>Me Poupe! · Curadoria de boas notícias · Janela: últimos 5 dias</span>
+    <span>Me Poupe! · Curadoria diária de boas notícias · GoodNewsMP-13/07/26</span>
+    <span>Janela: últimos 5 dias · 8 histórias (6 ✅ · 2 ⚠️) · Fator MP médio 4.0/5</span>
   </footer>
 
 </div>
