@@ -1,428 +1,559 @@
-<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
-{
-  "name": "Boas Noticias Mp",
-  "schemaVersion": 1,
-  "description": "Curadoria diária Me Poupe! — boas notícias subnoticiadas do Brasil e do mundo. Edição 14/07/26."
-}
-</script>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodNewsMP-14/07/26 · Boas notícias que o Brasil não viu</title>
+<title>GoodNewsMP-20/07/26 — Boas notícias que o Brasil não viu</title>
 <style>
   :root{
     --bg:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af;
-    --hair:rgba(255,255,255,.10); --txt:#fff; --mut:rgba(255,255,255,.55); --mut2:rgba(255,255,255,.38);
+    --fio:rgba(255,255,255,.10); --txt:rgba(255,255,255,.92); --txt2:rgba(255,255,255,.55);
   }
   *{box-sizing:border-box}
-  body{background:var(--bg);color:var(--txt);margin:0;
+  body{background:var(--bg);color:var(--txt);margin:0;padding:0;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:940px;margin:0 auto;padding:56px 28px 80px}
-  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--lilas);font-weight:600}
-  h1{font-weight:500;letter-spacing:-.03em;font-size:44px;line-height:1.04;margin:14px 0 18px}
-  .meta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;color:var(--mut);font-size:13px}
-  .tag{border:1px solid var(--hair);border-radius:999px;padding:4px 12px;color:var(--mut)}
-  .code{color:var(--verde);font-variant-numeric:tabular-nums}
+  .wrap{max-width:1080px;margin:0 auto;padding:64px 40px 96px}
+  a{color:inherit}
+  /* cabeçalho */
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--lilas);font-weight:600}
+  h1{font-size:52px;line-height:1.05;letter-spacing:-.035em;font-weight:300;margin:18px 0 22px;max-width:16ch}
+  .datebar{display:flex;gap:18px;align-items:center;flex-wrap:wrap;color:var(--txt2);font-size:13px}
+  .tag{border:1px solid var(--fio);border-radius:999px;padding:4px 12px;font-size:11px;letter-spacing:.06em;color:var(--txt2)}
   /* KPIs */
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:44px 0 8px;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
-  .kpi{padding:22px 18px;border-right:1px solid var(--hair)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio);margin:48px 0 72px}
+  .kpi{padding:26px 24px 26px 0;border-right:1px solid var(--fio)}
   .kpi:last-child{border-right:none}
-  .kpi .n{font-size:34px;font-weight:500;letter-spacing:-.03em;line-height:1}
-  .kpi .l{font-size:11.5px;color:var(--mut);text-transform:uppercase;letter-spacing:.08em;margin-top:9px}
-  .kpi .sub{font-size:12px;color:var(--mut2);margin-top:3px}
-  /* Section headers */
-  .sec{margin:64px 0 6px}
-  .sec .eyebrow{color:var(--mut)}
-  .sec h2{font-weight:500;letter-spacing:-.02em;font-size:24px;margin:8px 0 0}
-  /* Hero */
-  .hero{position:relative;padding:40px 0 44px;border-top:1px solid var(--hair);margin-top:22px}
-  .ghost{position:absolute;top:6px;right:0;font-size:150px;font-weight:600;line-height:.8;color:rgba(255,255,255,.045);letter-spacing:-.04em;pointer-events:none}
-  .cat{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilas);font-weight:600}
-  .hero h3{font-weight:500;letter-spacing:-.02em;font-size:32px;line-height:1.12;margin:12px 0 14px;max-width:80%}
-  .dek{color:var(--mut);font-size:16px;max-width:80%;margin:0 0 16px}
-  .src{font-size:12.5px;color:var(--mut2);margin:0 0 4px}
-  .src a{color:var(--lilas);text-decoration:none}
-  .orig{font-size:12px;color:var(--mut2);font-style:italic;margin:0 0 18px}
-  .callout{border-left:3px solid var(--amarelo);padding:10px 0 10px 16px;margin:18px 0;max-width:80%}
-  .callout .cl-l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amarelo);font-weight:600}
-  .callout p{margin:6px 0 0;font-size:15px;color:#efeaff}
-  .mp{display:flex;align-items:center;gap:12px;margin:16px 0}
+  .kpi .n{font-size:38px;font-weight:300;letter-spacing:-.03em;line-height:1}
+  .kpi .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--txt2);margin-top:10px}
+  .kpi .sub{font-size:12px;color:var(--txt2);margin-top:4px}
+  /* seções */
+  .sec{margin:0 0 28px}
+  .sec-title{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--amarelo);font-weight:600;
+    border-bottom:1px solid var(--fio);padding-bottom:14px;margin-bottom:52px}
+  /* hero */
+  .hero{position:relative;padding:0 0 64px;margin-bottom:64px;border-bottom:1px solid var(--fio)}
+  .ghost{position:absolute;top:-30px;right:0;font-size:150px;font-weight:200;line-height:1;
+    color:rgba(255,255,255,.05);letter-spacing:-.05em;pointer-events:none}
+  .cat{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lilas);font-weight:600}
+  .hero h2{font-size:38px;line-height:1.12;letter-spacing:-.03em;font-weight:400;margin:16px 0 18px;max-width:22ch;position:relative}
+  .dek{font-size:17px;color:var(--txt2);max-width:62ch;margin:0 0 22px}
+  .fonte{font-size:12px;color:var(--txt2);margin-bottom:6px}
+  .fonte a{color:var(--lilas);text-decoration:none;border-bottom:1px solid rgba(131,138,255,.35)}
+  .orig{font-size:11px;color:rgba(255,255,255,.38);font-style:italic;margin-bottom:22px}
+  .callout{border-left:2px solid var(--amarelo);padding:4px 0 4px 18px;margin:24px 0;max-width:60ch}
+  .callout .lab{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--amarelo);font-weight:600}
+  .callout p{margin:8px 0 0;font-size:15px;color:var(--txt)}
+  .meter{display:flex;align-items:center;gap:12px;margin:22px 0 14px}
   .bars{display:flex;gap:4px}
-  .bar{width:26px;height:8px;border-radius:2px;background:rgba(255,255,255,.14)}
+  .bar{width:26px;height:6px;background:rgba(255,255,255,.12);border-radius:2px}
   .bar.on{background:var(--verde)}
-  .mp .val{font-size:13px;color:var(--mut);font-variant-numeric:tabular-nums}
-  .status{font-size:13px;margin:6px 0 0}
-  .status.ok{color:var(--verde)} .status.warn{color:var(--amarelo)}
-  .why{font-size:14.5px;color:#d9d3ef;max-width:80%;margin:14px 0 0}
-  .why b{color:#fff;font-weight:600}
-  details{margin:16px 0 0;max-width:82%}
-  summary{cursor:pointer;font-size:13px;color:var(--lilas);letter-spacing:.02em}
-  details .copy{border:1px solid var(--hair);border-radius:10px;padding:16px 18px;margin-top:12px;font-size:14px;color:#e7e2f6;white-space:pre-wrap}
-  .hash{color:var(--lilas)}
-  /* Grid */
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:22px;border-top:1px solid var(--hair)}
-  .item{padding:32px 28px 34px;border-bottom:1px solid var(--hair);position:relative}
-  .item:nth-child(odd){border-right:1px solid var(--hair);padding-left:0}
-  .item:nth-child(even){padding-right:0}
-  .num{font-size:13px;color:var(--mut2);font-variant-numeric:tabular-nums;font-weight:600}
-  .item h4{font-weight:500;letter-spacing:-.015em;font-size:20px;line-height:1.16;margin:10px 0 12px}
-  .item .dek{font-size:14.5px;max-width:100%;margin-bottom:12px}
-  .item .callout{max-width:100%}
-  .item .why{max-width:100%}
-  .item details{max-width:100%}
-  .flag{display:inline-block;font-size:12px;color:var(--mut);margin-left:6px}
-  /* Discard + closing */
-  .discard{margin:60px 0 0;padding:20px 22px;border:1px solid var(--hair);border-radius:12px;color:var(--mut);font-size:13.5px}
-  .discard b{color:var(--vermelho);font-weight:600}
-  .closing{margin:56px 0 0;padding:40px 0 0;border-top:1px solid var(--hair)}
-  .closing .eyebrow{color:var(--amarelo)}
-  .closing p{font-size:19px;line-height:1.5;letter-spacing:-.01em;color:#efeaff;max-width:88%;margin:14px 0 0}
-  footer{margin:56px 0 0;padding-top:22px;border-top:1px solid var(--hair);color:var(--mut2);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-  @media(max-width:720px){
-    h1{font-size:32px}.kpis{grid-template-columns:1fr 1fr}
-    .kpi:nth-child(2){border-right:none}.kpi{border-bottom:1px solid var(--hair)}
-    .grid{grid-template-columns:1fr}
-    .item:nth-child(odd){border-right:none;padding-left:0}
-    .item{padding-left:0;padding-right:0}
-    .hero h3,.dek,.callout,.why,.hero .src{max-width:100%}
-    .ghost{font-size:96px;opacity:.7}
+  .bar.on.mid{background:var(--amarelo)}
+  .mnum{font-size:12px;color:var(--txt2);letter-spacing:.06em}
+  .status{font-size:12px;color:var(--txt2);margin-bottom:20px}
+  .why{font-size:14px;color:var(--txt);max-width:62ch;margin:0 0 20px}
+  .why b{color:var(--amarelo);font-weight:600;letter-spacing:.04em;font-size:11px;text-transform:uppercase;display:block;margin-bottom:6px}
+  details{border-top:1px solid var(--fio);padding-top:14px;max-width:64ch}
+  summary{cursor:pointer;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilas);font-weight:600;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"▸ "}
+  details[open] summary::before{content:"▾ "}
+  .copy{font-size:14px;color:var(--txt);white-space:pre-line;margin-top:16px;padding-left:2px}
+  .hash{color:var(--lilas);font-size:12px;margin-top:12px;display:block}
+  /* grid */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px 56px}
+  .item{position:relative;padding-bottom:8px}
+  .num{font-size:11px;color:rgba(255,255,255,.25);letter-spacing:.1em;margin-bottom:14px}
+  .item h3{font-size:23px;line-height:1.2;letter-spacing:-.02em;font-weight:400;margin:14px 0 14px}
+  .item .dek{font-size:15px;margin-bottom:18px}
+  /* descartes / fecho */
+  .discard{border-top:1px solid var(--fio);margin-top:72px;padding-top:22px;font-size:13px;color:var(--txt2)}
+  .fecho{border-top:1px solid var(--fio);margin-top:64px;padding-top:48px}
+  .fecho p{font-size:24px;line-height:1.4;font-weight:300;letter-spacing:-.02em;max-width:34ch;margin:0 0 18px}
+  .fecho .kick{color:var(--amarelo)}
+  footer{border-top:1px solid var(--fio);margin-top:72px;padding-top:24px;font-size:11px;color:rgba(255,255,255,.32);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  @media(max-width:820px){
+    .wrap{padding:40px 22px 64px}
+    h1{font-size:34px}
+    .hero h2{font-size:28px}
+    .kpis{grid-template-columns:1fr 1fr}
+    .kpi{border-right:none;border-bottom:1px solid var(--fio)}
+    .grid{grid-template-columns:1fr;gap:48px}
+    .ghost{font-size:90px}
   }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- CABEÇALHO -->
+  <!-- (1) CABEÇALHO -->
   <header>
     <div class="eyebrow">Me Poupe! · Curadoria diária</div>
     <h1>Boas notícias que o Brasil não viu</h1>
-    <div class="meta">
-      <span class="code">GoodNewsMP-14/07/26</span>
+    <div class="datebar">
+      <span>GoodNewsMP-20/07/26</span>
       <span class="tag">Janela: últimos 5 dias</span>
-      <span>Enquanto a Copa e o câmbio tomavam a tela, um estudante da UFF usou a câmera do celular para derrubar uma barreira que separa 2,6 milhões de brasileiros do resto do país — e ganhou um prêmio da Apple por isso.</span>
     </div>
   </header>
 
-  <!-- KPIs -->
+  <!-- (2) KPIs -->
   <section class="kpis">
-    <div class="kpi"><div class="n">9</div><div class="l">Histórias</div><div class="sub">5 nac · 4 int</div></div>
-    <div class="kpi"><div class="n">7</div><div class="l">Verificadas ✅</div><div class="sub">+ 2 em ⚠️ (Nível 2)</div></div>
-    <div class="kpi"><div class="n">6</div><div class="l">Descartadas 🚫</div><div class="sub">fora da janela / repetidas / fracas</div></div>
-    <div class="kpi"><div class="n">4.0</div><div class="l">Fator MP médio</div><div class="sub">de 5</div></div>
+    <div class="kpi"><div class="n">10</div><div class="l">Histórias</div><div class="sub">4 nac · 6 int</div></div>
+    <div class="kpi"><div class="n">9</div><div class="l">Verificadas ✅</div><div class="sub">Nível 1</div></div>
+    <div class="kpi"><div class="n">14</div><div class="l">Descartadas 🚫</div><div class="sub">repetidas, fracas, fora da janela</div></div>
+    <div class="kpi"><div class="n">4,4</div><div class="l">Fator MP médio</div><div class="sub">escala 1–5</div></div>
   </section>
 
-  <!-- DESTAQUE NACIONAL -->
-  <div class="sec"><div class="eyebrow">Brasil</div><h2>Destaque nacional do dia</h2></div>
+  <!-- (3) HERO NACIONAL -->
+  <div class="sec"><div class="sec-title">Destaque nacional do dia</div></div>
   <article class="hero">
     <div class="ghost">01</div>
-    <div class="cat">Tecnologia · Inclusão · Reconhecimento internacional</div>
-    <h3>Um estudante da UFF criou uma IA que traduz Libras pela câmera do celular — e a Apple premiou</h3>
-    <p class="dek">Gabriel Sales, estudante de Estatística da Universidade Federal Fluminense, desenvolveu a “IA Libras”: a pessoa faz os sinais diante da câmera do celular ou do computador e a inteligência artificial identifica os gestos e os converte em texto e voz em português, quase em tempo real. O projeto foi reconhecido no Swift Student Challenge, competição mundial da Apple para jovens desenvolvedores com impacto social. Segundo o IBGE, cerca de 2,6 milhões de brasileiros têm dificuldade permanente para ouvir; a ferramenta foi pensada para hospitais, escolas e repartições onde falta intérprete — sem a pretensão de substituí-los.</p>
-    <p class="src">Fonte: Só Notícia Boa — <a href="https://www.sonoticiaboa.com.br/2026/07/12/estudante-brasileiro-premio-apple-ia-libras-traduz-lingua-sinais-celular-video">ver matéria</a> · 12/07/2026</p>
+    <div class="cat">Crédito · Empreendedorismo feminino</div>
+    <h2>As mulheres que o banco não queria financiar têm 0,06% de inadimplência</h2>
+    <p class="dek">O Fampe Mulher, fundo de aval do Sebrae, chegou a 17,2 mil operações e R$ 1,15 bilhão em crédito garantido — com inadimplência de 0,06%. Apenas nove operações precisaram ser honradas, somando R$ 705,7 mil. O padrão da carteira geral do Fampe oscila entre 3,5% e 4,5%. Mais de 99% das empreendedoras estão adimplentes.</p>
+    <p class="fonte">Fonte: <a href="https://agenciasebrae.com.br/cultura-empreendedora/fampe-mulher-registra-inadimplencia-de-apenas-006-em-dois-anos/">Agência Sebrae de Notícias — 16/07/2026</a></p>
     <div class="callout">
-      <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-      <p>Tecnologia de verdade não é a que impressiona, é a que inclui. Um brasileiro transformou a câmera que todo mundo já tem no bolso em ponte para milhões — e isso vale mais que qualquer prêmio.</p>
+      <div class="lab">Proposta de leitura · Me Poupe!</div>
+      <p>O mercado cobrou juros proibitivos de quem prova ser o melhor pagador do país. O risco nunca esteve nelas — esteve na leitura de quem concede o crédito.</p>
     </div>
-    <div class="mp">
+    <div class="meter">
       <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
-      <span class="val">Fator MP 5/5</span>
+      <span class="mnum">Fator MP 5/5</span>
     </div>
-    <p class="status warn">⚠️ Verificada com ressalva · Nível 2 (SNB, a partir do estudante; o Swift Student Challenge é programa oficial da Apple)</p>
-    <p class="why"><b>Por que merece mais atenção:</b> é tecnologia para o povo — feita por um estudante de universidade pública, rodando no aparelho que quase todo mundo já tem. Ataca uma exclusão real: comunicação em hospital, escola e balcão público. Quando a inovação nasce para incluir, o retorno é coletivo.</p>
+    <p class="status">✅ Nível 1 — Sebrae, fonte institucional citável, com declarações nominais da diretora Margarete Coelho.</p>
+    <div class="why"><b>Por que merece mais atenção</b>
+      O dado desmonta a justificativa técnica do juro alto para mulheres empreendedoras. E revela o gargalo real: só 16% da procura vem de MEIs, porque a informalidade feminina bloqueia o acesso à garantia. A meta do Sebrae é dobrar a carteira em 2026 — o obstáculo não é risco, é formalização. Efeito de segunda ordem: sem bancos privados na operação, o programa continua limitado a 17% da carteira total do Fampe.</div>
     <details>
-      <summary>Copy Instagram · Me Poupe!</summary>
-      <div class="copy">Um celular. Uma câmera. Milhões de pessoas incluídas.
+      <summary>Copy Instagram</summary>
+      <div class="copy">Nove.
 
-Gabriel, estudante da UFF, criou uma IA que traduz Libras em tempo real — é só fazer o sinal na frente da câmera e vira texto e voz em português. A Apple premiou.
+Esse é o número de vezes que o Sebrae precisou honrar a garantia de crédito de mulheres empreendedoras. Em 17,2 MIL operações. R$ 1,15 bilhão emprestado.
 
-2,6 milhões de brasileiros têm dificuldade para ouvir. Em hospital, escola, repartição, faltava intérprete. Agora tem ponte.
+Inadimplência: 0,06%.
 
-Tecnologia boa não é a mais cara. É a que chega em quem sempre ficou de fora.
+A média da carteira geral? Entre 3,5% e 4,5%. Ou seja: elas pagam melhor que o mercado inteiro.
 
-<span class="hash">#MePoupe #Tecnologia #Libras #Inclusao #IA #UFF #Acessibilidade #Inovacao #Brasil #QuebraDeCiclo #Orgulho</span></div>
+E aí vem a pergunta que ninguém quer responder.
+
+Se a mulher que empreende é a melhor pagadora do Brasil, por que o juro que ela paga é o mais alto?
+
+Não é risco. Nunca foi risco.
+
+É leitura errada de quem está do outro lado do balcão.
+
+Formaliza. Busca o Fampe Mulher. E cobra a taxa que o seu histórico merece.
+<span class="hash">#MePoupe #EducacaoFinanceira #EmpreendedorismoFeminino #MulheresQueEmpreendem #Credito #MEI #Sebrae #Financas #Juros #Inadimplencia #PequenosNegocios #DinheiroNaMao</span></div>
     </details>
   </article>
 
-  <!-- DEMAIS NACIONAIS -->
-  <div class="sec"><div class="eyebrow">Brasil</div><h2>As demais histórias</h2></div>
-  <div class="grid">
+  <!-- (4) BRASIL — DEMAIS -->
+  <div class="sec"><div class="sec-title">Brasil — as demais histórias</div></div>
+  <section class="grid">
 
     <article class="item">
       <div class="num">02</div>
-      <div class="cat">Economia · Empreendedorismo · Dados</div>
-      <h4>O Brasil abriu 2,9 milhões de pequenos negócios em seis meses — 12% mais que em 2025</h4>
-      <p class="dek">Levantamento do DataSebrae, com base no CNPJ da Receita Federal (até 25/06/2026): foram 2,9 milhões de MEIs e micro e pequenas empresas abertas no 1º semestre, quase 12% acima do mesmo período de 2025 (2,6 milhões). O MEI segue como principal porta de entrada — 2,25 milhões de aberturas, mais de 75% do total. Serviços lideram (1,9 milhão; 64,4%), seguidos de comércio; São Paulo sozinho respondeu por 890 mil. Para o presidente do Sebrae, Rodrigo Soares, os números consolidam o empreendedorismo “como motor da economia nacional”.</p>
-      <p class="src">Fonte: Agência Sebrae de Notícias — <a href="https://agenciasebrae.com.br/dados/abertura-de-pequenos-negocios-cresce-12-no-primeiro-semestre-deste-ano/">ver matéria</a> · 13/07/2026</p>
+      <div class="cat">Trabalho · Microempreendedorismo</div>
+      <h3>MEI com segundo funcionário pode gerar 600 mil vagas em um ano</h3>
+      <p class="dek">O projeto que eleva o teto de faturamento do MEI e libera a contratação de um segundo funcionário pode criar mais de 600 mil empregos, estimou o presidente do Sebrae, Rodrigo Soares. São 14 milhões de MEIs no país — bastaria 5% contratarem. O teto de R$ 81 mil está congelado desde 2018, com defasagem inflacionária de cerca de 70%.</p>
+      <p class="fonte">Fonte: <a href="https://agenciasebrae.com.br/economia-e-politica/ampliacao-de-funcionarios-do-mei-pode-gerar-mais-de-600-mil-vagas-de-emprego-no-proximo-ano/">Agência Sebrae de Notícias — 16/07/2026</a></p>
       <div class="callout">
-        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-        <p>Empreender virou plano A de milhões de brasileiros. Cada CNPJ novo é alguém apostando em si — e formalizar é o que separa o “bico” instável da renda que constrói futuro.</p>
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>Oito anos sem correção transformaram o teto do MEI numa armadilha: crescer virou sinônimo de sair do regime.</p>
       </div>
-      <div class="mp">
+      <div class="meter">
         <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
-        <span class="val">Fator MP 5/5</span>
+        <span class="mnum">Fator MP 5/5</span>
       </div>
-      <p class="status ok">✅ Verificada · Nível 1 (Agência Sebrae / DataSebrae, base Receita Federal)</p>
-      <p class="why"><b>Por que merece mais atenção:</b> microempreendedorismo é o território-mãe da educação financeira. Crescer 12% com o MEI liderando mostra a formalização virando ferramenta de dignidade — e uma legião de gente que precisa aprender a precificar, separar caixa e emitir nota.</p>
+      <p class="status">✅ Nível 1 — Sebrae, declaração nominal do presidente em entrevista à Record (15/07).</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        É estimativa, não fato consumado: depende de aprovação no Congresso até agosto para valer no próximo ano fiscal. O risco não-óbvio é o encaixe com a transição do IVA Federal — se o teto do Simples não subir junto, o MEI que crescer cai numa faixa tributária hostil.</div>
       <details>
-        <summary>Copy Instagram · Me Poupe!</summary>
-        <div class="copy">2,9 milhões de pequenos negócios abertos em 6 meses.
+        <summary>Copy Instagram</summary>
+        <div class="copy">R$ 81 mil.
 
-12% a mais que no ano passado. E o MEI puxa a fila: 75% de tudo. Serviços na frente, São Paulo com 890 mil sozinho.
+Esse é o teto do MEI desde 2018. Oito anos. Sem correção nenhuma.
 
-Traduzindo: milhões de brasileiros apostando em si mesmos.
+A inflação no período? Cerca de 70%.
 
-Abrir CNPJ é o primeiro passo. O segundo é o que a gente mais fala aqui: separar o dinheiro da empresa do seu, precificar direito e não misturar caixa.
+Traduzindo: quem faturava no limite em 2018 hoje fatura, na prática, 40% menos.
 
-Empreender é coragem. Gestão é o que faz durar.
+Agora tem projeto no Congresso pra corrigir o teto e liberar um SEGUNDO funcionário.
 
-<span class="hash">#MePoupe #Empreendedorismo #MEI #PequenosNegocios #Renda #EducacaoFinanceira #Sebrae #Brasil #Financas #Gestao</span></div>
+O Sebrae fez a conta. São 14 milhões de MEIs. Se só 5% contratarem mais uma pessoa, são 600 mil empregos novos.
+
+Mas presta atenção nisso aqui.
+
+Crescer sempre foi punido no Brasil. Passou do teto, mudou de regime, dobrou a carga.
+
+O empreendedor não estava travado por falta de vontade. Estava travado por uma régua congelada.
+<span class="hash">#MePoupe #MEI #EducacaoFinanceira #Empreendedorismo #Emprego #SimplesNacional #PequenosNegocios #Financas #Sebrae #Faturamento #Formalizacao</span></div>
       </details>
     </article>
 
     <article class="item">
       <div class="num">03</div>
-      <div class="cat">Saúde · SUS · Política pública</div>
-      <h4>O SUS troca a insulina antiga pela mais moderna — e a dose vira uma por dia</h4>
-      <p class="dek">O Ministério da Saúde começou a substituir a insulina NPH pela glargina no SUS. Beneficia crianças e adolescentes de 2 a 18 anos incompletos com diabetes tipo 1 e pessoas com 70 anos ou mais com diabetes tipo 1 ou 2. De ação prolongada, a glargina costuma exigir uma única aplicação diária — contra até três dos esquemas antigos — e proporciona controle glicêmico mais estável, com menos episódios de hipoglicemia. Até 13/07, mais de 254 mil tubetes já haviam chegado a 16 estados, com 52.350 canetas reutilizáveis; todas as unidades da Federação devem receber o medicamento até o fim de julho, com acesso pela UBS mediante prescrição.</p>
-      <p class="src">Fonte: Agência Brasil — <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/sus-oferta-insulina-glargina-para-criancas-adolescentes-e-idosos">ver matéria</a> · 14/07/2026</p>
+      <div class="cat">Crédito · Trabalho por aplicativo</div>
+      <h3>10 mil motoristas de app e taxistas trocaram de carro em menos de um mês</h3>
+      <p class="dek">O programa Move Motoristas, do BNDES, contratou R$ 1 bilhão em financiamentos em menos de 30 dias, alcançando 1.015 municípios em todos os estados. Ticket médio de R$ 102 mil. Juros de até 0,99% ao mês para homens e 0,91% para mulheres, em 72 meses com seis de carência. Restam cerca de R$ 30 bilhões, mas as contratações vão até 15 de setembro.</p>
+      <p class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/16/10-mil-motoristas-app-taxistas-compraram-carro-novo-credito-bndes-veja-como-conseguir">Só Notícia Boa, a partir de balanço do BNDES — 16/07/2026</a></p>
       <div class="callout">
-        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-        <p>Uma picada por dia em vez de três não é detalhe técnico — é qualidade de vida para criança e idoso. Saúde pública que moderniza o básico é a que menos aparece e mais transforma rotina.</p>
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>Crédito barato com prazo curto não é bondade: é uma janela. E janela que fecha em setembro cobra decisão, não contemplação.</p>
       </div>
-      <div class="mp">
+      <div class="meter">
         <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
-        <span class="val">Fator MP 4/5</span>
+        <span class="mnum">Fator MP 4/5</span>
       </div>
-      <p class="status ok">✅ Verificada · Nível 1 (Agência Brasil / Ministério da Saúde)</p>
-      <p class="why"><b>Por que merece mais atenção:</b> diabetes tipo 1 pesa no bolso e na rotina de milhares de famílias. Trocar três aplicações por uma, de graça e em escala nacional, é ciência aplicada no SUS reduzindo sofrimento e custo — o tipo de avanço silencioso que muda o dia a dia de quem depende dele.</p>
+      <p class="status">✅ Nível 1 — dados do balanço oficial do BNDES, com amparo na Medida Provisória 1.359/2026.</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        A carência de seis meses é o ponto cego: a parcela só aparece quando a euforia da compra já passou. Num ticket de R$ 102 mil em 72 meses, o motorista precisa saber quanto o carro rende por dia antes de assinar — senão troca renda futura por conforto presente.</div>
       <details>
-        <summary>Copy Instagram · Me Poupe!</summary>
-        <div class="copy">Três picadas por dia. Agora, uma.
+        <summary>Copy Instagram</summary>
+        <div class="copy">Um bilhão de reais.
 
-O SUS está trocando a insulina antiga (NPH) pela mais moderna (glargina) para crianças, adolescentes e idosos com diabetes. Uma aplicação diária, controle mais estável, menos hipoglicemia.
+Em menos de um mês. Foi o que 10 mil motoristas de app e taxistas contrataram no Move Motoristas, do BNDES, pra comprar carro zero.
 
-Até o fim de julho, chega em todo o país. É só procurar a UBS com a receita.
+Juros de até 0,99% ao mês. 0,91% se você for mulher. 72 meses pra pagar. Seis meses de carência.
 
-Saúde pública de graça que moderniza o básico não vira manchete. Mas muda a vida de quem convive com a doença todo dia.
+Ticket médio: R$ 102 mil.
 
-<span class="hash">#MePoupe #Saude #SUS #Diabetes #Insulina #PoliticaPublica #Brasil #Cuidado #Crianca #Idoso</span></div>
+Parece o melhor negócio do ano. E pode ser.
+
+Mas repara na carência.
+
+Seis meses sem pagar nada significa seis meses pra esquecer que a conta existe. Quando a primeira parcela chega, o carro já não é novidade — e a obrigação, sim.
+
+Antes de assinar, responde uma coisa: quanto esse carro te devolve por dia rodado?
+
+Se você não souber o número, não é investimento. É dívida com cheiro de novo.
+
+O prazo vai até 15 de setembro. Faz a conta antes.
+<span class="hash">#MePoupe #EducacaoFinanceira #Credito #BNDES #MotoristaDeApp #Financiamento #Juros #Financas #Orcamento #DinheiroNaMao #Taxista #PlanejamentoFinanceiro</span></div>
       </details>
     </article>
 
     <article class="item">
       <div class="num">04</div>
-      <div class="cat">Inclusão digital · Mulheres · Empreendedorismo</div>
-      <h4>Formação digital gratuita para mulheres em dez capitais — com chip, auxílio e celular no fim</h4>
-      <p class="dek">A ONU Mulheres Brasil abriu inscrições (até 19/07) para o “Mulher + Tech: Conexão para Novos Começos”, formação híbrida e gratuita voltada a mulheres em vulnerabilidade socioeconômica em dez capitais. O conteúdo cobre letramento digital, segurança online, direitos das mulheres e empregabilidade e empreendedorismo. Além de gratuito, o programa oferece chip com internet por 12 meses, auxílio para deslocamento e alimentação, estrutura de cuidado para crianças nos encontros e, para quem concluir ao menos 75%, um aparelho celular. A iniciativa é financiada pela Claro e implementada pela Politize!.</p>
-      <p class="src">Fonte: Agência Brasil — <a href="https://agenciabrasil.ebc.com.br/geral/noticia/2026-07/onu-mulheres-oferece-formacao-digital-gratuita-saiba-como-participar">ver matéria</a> · 14/07/2026</p>
+      <div class="cat">Saúde pública · Longevidade</div>
+      <h3>Metade dos municípios do país pediu para levar o SUS até a cama do idoso</h3>
+      <p class="dek">Um mês após o lançamento, 2.722 municípios solicitaram adesão ao Padi Brasil — programa de atenção domiciliar à pessoa idosa do Ministério da Saúde. São R$ 500 milhões previstos até 2027, com equipes multiprofissionais visitando em casa mais de 3 milhões de idosos que dependem exclusivamente do SUS.</p>
+      <p class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/16/sus-atende-idosos-acamados-casa-veja-como-pedir-padi-brasil">Só Notícia Boa, a partir do Ministério da Saúde — 16/07/2026</a></p>
       <div class="callout">
-        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-        <p>Inclusão digital sem aparelho e sem dado é discurso. Aqui vem chip, transporte e até o celular no fim — porque oportunidade só é real quando remove as barreiras que travam quem mais precisa.</p>
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>Cuidar de idoso acamado em casa custa caro — em dinheiro e em carreira interrompida. Quase sempre de uma mulher da família.</p>
       </div>
-      <div class="mp">
+      <div class="meter">
         <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
-        <span class="val">Fator MP 4/5</span>
+        <span class="mnum">Fator MP 4/5</span>
       </div>
-      <p class="status ok">✅ Verificada · Nível 1 (Agência Brasil / ONU Mulheres Brasil)</p>
-      <p class="why"><b>Por que merece mais atenção:</b> junta tudo que a Me Poupe! defende — letramento digital, empregabilidade e empreendedorismo — e mira quem tem menos acesso. Ao entregar dado, deslocamento e aparelho, ataca as barreiras concretas que sempre deixam a mulher periférica de fora da economia digital.</p>
+      <p class="status">✅ Nível 1 — programa oficial do Ministério da Saúde, com declaração nominal do ministro Alexandre Padilha.</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        O impacto econômico invisível: cuidado domiciliar familiar é trabalho não remunerado que tira gente — majoritariamente mulheres — do mercado formal. Um programa público de atenção domiciliar devolve horas produtivas à família, não só conforto ao paciente. Ressalva: adesão do município não é sinônimo de equipe em campo.</div>
       <details>
-        <summary>Copy Instagram · Me Poupe!</summary>
-        <div class="copy">Curso de tecnologia de graça pra mulher. E com chip, transporte e celular no fim.
+        <summary>Copy Instagram</summary>
+        <div class="copy">2.722 cidades.
 
-A ONU Mulheres abriu vagas (até 19/07) em 10 capitais: letramento digital, segurança online, direitos, empregabilidade e empreendedorismo.
+Metade dos municípios do Brasil pediu adesão ao Padi Brasil em UM mês. É o programa que leva médico, fisioterapeuta e enfermeiro até a casa do idoso acamado. R$ 500 milhões até 2027.
 
-Prioridade pra quem tem menos acesso — periféricas, migrantes, mulheres em situação de vulnerabilidade.
+Bonito. Mas tem uma camada que quase ninguém comenta.
 
-Oportunidade de verdade não é só abrir a porta. É dar condição de atravessar.
+Quem cuida de idoso acamado em casa normalmente larga alguma coisa. O emprego. O curso. O próprio negócio.
 
-Marca uma amiga que precisa saber disso.
+E, na esmagadora maioria das vezes, quem larga é mulher.
 
-<span class="hash">#MePoupe #Mulheres #InclusaoDigital #Tecnologia #Empreendedorismo #Empregabilidade #ONUMulheres #Brasil #Oportunidade #Renda</span></div>
+Isso tem nome em economia: trabalho de cuidado não remunerado. Não entra no PIB, mas sai do seu bolso.
+
+Quando o Estado entra na casa, ele não devolve só conforto pro paciente.
+
+Devolve renda pra família.
+
+Procura a UBS do seu bairro e pergunta se a sua cidade aderiu.
+<span class="hash">#MePoupe #EducacaoFinanceira #SUS #SaudeDoIdoso #Cuidadores #TrabalhoDeCuidado #Financas #Longevidade #PoliticasPublicas #Renda #MulheresEDinheiro</span></div>
+      </details>
+    </article>
+
+  </section>
+
+  <!-- (5) HERO INTERNACIONAL -->
+  <div class="sec" style="margin-top:88px"><div class="sec-title">Destaque internacional do dia</div></div>
+  <article class="hero">
+    <div class="ghost">01</div>
+    <div class="cat">🇺🇬 Uganda · Ciência para o povo</div>
+    <h2>Uma planta que dá no quintal repele mosquito tão bem quanto o repelente caro</h2>
+    <p class="dek">Pesquisadores galeses e ugandenses mostraram que a loção de erva-de-gato (<i>Nepeta cataria</i>) a 6% de nepetalactona repele mosquitos tão bem quanto o DEET em testes de laboratório. A planta é fácil de cultivar e o óleo essencial, fácil de destilar. A fórmula não pode ser patenteada — e a produção foi desenhada para ficar com a própria comunidade rural.</p>
+    <p class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/homegrown-catnip-lotion-proves-to-be-an-effective-mosquito-repellent-in-rural-uganda/">Good News Network — 17/07/2026</a> · apresentado em conferência científica internacional em Florença, com o Dr. Simon Scofield (Cardiff University)</p>
+    <p class="orig">Título original: “Homegrown Catnip Lotion Proves to Be An Effective Mosquito Repellent in Rural Uganda”</p>
+    <div class="callout">
+      <div class="lab">Proposta de leitura · Me Poupe!</div>
+      <p>A inovação aqui não é química. É de modelo de negócio: um produto que não pode ser patenteado devolve a margem para quem planta.</p>
+    </div>
+    <div class="meter">
+      <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+      <span class="mnum">Fator MP 5/5</span>
+    </div>
+    <p class="status">✅ Nível 1 — pesquisa apresentada em conferência internacional, com instituição e pesquisador nomeados.</p>
+    <div class="why"><b>Por que merece mais atenção</b>
+      O ganho de saúde é consequência de uma decisão econômica. Ao renunciar à patente e organizar a produção local, os pesquisadores criaram um sistema autossustentável — o dinheiro circula em cada etapa da cadeia, em vez de depender de doação. Ressalva metodológica: eficácia medida em laboratório; falta ensaio de campo em larga escala. E menos picada não equivale, por si só, a menos malária.</div>
+    <details>
+      <summary>Copy Instagram</summary>
+      <div class="copy">Uma erva que nasce no quintal.
+
+Pesquisadores de Gales e Uganda testaram uma loção feita de erva-de-gato — a mesma planta que deixa gato eufórico — contra mosquito.
+
+Resultado: a 6% de nepetalactona, repeliu tão bem quanto o DEET, o padrão do mercado.
+
+Só que o DEET, nas palavras do próprio pesquisador, está fora do alcance do agricultor de subsistência ugandense.
+
+Aí vem a parte que muda o jogo.
+
+Eles não patentearam.
+
+Óleo essencial, estabilizante e base cosmética. Fórmula aberta. E a produção fica na comunidade — do plantio à venda.
+
+Sabe o que isso significa?
+
+Que o dinheiro não vaza pra fora. Ele volta pra quem plantou, pra quem destilou, pra quem vendeu.
+
+Ciência boa resolve o problema. Ciência muito boa resolve o problema e deixa a margem com o povo.
+<span class="hash">#MePoupe #EducacaoFinanceira #Uganda #Ciencia #Inovacao #Empreendedorismo #Malaria #Sustentabilidade #NegociosDeImpacto #Renda #Africa #Saude</span></div>
+    </details>
+  </article>
+
+  <!-- (6) MUNDO -->
+  <div class="sec"><div class="sec-title">Mundo — notícias internacionais</div></div>
+  <section class="grid">
+
+    <article class="item">
+      <div class="num">02</div>
+      <div class="cat">🇦🇷 Argentina · Trabalho e requalificação</div>
+      <h3>Aos 78 anos, ele estudou inteligência artificial e virou diretor comercial</h3>
+      <p class="dek">Norberto B. Worobeizyk fez cursos on-line e no YouTube para se qualificar em IA e acaba de ser contratado como diretor comercial da empresa de tecnologia b.live. Ficou temporariamente tetraplégico aos 56 anos, após ser atropelado em 2004, e se recuperou. Hoje nada, pedala, corre e é guarda-vidas. “Precisamos desaprender para reaprender.”</p>
+      <p class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/16/idoso-78-anos-estuda-ia-consegue-emprego-diretor-empresa-tecnologia">Só Notícia Boa, entrevista exclusiva — 16/07/2026</a></p>
+      <div class="callout">
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>O mercado trata os 60+ como custo. Ele leu a mesma tecnologia que os demite como a vantagem competitiva que só a experiência entrega.</p>
+      </div>
+      <div class="meter">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+        <span class="mnum">Fator MP 5/5</span>
+      </div>
+      <p class="status">⚠️ Nível 2 — relato pessoal em entrevista direta ao veículo; a contratação não foi confirmada de forma independente junto à empresa.</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        A tese dele é contraintuitiva e testável: se a IA automatiza execução técnica, o diferencial migra para julgamento, comunicação e repertório — exatamente onde os 60+ acumulam vantagem. No Brasil, com o envelhecimento populacional e a reforma da Previdência empurrando carreiras mais longas, requalificação depois dos 60 deixa de ser inspiração e vira necessidade de fluxo de caixa.</div>
+      <details>
+        <summary>Copy Instagram</summary>
+        <div class="copy">78 anos.
+
+Norberto estudou inteligência artificial no YouTube e em cursos on-line. Acabou de ser contratado como diretor comercial de uma empresa de tecnologia.
+
+Antes disso, ficou temporariamente tetraplégico. Atropelado por um motorista bêbado, aos 56.
+
+Voltou a andar. Hoje nada, pedala, corre e é guarda-vidas.
+
+Mas o que ele diz é ainda mais interessante que o que ele fez.
+
+“Pela primeira vez na história, as pessoas da terceira idade serão as mais procuradas.”
+
+A lógica dele: a IA faz a execução técnica. Sobra o que ela não faz — julgamento, empatia, repertório de vida.
+
+Justamente o que só o tempo entrega.
+
+O mercado leu os 60+ como custo. Ele leu como ativo.
+
+“Precisamos desaprender para reaprender.”
+
+Anota essa frase. Ela vale mais que a maioria dos cursos de carreira.
+<span class="hash">#MePoupe #EducacaoFinanceira #Carreira #InteligenciaArtificial #60Mais #Requalificacao #Trabalho #Aposentadoria #Longevidade #Renda #Etarismo</span></div>
+      </details>
+    </article>
+
+    <article class="item">
+      <div class="num">03</div>
+      <div class="cat">🇬🇧 Reino Unido · Pequenos negócios</div>
+      <h3>A filha postou um vídeo no TikTok e salvou a sapataria que o pai ia fechar</h3>
+      <p class="dek">Rachid Lazraq mantinha a Rich Collection Italia, no leste de Londres, havia mais de 30 anos. O comércio on-line e a clientela envelhecida quase liquidaram a loja. A filha, de 25 anos, postou o primeiro vídeo sobre um par de sandálias Y2K em 7 de julho: 300 mil visualizações da noite para o dia e, em poucos dias, filas de duas horas na porta. O pai arrancou a placa de “liquidação de encerramento” sob aplausos.</p>
+      <p class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/daughter-saves-dads-struggling-shoe-shop-with-tiktok-appeal-and-customer-lines-out-the-door/">Good News Network / SWNS — 18/07/2026</a></p>
+      <p class="orig">Título original: “Daughter Saves Dad’s Struggling Shoe Shop With TikTok Appeal—And Customer Lines Out the Door”</p>
+      <div class="callout">
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>O estoque não estava errado. A vitrine estava. Ele vendia exatamente o que o público novo queria — e não sabia disso.</p>
+      </div>
+      <div class="meter">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+        <span class="mnum">Fator MP 5/5</span>
+      </div>
+      <p class="status">✅ Nível 1 — apuração da agência SWNS, com fonte nomeada e endereço verificável do comércio.</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        O detalhe decisivo passa batido: a filha só teve a ideia porque uma influenciadora francesa já havia postado sobre a loja. Ou seja, a demanda existia e era invisível ao dono. Efeito de segunda ordem: fila na porta é receita hoje, não é modelo. O negócio só se sustenta se converter o pico viral em canal on-line — o que a família ainda está avaliando.</div>
+      <details>
+        <summary>Copy Instagram</summary>
+        <div class="copy">Trinta anos de loja. Placa de “fechando” na vitrine.
+
+Rachid vendia sapatos em Londres desde antes da filha nascer. A clientela envelheceu. O on-line comeu o resto.
+
+Aí a filha, 25 anos, postou UM vídeo no TikTok sobre um par de sandália Y2K.
+
+300 mil views da noite pro dia. Em poucos dias, fila de duas horas na porta.
+
+E ele arrancou a placa de liquidação sob aplauso.
+
+Mas presta atenção no detalhe que quase ninguém viu.
+
+A filha só teve a ideia porque uma influenciadora francesa já tinha postado sobre a loja. Ela nem sabia que o pai vendia aquele modelo.
+
+Ou seja: a demanda JÁ EXISTIA. Ele só não conseguia enxergar.
+
+O estoque não estava errado. A vitrine estava.
+
+Antes de baixar a porta, pergunta: será que o problema é o que eu vendo — ou é quem sabe que eu vendo?
+<span class="hash">#MePoupe #EducacaoFinanceira #PequenosNegocios #Empreendedorismo #TikTok #MarketingDigital #NegocioDeFamilia #Vendas #Faturamento #Financas #Loja</span></div>
+      </details>
+    </article>
+
+    <article class="item">
+      <div class="num">04</div>
+      <div class="cat">🇪🇸 Espanha · Astronomia</div>
+      <h3>Cientistas detectam açúcar no espaço interestelar pela primeira vez</h3>
+      <p class="dek">Pesquisadores do CSIC-INTA usaram dois radiotelescópios na Espanha para identificar eritrulose — um açúcar de quatro carbonos, presente em framboesas — numa nuvem de gás perto do centro da Via Láctea. É a primeira vez que um açúcar é detectado no meio interestelar. O achado indica que ingredientes-chave da vida podem se formar antes mesmo de estrelas e planetas existirem.</p>
+      <p class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/would-you-like-sugar-with-your-stars-sugar-detected-in-interstellar-space-for-the-first-time/">Good News Network — 16/07/2026</a> · artigo publicado na Nature Astronomy, autoria principal da Dra. Izaskun Jiménez-Serra (Centro de Astrobiologia CSIC-INTA)</p>
+      <p class="orig">Título original: “Would You Like Sugar With Your Stars? Sugar Detected in Interstellar Space for the First Time”</p>
+      <div class="callout">
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>Desde 1937 já foram identificados 350 compostos no espaço. Este é o primeiro açúcar — e açúcares são tijolos do DNA.</p>
+      </div>
+      <div class="meter">
+        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+        <span class="mnum">Fator MP 4/5</span>
+      </div>
+      <p class="status">✅ Nível 1 — artigo revisado por pares na Nature Astronomy, com instituição e autora nomeadas.</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        Primeiro da história, com fonte primária sólida — encaixe exato no critério editorial. E é ciência básica financiada com dinheiro público rendendo resultado de fronteira: o custo é de radiotelescópios já instalados, não de missão espacial bilionária.</div>
+      <details>
+        <summary>Copy Instagram</summary>
+        <div class="copy">Tem açúcar no espaço.
+
+Cientistas espanhóis apontaram dois radiotelescópios pra uma nuvem de gás perto do centro da Via Láctea. E encontraram eritrulose — o mesmo açúcar que existe na framboesa.
+
+É a PRIMEIRA vez que um açúcar é detectado no meio interestelar.
+
+Desde 1937, já se identificaram 350 substâncias no espaço. Nenhuma era açúcar.
+
+E por que isso importa?
+
+Porque açúcar não é só doce. É tijolo de DNA.
+
+Se ele se forma sozinho, na poeira, antes de existir estrela ou planeta — os ingredientes da vida podem estar prontos muito antes do endereço.
+
+Nada disso exigiu missão espacial bilionária. Foram dois telescópios que já estavam lá.
+
+Ciência básica é isso: parece que não serve pra nada, até responder a pergunta mais antiga que a gente tem.
+<span class="hash">#MePoupe #Ciencia #Astronomia #ViaLactea #Espaco #Nerd #Descoberta #Pesquisa #Astrobiologia #CienciaBasica #Curiosidade</span></div>
       </details>
     </article>
 
     <article class="item">
       <div class="num">05</div>
-      <div class="cat">Cultura · Educação · Reconhecimento</div>
-      <h4>Ayrton Senna entra para o Livro dos Heróis da Pátria — ao lado de Tiradentes e Zumbi</h4>
-      <p class="dek">A sanção da Lei 15.447/2026 inscreveu Ayrton Senna no Livro dos Heróis e Heroínas da Pátria, guardado no Panteão da Pátria, em Brasília — junto de nomes como Tiradentes, Zumbi dos Palmares, Santos Dumont, Irmã Dulce e Dom Hélder Câmara. Tricampeão mundial de Fórmula 1, Senna deixou um legado que foi além das pistas: o Instituto Ayrton Senna, criado após sua morte em 1994, atua há mais de 30 anos na transformação da educação pública brasileira e já beneficiou milhões de crianças e jovens.</p>
-      <p class="src">Fonte: Só Notícia Boa / Agência Brasil — <a href="https://www.sonoticiaboa.com.br/2026/07/12/ayrton-senna-imortalizado-heroi-da-patria-tiradentes-irma-dulce-entenda">ver matéria</a> · 12/07/2026</p>
+      <div class="cat">🇬🇧 Reino Unido · Saúde</div>
+      <h3>Remédio já aprovado em teste de segurança repara DNA no Alzheimer inicial</h3>
+      <p class="dek">Pesquisadores do King’s College London mostraram que o KCL-286 — desenvolvido originalmente para lesão medular e já aprovado em ensaio de Fase 1 — reparou quebras de fita dupla de DNA e reduziu inflamação em modelo animal de Alzheimer. Os dois processos aparecem nos estágios mais precoces da doença. Por já ter passado pela Fase 1, o cronograma de desenvolvimento encurta substancialmente.</p>
+      <p class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/drug-may-repair-dna-at-earliest-stages-of-alzheimers-and-its-already-passed-safety-trials/">Good News Network — 18/07/2026</a> · estudo publicado na FEBS Open Bio, com o professor Jonathan Corcoran e a pesquisadora Natasha Hill (King’s College London)</p>
+      <p class="orig">Título original: “Drug May Repair DNA at Earliest Stages of Alzheimer’s – And it’s Already Passed Safety Trials”</p>
       <div class="callout">
-        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-        <p>O que imortaliza não é o troféu, é o que fica depois. Trinta anos após a última corrida, o nome de Senna virou honraria nacional — sustentado por um instituto que educa milhões.</p>
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>Reaproveitar um remédio que já passou no teste de segurança é o atalho mais barato que a indústria farmacêutica conhece.</p>
       </div>
-      <div class="mp">
-        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
-        <span class="val">Fator MP 3/5</span>
-      </div>
-      <p class="status ok">✅ Verificada · Nível 1 (Lei 15.447/2026; Agência Brasil / Só Notícia Boa)</p>
-      <p class="why"><b>Por que merece mais atenção:</b> não é homenagem esportiva — pouquíssimos brasileiros entram no Livro dos Heróis da Pátria. O reconhecimento se apoia num legado de educação pública que forma gerações, lembrando que o que sobrevive de alguém é o que ele construiu para os outros.</p>
-      <details>
-        <summary>Copy Instagram · Me Poupe!</summary>
-        <div class="copy">Senna virou Herói da Pátria. Do lado de Tiradentes e Zumbi.
-
-A Lei 15.447/2026 inscreveu Ayrton Senna no Livro dos Heróis e Heroínas da Pátria, em Brasília. Um clube pequeno e seleto da história do Brasil.
-
-Mas o que imortaliza não é o tricampeonato. É o Instituto Ayrton Senna, que há 30 anos transforma a educação pública e já alcançou milhões de crianças.
-
-Troféu enferruja. Legado educa geração após geração.
-
-<span class="hash">#MePoupe #AyrtonSenna #HeroiDaPatria #Educacao #Legado #Brasil #Historia #Inspiracao #InstitutoAyrtonSenna #Orgulho</span></div>
-      </details>
-    </article>
-
-  </div>
-
-  <!-- DESTAQUE INTERNACIONAL -->
-  <div class="sec"><div class="eyebrow">Mundo</div><h2>Destaque internacional do dia</h2></div>
-  <article class="hero">
-    <div class="ghost">01</div>
-    <div class="cat">🇬🇧 Reino Unido · Saúde da mulher</div>
-    <h3>Um teste de saliva vai diagnosticar endometriose em dias — não mais nos nove anos de espera</h3>
-    <p class="dek">O sistema público de saúde britânico (NHS) aprovou dois exames não invasivos para endometriose: o Endotest, que analisa microRNAs na saliva, e o EndoSure, de 45 minutos, que mede sinais elétricos no intestino. Hoje o diagnóstico depende de uma laparoscopia com anestesia geral, e a espera média chega a mais de nove anos. A condição atinge cerca de uma em cada dez mulheres em idade reprodutiva. Especialistas chamaram os testes de “virada de jogo”: diagnóstico precoce, menos cirurgia e menos mulheres sendo mandadas de volta com a dor tratada como “coisa da sua cabeça”. Relatos como o de Ami Robertson, 23, que passou anos ouvindo que era “síndrome do intestino irritável”, ilustram a diferença.</p>
-    <p class="src">Fonte: Good News Network — <a href="https://www.goodnewsnetwork.org/new-test-scan-diagnose-endometriosis-in-days-rather-than-years/">ver matéria</a> · 11/07/2026</p>
-    <p class="orig">Título original: “‘Game-Changing’ Saliva Test Can Diagnose Endometriosis in Days Rather Than Years”</p>
-    <div class="callout">
-      <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-      <p>Nove anos de dor é o custo invisível de não ser ouvida. Um teste de saliva não só diagnostica cedo — ele devolve credibilidade a quem passou anos sendo desacreditada.</p>
-    </div>
-    <div class="mp">
-      <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
-      <span class="val">Fator MP 5/5</span>
-    </div>
-    <p class="status ok">✅ Verificada · Nível 1 (Good News Network / NHS, orientação do NICE, médicos nomeados)</p>
-    <p class="why"><b>Por que merece mais atenção:</b> a endometriose é subdiagnosticada no mundo todo, e a demora tem nome: dor crônica e descrédito. Trocar cirurgia por saliva encurta o caminho, libera vagas cirúrgicas e ataca de frente um viés de gênero que atinge milhões de mulheres — inclusive no Brasil.</p>
-    <details>
-      <summary>Copy Instagram · Me Poupe!</summary>
-      <div class="copy">9 anos pra ter um diagnóstico. Agora: dias.
-
-O sistema de saúde do Reino Unido aprovou testes de saliva pra endometriose. Antes: cirurgia com anestesia geral e uma espera média de mais de 9 anos. Uma em cada 10 mulheres tem a doença.
-
-“Virada de jogo”, disseram os especialistas.
-
-Diagnóstico rápido é mais que exame: é parar de dizer que a dor da mulher “é da cabeça dela”.
-
-<span class="hash">#MePoupe #Saude #Endometriose #SaudeDaMulher #Diagnostico #Ciencia #ReinoUnido #Inovacao #Prevencao #Cuidado</span></div>
-    </details>
-  </article>
-
-  <!-- MUNDO — DEMAIS -->
-  <div class="sec"><div class="eyebrow">Mundo</div><h2>Notícias internacionais</h2></div>
-  <div class="grid">
-
-    <article class="item">
-      <div class="num">02</div>
-      <div class="cat">🇯🇵 Japão · Ciência · Câncer</div>
-      <h4>Uma bactéria do intestino de um sapo eliminou tumores em camundongos — com uma única dose</h4>
-      <p class="dek">Cientistas do Instituto Avançado de Ciência e Tecnologia do Japão (JAIST), liderados pelo professor Eijiro Miyako, isolaram uma bactéria natural (<em>Ewingella americana</em>) do intestino de uma perereca japonesa. Em camundongos com câncer colorretal, uma única aplicação intravenosa levou à eliminação completa do tumor na totalidade dos casos — superando terapias-padrão e ativando o sistema imune do animal. A bactéria desaparece do organismo em cerca de 24h e não colonizou órgãos sadios. O estudo saiu na revista científica <em>Gut Microbes</em>. Atenção: é resultado pré-clínico, em animais; ainda há um longo caminho até testes em humanos.</p>
-      <p class="src">Fonte: Good News Network — <a href="https://www.goodnewsnetwork.org/japanese-find-frog-bacteria-that-wipes-out-cancer-tumors-with-a-single-dose/">ver matéria</a> · 12/07/2026</p>
-      <p class="orig">Título original: “Japanese Team Finds Frog Bacteria That Wipes Out Cancer Tumors With a Single Dose”</p>
-      <div class="callout">
-        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-        <p>O tesouro estava onde ninguém procurava: no intestino de um sapo. Biodiversidade é ativo de pesquisa — quem protege a natureza guarda, sem saber, a farmácia do futuro.</p>
-      </div>
-      <div class="mp">
+      <div class="meter">
         <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
-        <span class="val">Fator MP 4/5</span>
+        <span class="mnum">Fator MP 4/5</span>
       </div>
-      <p class="status warn">⚠️ Verificada com ressalva · resultado pré-clínico (em animais); revista Gut Microbes, JAIST / prof. Eijiro Miyako. Não é tratamento humano.</p>
-      <p class="why"><b>Por que merece mais atenção:</b> é ciência de fronteira ligando biodiversidade e cura, publicada em periódico revisado por pares. Não é remédio de gente — mas mostra, com um exemplo concreto, por que preservar espécies é também preservar possibilidades de medicina.</p>
+      <p class="status">✅ Nível 1 — universidade e periódico nomeados, com pesquisadores identificados. ⚠️ Estágio pré-clínico: resultado em modelo animal, não em pacientes.</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        A aposta terapêutica muda de alvo: em vez de amiloide e tau — onde os fármacos vêm falhando —, ataca dano de DNA e inflamação. A economia por trás é o ponto: reposicionar molécula que já venceu a Fase 1 elimina o trecho mais caro e demorado do funil. Ressalva obrigatória: modelo em camundongo não é promessa de eficácia humana.</div>
       <details>
-        <summary>Copy Instagram · Me Poupe!</summary>
-        <div class="copy">O antitumor estava no intestino de um sapo.
+        <summary>Copy Instagram</summary>
+        <div class="copy">Um remédio de lesão na medula pode virar remédio de Alzheimer.
 
-Cientistas do Japão isolaram uma bactéria de uma perereca. Em camundongos com câncer, uma única dose eliminou os tumores — e ainda ligou o sistema imune. Publicado na revista Gut Microbes.
+Pesquisadores do King’s College London testaram o KCL-286 num modelo animal da doença. Ele reparou quebras de DNA e reduziu inflamação — dois processos que aparecem BEM no começo do Alzheimer.
 
-Calma: é em animais. Ainda tem um longo caminho até virar remédio de gente.
+Enquanto isso, a indústria vem batendo cabeça há anos mirando amiloide e tau, com resultado clínico limitado.
 
-Mas o recado fica: biodiversidade é a farmácia do futuro. Proteger a natureza é proteger a cura.
+Mas o detalhe mais esperto é outro.
 
-<span class="hash">#MePoupe #Ciencia #Cancer #Pesquisa #Biodiversidade #Saude #Japao #Inovacao #Natureza #Esperanca</span></div>
+Esse remédio já passou na Fase 1 de segurança em humanos. Pra outra doença.
+
+Sabe o que isso significa? Que o trecho mais caro e mais demorado do desenvolvimento já foi pago.
+
+Reposicionar remédio é o atalho mais barato que a farmacêutica conhece.
+
+Importante: ainda é camundongo. Não é paciente. Não é cura.
+
+Mas é ciência mudando de alvo depois de anos errando o mesmo. E isso já é notícia boa.
+<span class="hash">#MePoupe #Ciencia #Alzheimer #Saude #Pesquisa #Neurociencia #Longevidade #Medicina #Inovacao #KingsCollege #Nerd</span></div>
       </details>
     </article>
 
     <article class="item">
-      <div class="num">03</div>
-      <div class="cat">🇺🇸 EUA · Memória · Inspiração</div>
-      <h4>Ele passou dez anos gravando 3 mil veteranos da 2ª Guerra antes que as histórias sumissem</h4>
-      <p class="dek">Há uma década, o americano Rishi Sharma, hoje com 28 anos, começou a registrar em vídeo entrevistas com veteranos de combate da Segunda Guerra Mundial. A curiosidade virou missão: 3.000 veteranos depois, seus HDs e cartões de memória se tornaram uma espécie de tesouro nacional. Quando ele começou, cerca de 700 mil veteranos ainda estavam vivos nos EUA; hoje são 30 mil. “Passei cada dia dos últimos 10 anos fazendo isso”, disse Sharma ao repórter Steve Hartman, da CBS, após conversar com um sobrevivente de Iwo Jima de 100 anos.</p>
-      <p class="src">Fonte: Good News Network — <a href="https://www.goodnewsnetwork.org/young-man-interviews-3000-world-war-ii-vets-over-10-year-project-preserving-their-stories/">ver matéria</a> · 13/07/2026</p>
-      <p class="orig">Título original: “Young Man Interviews 3,000 World War II Vets Over 10-year Project–Preserving Their Stories”</p>
+      <div class="num">06</div>
+      <div class="cat">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Escócia · Saúde neonatal</div>
+      <h3>Nascida com 22 semanas e 511 gramas, Hope vai para casa após 142 dias</h3>
+      <p class="dek">Hope nasceu quase quatro meses antes do previsto, pesando 511 gramas, e cabia na palma da mão do médico. Passou 85 dias em cuidados intensivos em Glasgow e seguiu para a unidade neonatal do Victoria Hospital, no NHS Fife. A enfermeira-chefe Amy Moran classificou a recuperação como “notável”. Os pais criaram a Hope’s Tiny Tapes, que fabrica fitas para fixar cânulas de oxigênio em bebês — parte da renda vai para a unidade neonatal.</p>
+      <p class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/19/bebe-nasceu-22-semanas-500-gramas-alta-casa-hope">Só Notícia Boa, a partir de NHS Fife / SWNS — 19/07/2026</a></p>
       <div class="callout">
-        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-        <p>Memória que não é gravada some com quem a viveu. Um jovem transformou paciência em arquivo — o tipo de investimento que só rende para as próximas gerações.</p>
+        <div class="lab">Proposta de leitura · Me Poupe!</div>
+        <p>A família não fez campanha de doação. Montou um negócio — e devolveu parte da receita para a UTI que salvou a filha.</p>
       </div>
-      <div class="mp">
+      <div class="meter">
         <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
-        <span class="val">Fator MP 3/5</span>
+        <span class="mnum">Fator MP 3/5</span>
       </div>
-      <p class="status ok">✅ Verificada · Nível 1 (Good News Network / CBS News, “On the Road”, Steve Hartman)</p>
-      <p class="why"><b>Por que merece mais atenção:</b> enquanto a geração que viveu a guerra desaparece — de 700 mil para 30 mil —, um jovem decidiu correr contra o tempo para preservar 3 mil relatos. É a prova de que dedicação persistente cria patrimônio onde antes havia só esquecimento.</p>
+      <p class="status">✅ Nível 1 — NHS Fife como fonte institucional, com declaração nominal da enfermeira-chefe da unidade neonatal.</p>
+      <div class="why"><b>Por que merece mais atenção</b>
+        O que diferencia esta história do gênero “superação de bebê prematuro” é o desfecho econômico: em vez de vaquinha, os pais criaram uma empresa resolvendo um problema que viveram na pele — fixação de cânula em recém-nascido — com repasse de parte da receita ao hospital. É gratidão estruturada como modelo de negócio, não como evento único.</div>
       <details>
-        <summary>Copy Instagram · Me Poupe!</summary>
-        <div class="copy">10 anos. 3.000 veteranos. Antes que as histórias sumissem.
+        <summary>Copy Instagram</summary>
+        <div class="copy">511 gramas.
 
-Rishi tinha 18 anos quando começou a gravar entrevistas com veteranos da 2ª Guerra. Virou missão de vida.
+Meio quilo. Hope nasceu com 22 semanas, quase quatro meses antes da hora, e cabia na palma da mão do médico.
 
-Quando ele começou, eram 700 mil vivos nos EUA. Hoje, 30 mil.
+142 dias internada. 85 deles em terapia intensiva.
 
-Os HDs dele viraram tesouro nacional.
+Ontem, foi pra casa.
 
-Memória não gravada some com quem viveu. Paciência que vira arquivo é herança pra sempre.
+Só que o final dessa história não é o que você está esperando.
 
-<span class="hash">#MePoupe #Historia #Memoria #Veteranos #Legado #EUA #Inspiracao #2GuerraMundial #Dedicacao #Registro</span></div>
+Os pais não abriram vaquinha.
+
+Abriram uma empresa.
+
+A Hope’s Tiny Tapes faz fitas pra fixar cânula de oxigênio em bebê — exatamente o problema que eles viveram na pele durante quatro meses de UTI.
+
+E parte da receita volta pra unidade neonatal que salvou a filha.
+
+Gratidão que dura um post é emoção.
+
+Gratidão que vira negócio é sistema.
+
+Adivinha qual das duas ainda vai estar de pé daqui a dez anos.
+<span class="hash">#MePoupe #EducacaoFinanceira #Empreendedorismo #Prematuro #Saude #NegociosDeImpacto #Familia #Superacao #Renda #Maternidade #Inovacao</span></div>
       </details>
     </article>
 
-    <article class="item">
-      <div class="num">04</div>
-      <div class="cat">🇬🇧 Reino Unido · Arqueologia · Cultura</div>
-      <h4>Perto da Muralha de Adriano, aparece uma estátua romana enterrada há 1.600 anos “para dar sorte”</h4>
-      <p class="dek">Uma estátua romana perfeitamente preservada, deliberadamente enterrada há 1.600 anos, foi desenterrada perto da Muralha de Adriano, no norte da Inglaterra. A figura de arenito, de 45 cm, representa um “Gênio” — o espírito protetor de um lugar, que segurava uma cornucópia, símbolo de prosperidade. O arqueólogo Andrew Birley — terceira geração de sua família a liderar escavações no forte de Vindolanda — encontrou a peça em 16 de junho, sob o piso de um antigo alojamento militar. Relevos esculpidos de um Gênio são raros; a escultura passará por conservação e irá para o museu do sítio.</p>
-      <p class="src">Fonte: Good News Network — <a href="https://www.goodnewsnetwork.org/roman-genius-spirit-statue-buried-1600-years-ago-found-by-hadrians-wall/">ver matéria</a> · 12/07/2026</p>
-      <p class="orig">Título original: “Roman ‘Genius’ Spirit Statue Buried 1,600 Years Ago Found by Hadrian’s Wall”</p>
-      <div class="callout">
-        <div class="cl-l">Proposta de leitura · Me Poupe!</div>
-        <p>O que se guarda com cuidado atravessa milênios. Uma estátua enterrada “para dar sorte” virou, dois mil anos depois, a sorte de quem estuda a história — patrimônio não tem prazo de validade.</p>
-      </div>
-      <div class="mp">
-        <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
-        <span class="val">Fator MP 3/5</span>
-      </div>
-      <p class="status ok">✅ Verificada · Nível 1 (Good News Network / The Vindolanda Trust; Archaeology Magazine)</p>
-      <p class="why"><b>Por que merece mais atenção:</b> descobertas de relevos romanos assim são raríssimas, e esta vem de um dos sítios mais bem preservados da Grã-Bretanha. É um lembrete de que curiosidade e preservação — e três gerações de uma mesma família cavando — transformam pedra enterrada em conhecimento vivo.</p>
-      <details>
-        <summary>Copy Instagram · Me Poupe!</summary>
-        <div class="copy">Enterraram “pra dar sorte” há 1.600 anos. Acabou de aparecer.
+  </section>
 
-Perto da Muralha de Adriano, na Inglaterra, arqueólogos acharam uma estátua romana intacta: um “Gênio”, espírito protetor, segurando uma cornucópia — símbolo de prosperidade.
+  <!-- (7) DESCARTES -->
+  <p class="discard">🚫 <b>14 descartadas.</b> Repetidas no ledger: baleias-jubarte no Brasil, tumba de Luxor, dono de restaurante que devolveu US$ 12 mil, arenques do Maine, café e fígado. Fora da janela ou de fonte em cache: seções da Agência Brasil (conteúdo de 04/07 servido em cache), dados Sebrae de meses anteriores. Fora da linha editorial: resultados da Copa do Mundo (Espanha × Argentina, França × Paraguai), Mega-Sena, memes de IA. Pauta fraca ou puramente viral: pombo com oxigênio, dinâmica escolar, cachorros escolhendo pelúcia. Saúde sem confirmação Nível 1: polilaminina em tetraplegia (relato individual em rede social) e psilocibina em Alzheimer (caso único).</p>
 
-Quem escavou é a 3ª geração da mesma família a trabalhar no sítio.
-
-O que se guarda com cuidado atravessa milênios. Patrimônio não tem prazo de validade.
-
-<span class="hash">#MePoupe #Historia #Arqueologia #Roma #Cultura #Descoberta #ReinoUnido #Patrimonio #Ciencia #Curiosidade</span></div>
-      </details>
-    </article>
-
-  </div>
-
-  <!-- DESCARTES -->
-  <div class="discard">
-    <b>🚫 6 descartadas.</b> Repetidas (já entregues em edições anteriores): menino superdotado e a descoberta matemática na Bienal, fisioterapeuta que ajuda menino com paralisia a andar e menina palestina ouro na Olimpíada de Matemática — todas do ledger de 13/07. Fora da janela de 5 dias: “Polilaminina chega a 100 pacientes” (lesão medular, publicada em 08/07). Celebridade / doação pontual: Richarlison doa R$ 60 mil para bebê. Retida por falta de confirmação de fonte primária Nível 1 (repetição de execuções anteriores): vacina experimental alemã contra tumor cerebral (DKFZ / <em>Nature</em>). Fora de escopo: resgates e desdobramentos do terremoto na Venezuela (tragédia) e resultados diários da Copa do Mundo (esporte cotidiano).
-  </div>
-
-  <!-- FECHAMENTO -->
-  <div class="closing">
-    <div class="eyebrow">Fecho da curadoria</div>
-    <p>A tela do dia foi Copa e câmbio — mas o que muda vida ficou na margem: um estudante da UFF colocando 2,6 milhões de brasileiros na conversa com uma câmera de celular, 2,9 milhões de pequenos negócios abertos em seis meses, um teste de saliva encurtando nove anos de dor para dias. Menos manchete, mais lastro. O retorno que a Me Poupe! persegue todo dia não é o de hoje — é o que educação, empreendedorismo e ciência constroem para durar.</p>
-  </div>
+  <!-- (8) FECHAMENTO -->
+  <section class="fecho">
+    <p>O mercado passou anos dizendo que crédito para mulher empreendedora era arriscado.</p>
+    <p>Aí alguém mediu: <span class="kick">0,06% de inadimplência.</span></p>
+    <p style="font-size:17px;color:var(--txt2);max-width:52ch;font-weight:400">O dado sempre esteve lá. Faltava quem olhasse. Enquanto isso, um senhor de 78 anos estudava IA no YouTube e uma filha salvava a loja do pai com um vídeo de sandália. Ciclo não se quebra com discurso — se quebra com número na mão e coragem de contrariar a régua. <b style="color:var(--amarelo);font-weight:600">Sua vez: qual dado sobre você o mercado ainda não mediu?</b></p>
+  </section>
 
   <footer>
-    <span>Me Poupe! · Curadoria diária de boas notícias · GoodNewsMP-14/07/26</span>
-    <span>Janela: últimos 5 dias · 9 histórias (7 ✅ · 2 ⚠️) · Fator MP médio 4.0/5</span>
+    <span>GoodNewsMP-20/07/26 · Me Poupe! · Curadoria diária</span>
+    <span>Janela: 15–20/07/2026 · 10 histórias · 9 ✅ · 1 ⚠️ · 14 🚫</span>
   </footer>
 
 </div>
