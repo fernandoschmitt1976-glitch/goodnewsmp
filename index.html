@@ -3,77 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodNewsMP-20/07/26 — Boas notícias que o Brasil não viu</title>
+<title>GoodNewsMP-21/07/26 — Boas notícias que o Brasil não viu</title>
 <style>
-:root{
-  --bg:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af;
-  --fio:rgba(255,255,255,.10); --texto:#fff; --suave:rgba(255,255,255,.62);
-}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--texto);
- font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
- line-height:1.55;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1040px;margin:0 auto;padding:64px 28px 96px}
-.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--lilas);font-weight:600}
-h1{font-size:clamp(34px,5.4vw,58px);font-weight:300;letter-spacing:-.035em;margin:18px 0 22px;line-height:1.04}
-.meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:12px;color:var(--suave)}
-.tag{border:1px solid var(--fio);border-radius:999px;padding:4px 12px}
-.tag.amarela{border-color:rgba(255,236,100,.4);color:var(--amarelo)}
-hr.fio{border:0;border-top:1px solid var(--fio);margin:56px 0}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:52px 0 0;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
-.kpi{padding:26px 20px;border-right:1px solid var(--fio)}
-.kpi:last-child{border-right:0}
-.kpi .n{font-size:34px;font-weight:300;letter-spacing:-.03em;line-height:1}
-.kpi .l{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--suave);margin-top:9px}
-.kpi .s{font-size:11px;color:var(--lilas);margin-top:5px}
-h2.sec{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--suave);font-weight:600;margin:64px 0 34px}
-.hero{position:relative;padding:8px 0 0}
-.ghost{position:absolute;top:-38px;right:0;font-size:150px;font-weight:200;color:rgba(255,255,255,.05);line-height:1;letter-spacing:-.06em;pointer-events:none}
-.cat{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--lilas);font-weight:600}
-.hero h3{font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:-.03em;line-height:1.15;margin:14px 0 16px;max-width:22ch}
-.item h3{font-size:21px;font-weight:400;letter-spacing:-.02em;line-height:1.25;margin:12px 0 12px}
-.dek{color:var(--suave);font-size:15px;max-width:62ch;margin:0 0 16px}
-.fonte{font-size:12px;color:var(--suave);margin:0 0 6px}
-.fonte a{color:var(--lilas);text-decoration:none;border-bottom:1px solid rgba(131,138,255,.35)}
-.orig{font-size:11px;color:rgba(255,255,255,.38);margin:0 0 18px;font-style:italic}
-.callout{border-left:2px solid var(--amarelo);padding:4px 0 4px 16px;margin:20px 0;max-width:58ch}
-.callout .t{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--amarelo);font-weight:600;margin-bottom:6px}
-.callout p{margin:0;font-size:14px;color:rgba(255,255,255,.86)}
-.medidor{display:flex;align-items:center;gap:10px;margin:18px 0 12px}
-.barras{display:flex;gap:4px}
-.b{width:26px;height:5px;background:rgba(255,255,255,.13);border-radius:2px}
-.b.on{background:var(--verde)}
-.mp{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--suave)}
-.status{font-size:12px;margin:0 0 14px}
-.status.ok{color:var(--verde)}
-.status.alerta{color:var(--amarelo)}
-.porque{font-size:14px;color:rgba(255,255,255,.78);max-width:60ch;margin:0 0 18px}
-.porque b{color:#fff;font-weight:600}
-details{border-top:1px solid var(--fio);padding-top:14px;margin-top:6px}
-summary{cursor:pointer;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--lilas);font-weight:600;list-style:none}
-summary::-webkit-details-marker{display:none}
-details p{font-size:14px;color:rgba(255,255,255,.82);white-space:pre-line;max-width:60ch}
-.hash{color:var(--lilas);font-size:13px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
-.item{padding:34px 34px 34px 0;border-top:1px solid var(--fio);position:relative}
-.grid .item:nth-child(even){padding-left:34px;border-left:1px solid var(--fio);padding-right:0}
-.num{position:absolute;top:34px;right:0;font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.1em}
-.grid .item:nth-child(even) .num{right:0}
-.bandeira{font-size:14px;margin-right:6px}
-.descartes{margin:64px 0 0;padding:22px 0;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio);font-size:13px;color:var(--suave)}
-.descartes b{color:var(--vermelho);font-weight:600}
-.fecho{margin:64px 0 0;max-width:64ch}
-.fecho p{font-size:19px;font-weight:300;letter-spacing:-.015em;line-height:1.5;color:rgba(255,255,255,.92)}
-.fecho p .destaque{color:var(--amarelo)}
-footer{margin-top:72px;padding-top:26px;border-top:1px solid var(--fio);font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.04em}
-@media(max-width:760px){
- .kpis{grid-template-columns:repeat(2,1fr)}
- .kpi:nth-child(2){border-right:0}
- .kpi:nth-child(3),.kpi:nth-child(4){border-top:1px solid var(--fio)}
- .grid{grid-template-columns:1fr}
- .item,.grid .item:nth-child(even){padding-left:0;padding-right:0;border-left:0}
- .ghost{font-size:96px;top:-24px}
-}
+  :root { color-scheme: light }
+  *{box-sizing:border-box}
+  body{background:#1B0A3A;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:56px 28px 80px}
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#838aff;margin-bottom:22px}
+  h1{font-weight:300;letter-spacing:-.035em;font-size:clamp(34px,6vw,58px);line-height:1.04;margin:0 0 22px}
+  .meta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12px;color:rgba(255,255,255,.5)}
+  .tag{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:4px 12px;color:#ffec64}
+  .hair{height:1px;background:rgba(255,255,255,.10);border:0;margin:44px 0}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.10)}
+  .kpi{background:#1B0A3A;padding:22px 18px}
+  .kpi .n{font-size:30px;font-weight:300;letter-spacing:-.03em;display:block}
+  .kpi .l{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:6px;display:block}
+  .kpi .sub{font-size:11px;color:#838aff;margin-top:4px;display:block}
+  h2.sec{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500;margin:0 0 30px}
+  .hero{position:relative;padding-top:12px}
+  .ghost{position:absolute;top:-30px;right:0;font-size:150px;font-weight:200;color:rgba(255,255,255,.045);line-height:1;letter-spacing:-.06em;pointer-events:none}
+  .cat{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#838aff;margin-bottom:12px}
+  .hl{font-weight:400;letter-spacing:-.03em;line-height:1.14;margin:0 0 14px}
+  .hero .hl{font-size:clamp(26px,4.2vw,40px)}
+  .grid .hl{font-size:21px}
+  .dek{color:rgba(255,255,255,.7);font-size:15px;margin:0 0 16px;max-width:60ch}
+  .src{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:6px}
+  .src a{color:#838aff;text-decoration:none}
+  .orig{font-size:11px;color:rgba(255,255,255,.32);font-style:italic;margin-bottom:16px}
+  .callout{border-left:2px solid #ffec64;padding:4px 0 4px 16px;margin:18px 0;font-size:14px;color:rgba(255,255,255,.82)}
+  .callout b{color:#ffec64;font-weight:500;display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+  .mp{display:flex;align-items:center;gap:10px;margin:16px 0 10px}
+  .bars{display:flex;gap:3px}
+  .bar{width:20px;height:5px;background:rgba(255,255,255,.14);border-radius:2px}
+  .bar.on{background:#83e9af}
+  .mpn{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.08em}
+  .status{font-size:12px;color:#83e9af;margin-bottom:14px}
+  .status.warn{color:#ffec64}
+  .why{font-size:13px;color:rgba(255,255,255,.62);border-top:1px solid rgba(255,255,255,.08);padding-top:14px;max-width:64ch}
+  .why b{color:rgba(255,255,255,.85);font-weight:500}
+  details{margin-top:16px;font-size:13px}
+  summary{cursor:pointer;color:#838aff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;outline:none}
+  details .copy{margin-top:14px;color:rgba(255,255,255,.75);white-space:pre-wrap;border-left:1px solid rgba(255,255,255,.12);padding-left:16px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.10)}
+  .cell{background:#1B0A3A;padding:34px 26px}
+  .num{font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.1em;margin-bottom:14px}
+  .discard{font-size:13px;color:#e6483f;margin:40px 0 0}
+  .close{font-size:19px;font-weight:300;line-height:1.5;color:rgba(255,255,255,.9);max-width:62ch;letter-spacing:-.01em}
+  .close em{color:#ffec64;font-style:normal}
+  footer{margin-top:56px;font-size:11px;color:rgba(255,255,255,.32);line-height:1.8}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.ghost{font-size:96px}}
 </style>
 </head>
 <body>
@@ -82,352 +60,191 @@ footer{margin-top:72px;padding-top:26px;border-top:1px solid var(--fio);font-siz
   <div class="eyebrow">Me Poupe! · Curadoria diária</div>
   <h1>Boas notícias que o Brasil não viu</h1>
   <div class="meta">
-    <span class="tag">GoodNewsMP-20/07/26</span>
-    <span class="tag amarela">Janela: últimos 5 dias</span>
-    <span class="tag">2ª edição do dia</span>
+    <span>GoodNewsMP-21/07/26</span>
+    <span class="tag">Janela: últimos 5 dias</span>
   </div>
 
+  <hr class="hair">
+
   <div class="kpis">
-    <div class="kpi"><div class="n">9</div><div class="l">Histórias</div><div class="s">5 nac · 4 int</div></div>
-    <div class="kpi"><div class="n">5</div><div class="l">Verificadas ✅</div><div class="s">Nível 1</div></div>
-    <div class="kpi"><div class="n">14</div><div class="l">Descartadas 🚫</div><div class="s">4 com alerta ⚠️</div></div>
-    <div class="kpi"><div class="n">4,0</div><div class="l">Fator MP médio</div><div class="s">de 5,0</div></div>
+    <div class="kpi"><span class="n">5</span><span class="l">Histórias</span><span class="sub">2 nac · 3 int</span></div>
+    <div class="kpi"><span class="n">5</span><span class="l">Verificadas ✅</span><span class="sub">todas Nível 1</span></div>
+    <div class="kpi"><span class="n">9</span><span class="l">Descartadas 🚫</span><span class="sub">janela, repetição, pauta fraca</span></div>
+    <div class="kpi"><span class="n">4,0</span><span class="l">Fator MP médio</span><span class="sub">de 5</span></div>
   </div>
+
+  <hr class="hair">
 
   <h2 class="sec">Destaque nacional do dia</h2>
   <div class="hero">
     <div class="ghost">01</div>
-    <div class="cat">Empreendedorismo · Crédito</div>
-    <h3>O Brasil vai medir, cidade por cidade, o que trava o crédito para mulheres que empreendem</h3>
-    <p class="dek">Sebrae e Ministério do Empreendedorismo criaram o Índice Municipal de Empreendedorismo Feminino (IEFM), em fase piloto em dez cidades das cinco regiões. Ele cruza cinco dimensões — crédito, tecnologia, mercado, educação empreendedora e suporte político-institucional — e chega a indicadores que ninguém costuma associar a negócio: oferta de creches, participação feminina na política, presença de mulheres em cursos de ciência e tecnologia. Municípios-piloto: Parintins (AM), Macapá (AP), Imperatriz (MA), Juazeiro (BA), Lucas do Rio Verde (MT), Anápolis (GO), Volta Redonda (RJ), Suzano (SP), Lages (SC) e Pelotas (RS).</p>
-    <p class="fonte">Fonte: Agência Sebrae de Notícias, 17/07/2026 — <a href="https://agenciasebrae.com.br/cultura-empreendedora/novo-indice-vai-mapear-os-desafios-enfrentados-pelos-municipios-para-destravar-credito-e-apoiar-mulheres-que-empreendem/">ler matéria</a></p>
-    <div class="callout">
-      <div class="t">Proposta de leitura · Me Poupe!</div>
-      <p>Falta de crédito para mulher nunca foi falta de capacidade. É falta de creche, de histórico bancário, de dado. O que não se mede, não se corrige — e o Brasil acabou de começar a medir.</p>
-    </div>
-    <div class="medidor">
-      <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span></div>
-      <span class="mp">Fator MP 5/5</span>
-    </div>
-    <p class="status ok">✅ Nível 1 — Sebrae e Ministério do Empreendedorismo, com fontes nomeadas (Renata Malheiros Henriques, gestora do Sebrae Delas)</p>
-    <p class="porque"><b>Por que merece mais atenção:</b> a manchete parece burocrática, mas o conteúdo é político. O índice trata creche e representatividade como <b>infraestrutura de crédito</b> — não como pauta social paralela. Se a metodologia for automatizada para os 5.570 municípios, como o Sebrae pretende após o piloto, vira o primeiro mapa nacional do que impede uma mulher de abrir e manter um negócio no Brasil.</p>
-    <details>
-      <summary>Copy Instagram</summary>
-      <p>Creche é política de crédito.
+    <div class="cat">Educação · Pequenos negócios</div>
+    <h3 class="hl">Sebrae abre plataforma gratuita de capacitação com mentoria ao vivo para dono de micro e pequena empresa</h3>
+    <p class="dek">O Sebrae Ingresse reúne cursos, jornadas de aprendizagem, mentorias e encontros ao vivo com especialistas — de marketing digital a gestão financeira e tributação — com acesso pelo celular e certificado digital. Em 2025 foram 18 cursos em 1.819 turmas, média de 64,78 matrículas por turma. Há trilha exclusiva para mulheres empreendedoras (Mulheres em Foco, Ganha-Ganha, Invista em Você, Marca Pessoal Poderosa) e o Decola MEI em seis segmentos: Moda, Beleza, Transporte, Entretenimento, Casa e Construção, Alimentos e Bebidas.</p>
+    <div class="src">Fonte: Agência Sebrae de Notícias, 17/07/2026 · <a href="https://agenciasebrae.com.br/cultura-empreendedora/plataforma-gratuita-amplia-acesso-a-capacitacao-e-fortalece-a-competitividade-dos-pequenos-negocios/">ler na fonte</a></div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>A barreira do dono de negócio pequeno nunca foi só dinheiro — foi tempo e acesso. A contadora Aline Grasiela, de Mogi Guaçu (SP), passou uma década como empregada, abriu escritório próprio digital e diz que o curso de marketing foi "um divisor de águas": tinha medo de gravar vídeo. Capacitação gratuita é crédito disfarçado — só que sem juros.</div>
+    <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></span><span class="mpn">Fator MP 5/5</span></div>
+    <div class="status">✅ Verificada — Nível 1 (Agência Sebrae, com fonte nomeada e caso identificado)</div>
+    <div class="why"><b>Por que merece mais atenção:</b> a conversa pública sobre empreendedorismo brasileiro gira em torno de crédito e teto do MEI. Gestão — precificar, separar caixa pessoal do caixa da empresa, vender — é o que quebra o negócio antes do juro. Uma plataforma gratuita com mentor ao vivo ataca exatamente o ponto que ninguém filma.</div>
+    <details><summary>Copy Instagram</summary><div class="copy">Curso de marketing. Gratuito. Com mentor ao vivo.
 
-Parece exagero? Não é.
+Aline era funcionária de escritório contábil. Dez anos. Abriu o próprio negócio, 100% digital — e travava na hora de gravar vídeo.
 
-O novo Índice Municipal de Empreendedorismo Feminino — do Sebrae com o Ministério do Empreendedorismo — mede acesso a crédito, tecnologia, mercado e educação empreendedora nas cidades brasileiras. E coloca, lado a lado com a taxa de juros, a oferta de creches públicas.
+Fez quatro cursos do Sebrae Ingresse. Marketing, finanças, marca pessoal.
 
-Porque o banco pergunta o histórico. Ninguém pergunta com quem fica a criança.
+Hoje posta com constância. E a carteira de clientes cresceu.
 
-Piloto rodando em 10 cidades, de Parintins a Pelotas. Depois, o país inteiro.
+Aqui vai o que ninguém te conta: falta de capacitação é custo. Aparece na margem, no preço errado, no cliente que não volta.
 
-"Aquilo que é medido pode ser melhorado."
+Só que esse custo tem versão gratuita.
 
-Salva esse post. E manda pra quem empreende com um filho no colo. 💛
+Cursos, mentoria ao vivo, certificado. Trilha só para mulheres. Decola MEI em seis segmentos.
 
-#MePoupe #EmpreendedorismoFeminino #CréditoParaMulheres #Sebrae #MEI #EducaçãoFinanceira #PequenosNegócios #MulheresQueEmpreendem #FinançasPessoais #Brasil</p>
-    </details>
+Você não precisa de mais crédito. Precisa saber o que fazer com ele.
+
+#MePoupe #EducaçãoFinanceira #MEI #PequenosNegócios #Empreendedorismo #Sebrae #GestãoFinanceira #MulheresEmpreendedoras #MarketingDigital #NegócioPróprio</div></details>
   </div>
+
+  <hr class="hair">
 
   <h2 class="sec">Brasil — as demais histórias</h2>
   <div class="grid">
-
-    <div class="item">
+    <div class="cell">
       <div class="num">02</div>
-      <div class="cat">Microempreendedorismo</div>
-      <h3>Influenciador compra todos os donuts de mãe que trabalhava com o bebê no colo — e arrecada R$ 300 mil</h3>
-      <p class="dek">Josilene vendia donuts em Maceió (AL) carregando o filho. O influenciador Renato Júnior comprou o estoque inteiro, gravou o vídeo e transformou a cena em campanha: R$ 300 mil arrecadados para a empreendedora estruturar o negócio.</p>
-      <p class="fonte">Fonte: Só Notícia Boa, 17/07/2026 — <a href="https://www.sonoticiaboa.com.br/2026/07/17/influenciador-compra-todos-donuts-mae-bebe-colo-arrecada-r-300-mil-realizar-sonho">ler matéria</a></p>
-      <div class="callout">
-        <div class="t">Proposta de leitura · Me Poupe!</div>
-        <p>R$ 300 mil resolvem a Josilene. O que não resolve: por que uma mãe precisa de viralização para ter capital de giro.</p>
-      </div>
-      <div class="medidor">
-        <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b"></span></div>
-        <span class="mp">Fator MP 4/5</span>
-      </div>
-      <p class="status alerta">⚠️ Nível 2 — apuração do SNB a partir de conteúdo de redes sociais (@renatojunioriat); valor arrecadado não auditado por fonte independente</p>
-      <p class="porque"><b>Por que merece mais atenção:</b> é a história de quebra de ciclo mais compartilhável da semana e, ao mesmo tempo, a mais desconfortável. A generosidade individual funcionou onde o sistema de microcrédito não chegou. Vale contar celebrando a Josilene — e cobrando o crédito que deveria ter chegado antes do influenciador.</p>
-      <details>
-        <summary>Copy Instagram</summary>
-        <p>Ela vendia donuts com o filho no colo.
+      <div class="cat">Ciência · Saúde pública</div>
+      <h3 class="hl">Três deep techs do Norte e do Centro-Oeste passam para a etapa nacional do desafio que quer levar tecnologia de oncologia ao SUS</h3>
+      <p class="dek">Smart Saag (RO), Biotech Tecnologia Genômica Especializada (GO) e BioSpin Nanotech (AM) foram selecionadas no Hackaton SUS, realizado no Hospital Universitário de Brasília. Duas delas passaram pelo programa Catalisa ICT, do Sebrae. A final, em dezembro de 2026, premia com R$ 100 mil, R$ 50 mil e R$ 30 mil do Ministério da Saúde. Execução prevista até abril de 2027, com acordo entre Sebrae, Ministério da Saúde, MDIC, Anvisa, HU Brasil e Opas.</p>
+      <div class="src">Fonte: Agência Sebrae de Notícias, 16/07/2026 · <a href="https://agenciasebrae.com.br/inovacao-e-tecnologia/startups-das-regioes-norte-e-centro-oeste-criam-solucoes-aplicaveis-para-o-sistema-unico-de-saude/">ler na fonte</a></div>
+      <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Rondônia, Goiás e Amazonas competindo em deep tech de oncologia. O mapa da inovação brasileira que a gente aprendeu na escola tem eixo Rio–São Paulo. Esse aqui não tem.</div>
+      <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></span><span class="mpn">Fator MP 4/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (Agência Sebrae, startups e gestores nomeados)</div>
+      <div class="why"><b>Por que merece mais atenção:</b> o Sebrae atende 25 mil startups no país e a segunda maior carteira é saúde — cerca de 3 mil empresas. Tecnologia de ponta nascendo fora do eixo, com compra pública no horizonte, é política industrial acontecendo sem manchete.</div>
+      <details><summary>Copy Instagram</summary><div class="copy">Rondônia. Goiás. Amazonas.
 
-Um vídeo. R$ 300 mil.
+Três empresas dessas regiões acabaram de passar para a etapa nacional de um desafio de tecnologia em oncologia para o SUS.
 
-O influenciador comprou o estoque inteiro da Josilene, em Maceió, e a internet fez o resto. Sonho realizado, negócio de pé, final feliz.
+Deep tech. A categoria mais difícil de empreender que existe — anos de pesquisa antes do primeiro real de receita.
 
-Agora a pergunta chata: e as milhares de Josilenes que ninguém filmou?
+Prêmio na final: R$ 100 mil. Ministério da Saúde paga.
 
-Capital de giro não devia depender de algoritmo. Devia depender de crédito.
+Aqui está a virada: duas delas foram apoiadas por um programa público de aceleração. Não nasceram em garagem do Vale do Silício.
 
-Comemora a vitória dela. Cobra o sistema. Dá pra fazer os dois. 💛
+Nasceram onde ninguém procura.
 
-#MePoupe #Microempreendedorismo #CapitalDeGiro #EducaçãoFinanceira #Maceió #MEI #Microcrédito #PequenosNegócios #Empreendedorismo #Brasil</p>
-      </details>
+Inovação não é CEP. É acesso.
+
+#MePoupe #EducaçãoFinanceira #Startups #DeepTech #SUS #Inovação #Empreendedorismo #Amazonas #Rondônia #CiênciaBrasileira #Sebrae</div></details>
     </div>
-
-    <div class="item">
-      <div class="num">03</div>
-      <div class="cat">Saúde · Oncologia</div>
-      <h3>Anvisa registra novo biológico contra o linfoma mais agressivo do sangue</h3>
-      <p class="dek">Publicado no Diário Oficial nesta segunda (20), o registro do Columvi (glofitamabe) libera no Brasil um anticorpo biespecífico que redireciona o sistema imune contra as células tumorais. É indicado para linfoma difuso de grandes células B recidivante ou refratário — cerca de 4 mil diagnósticos por ano no país. Tratamento intravenoso, sem internação, 12 ciclos em ~8,3 meses. O estudo global publicado na Lancet apontou redução de 41% no risco de morte e remissão completa em 50,3% dos participantes, contra 22% do grupo comparativo.</p>
-      <p class="fonte">Fonte: Agência Brasil, 20/07/2026 — <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/anvisa-aprova-novo-medicamento-para-linfoma-nao-hodgkin">ler matéria</a></p>
-      <div class="callout">
-        <div class="t">Proposta de leitura · Me Poupe!</div>
-        <p>Registro na Anvisa não é preço acessível. É a primeira porta. A segunda — incorporação ao SUS — é a que decide quem vai viver.</p>
-      </div>
-      <div class="medidor">
-        <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b"></span></div>
-        <span class="mp">Fator MP 4/5</span>
-      </div>
-      <p class="status ok">✅ Nível 1 — Anvisa (RE nº 2.831/2026, DOU), com estudo revisado por pares na Lancet</p>
-      <p class="porque"><b>Por que merece mais atenção:</b> o dado que a cobertura padrão omite é o efeito de segunda ordem. O medicamento é indicado justamente a pacientes <b>sem condições clínicas para o transplante autólogo</b> — ou seja, quem antes ficava sem opção. E a aplicação ambulatorial derruba custo de leito, que é o argumento econômico decisivo numa futura análise da Conitec para o SUS.</p>
-      <details>
-        <summary>Copy Instagram</summary>
-        <p>Aprovado. Mas ainda não é seu.
-
-A Anvisa registrou hoje um biológico contra o linfoma mais agressivo do sangue. Ele treina o próprio sistema imune para atacar o tumor.
-
-Os números da Lancet: 41% menos risco de morte. Metade dos pacientes em remissão completa.
-
-E o detalhe que quase ninguém contou: ele é feito pra quem não aguenta transplante. Pra quem já tinha ouvido "não tem mais o que fazer".
-
-Aplicação sem internação. Custo de leito zero.
-
-Registro é a porta 1. SUS é a porta 2. Fica de olho nessa. 💛
-
-#MePoupe #Saúde #Anvisa #SUS #Oncologia #Linfoma #CiênciaBrasileira #AcessoASaúde #EducaçãoFinanceira #Brasil</p>
-      </details>
-    </div>
-
-    <div class="item">
-      <div class="num">04</div>
-      <div class="cat">Inovação · Startups</div>
-      <h3>Sebrae faz o primeiro mapa nacional das deeptechs brasileiras</h3>
-      <p class="dek">O Sebrae Startups abriu um diagnóstico inédito para entender por que a ciência brasileira trava no caminho entre o laboratório e o mercado. O levantamento mede maturidade tecnológica (TRL), acesso a capital, infraestrutura científica, regulação, propriedade intelectual e internacionalização — em IA, biotecnologia, saúde, agro, novos materiais, energia, robótica e tecnologias espaciais. Inscrições até 27 de julho, às 18h.</p>
-      <p class="fonte">Fonte: Agência Sebrae de Notícias, 17/07/2026 — <a href="https://agenciasebrae.com.br/inovacao-e-tecnologia/deeptechs-entram-no-radar-do-sebrae-startups-com-mapeamento-nacional-inedito/">ler matéria</a></p>
-      <div class="callout">
-        <div class="t">Proposta de leitura · Me Poupe!</div>
-        <p>O Brasil publica ciência de primeira linha e patenteia pouco. O gargalo raramente é a pesquisa — é o dinheiro que não atravessa a ponte.</p>
-      </div>
-      <div class="medidor">
-        <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b"></span></div>
-        <span class="mp">Fator MP 4/5</span>
-      </div>
-      <p class="status ok">✅ Nível 1 — Sebrae Startups, com diagnóstico público e prazo verificável</p>
-      <p class="porque"><b>Por que merece mais atenção:</b> é uma pauta de "chamada aberta" que a imprensa ignora porque não tem número fechado ainda. Mas quem se inscreve entra na Vitrine Deeptechs e ganha exposição direta a investidores. Para uma startup de base científica fora do eixo Rio-SP, isso vale mais do que a maioria dos editais.</p>
-      <details>
-        <summary>Copy Instagram</summary>
-        <p>Prazo: 27 de julho, 18h.
-
-O Brasil produz ciência boa. E vê essa ciência morrer na porta do mercado.
-
-O Sebrae Startups abriu o primeiro mapeamento nacional das deeptechs — startups nascidas de laboratório. IA, biotecnologia, energia, agro, robótica, espaço.
-
-Não é pesquisa acadêmica. É diagnóstico de gargalo: onde falta capital, laboratório, regulação, cliente.
-
-Quem participa entra na Vitrine Deeptechs e aparece pra investidor.
-
-Se você tem ciência virando negócio, o relógio tá correndo. ⏱️
-
-#MePoupe #Deeptech #Startups #Inovação #Sebrae #CiênciaBrasileira #Empreendedorismo #Investimento #PequenosNegócios #Brasil</p>
-      </details>
-    </div>
-
-    <div class="item">
-      <div class="num">05</div>
-      <div class="cat">Boas ações · Consumo</div>
-      <h3>Donos de trailer devolvem Pix de R$ 2 mil que cliente enviou por engano</h3>
-      <p class="dek">Ricardo e Mariana tocam um trailer no Recreio dos Bandeirantes (RJ). Um cliente errou o valor da transferência e mandou R$ 2 mil. O casal devolveu na hora — e registrou.</p>
-      <p class="fonte">Fonte: Só Notícia Boa, 17/07/2026 — <a href="https://www.sonoticiaboa.com.br/2026/07/17/honestidade-donos-trailer-devolvem-pix-r-2-mil-cliente-pagou-engano">ler matéria</a></p>
-      <div class="callout">
-        <div class="t">Proposta de leitura · Me Poupe!</div>
-        <p>Pix errado tem procedimento — o MED, do Banco Central. Mas nenhum mecanismo é mais rápido que um comerciante honesto.</p>
-      </div>
-      <div class="medidor">
-        <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b"></span><span class="b"></span></div>
-        <span class="mp">Fator MP 3/5</span>
-      </div>
-      <p class="status alerta">⚠️ Nível 2 — relato apurado pelo SNB a partir de conteúdo de rede social (@ricardokombista)</p>
-      <p class="porque"><b>Por que merece mais atenção:</b> serve de gancho para uma informação que muita gente ainda não tem — o Mecanismo Especial de Devolução do Banco Central existe, é gratuito e se aciona pelo próprio app do banco. A história dá o afeto; o serviço dá a utilidade.</p>
-      <details>
-        <summary>Copy Instagram</summary>
-        <p>Pix de R$ 2 mil. No trailer errado.
-
-Ricardo e Mariana viram o valor cair, viram que era engano e devolveram na hora. Sem drama, sem espera.
-
-Agora anota, porque um dia pode ser você:
-
-Pix errado tem volta. Chama-se MED — Mecanismo Especial de Devolução, do Banco Central. É gratuito. Aciona pelo app do seu banco.
-
-Mas olha o incômodo: existe procedimento pra quando falta honestidade. Não existe procedimento pra quando ela sobra.
-
-Sorte deles ter dado nos dois. 💛
-
-#MePoupe #Pix #EducaçãoFinanceira #BancoCentral #MED #FinançasPessoais #PequenosNegócios #Honestidade #DicaFinanceira #Brasil</p>
-      </details>
-    </div>
-
   </div>
+
+  <hr class="hair">
 
   <h2 class="sec">Destaque internacional do dia</h2>
   <div class="hero">
     <div class="ghost">01</div>
-    <div class="cat"><span class="bandeira">🇪🇬</span> Egito · Arqueologia</div>
-    <h3>As filhas do faraó eram arqueiras de verdade — os ossos provaram o que o museu tratava como enfeite</h3>
-    <p class="dek">Por décadas, especialistas discutiram se as armas encontradas em câmaras funerárias de princesas egípcias eram objetos simbólicos ou ferramentas de uso. A reavaliação de seis múmias reais escavadas em Dahshur nos anos 1890 fechou a discussão: inserções musculares robustas e fraturas consolidadas mostram que elas usavam arco e flecha. A princesa Itaweret, de 20 a 34 anos, sobreviveu a costelas e ossos do pé quebrados; o esqueleto é de uma arqueira treinada. A princesa Ita, de 28 a 34, tinha musculatura superior compatível com maças e adagas — e uma adaga no próprio caixão.</p>
-    <p class="fonte">Fonte: Good News Network, 19/07/2026 — <a href="https://www.goodnewsnetwork.org/pharaohs-daughters-were-skilled-at-archery-4000-years-ago-reveals-new-research/">ler matéria</a> · estudo de Zeinab Hashesh na revista Frontiers in Environmental Archaeology</p>
-    <p class="orig">Título original: “Pharaoh’s Daughters Were Skilled at Archery 4,000 Years ago, Reveals New Research”</p>
-    <div class="callout">
-      <div class="t">Proposta de leitura · Me Poupe!</div>
-      <p>As armas estavam ali o tempo todo. O que faltava não era evidência — era disposição para lê-la de outro jeito.</p>
-    </div>
-    <div class="medidor">
-      <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span></div>
-      <span class="mp">Fator MP 5/5</span>
-    </div>
-    <p class="status ok">✅ Nível 1 — estudo revisado por pares (Frontiers in Environmental Archaeology), pesquisadora e instituição nomeadas</p>
-    <p class="porque"><b>Por que merece mais atenção:</b> o achado não é sobre o Egito antigo. É sobre método. As mesmas múmias estavam catalogadas há 130 anos; o que mudou foi a pergunta. Quando o pressuposto era "arma em túmulo de mulher só pode ser símbolo", o dado ficou invisível. Há um segundo detalhe silencioso: as fraturas <b>consolidaram bem</b> — havia medicina de alto padrão por trás dessas atletas.</p>
-    <details>
-      <summary>Copy Instagram</summary>
-      <p>130 anos catalogadas como enfeite.
+    <div class="cat">🇺🇸 Ciência · Meio ambiente</div>
+    <h3 class="hl">Startup usa dados genômicos para trazer de volta a castanheira-americana — sem engenharia genética</h3>
+    <p class="dek">A SilvaBio cruzou análise genômica com um processo próprio de "reprodução acelerada" por luz de alta intensidade, encurtando o ciclo de melhoramento de mais de 10 anos para cerca de um. O resultado é a cultivar Darling54: em teste duplo-cego, as lesões causadas pela ferrugem-do-castanheiro ficaram ordens de grandeza menores que nas variedades comuns. Um exemplar foi plantado na Casa Branca no Dia da Árvore de 2026. Os fundadores, Andrew Serazin e Michael Bloom, afirmam que a mesma abordagem pode servir ao olmo, ao freixo e ao carvalho-branco americanos.</p>
+    <div class="src">Fonte: Good News Network (EUA), 20/07/2026 · <a href="https://www.goodnewsnetwork.org/biotech-startup-breeds-blight-tolerant-american-chestnut-without-any-genetic-defects/">ler na fonte</a></div>
+    <div class="orig">Título original: "Biotech Startup Breeds Blight Tolerant American Chestnut Without Any Genetic Defects"</div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>A castanheira-americana foi declarada funcionalmente extinta. Em 2023, uma tentativa anterior — árvore geneticamente modificada, décadas de trabalho — perdeu o apoio da própria fundação que a financiava, por defeitos genéticos documentados. Esta versão não mexeu no gene: acelerou a seleção natural. Reconhecer o erro caro e mudar de método é gestão, não só ciência.</div>
+    <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></span><span class="mpn">Fator MP 4/5</span></div>
+    <div class="status">✅ Verificada — Nível 1 (empresa, fundadores e cultivar nomeados; teste duplo-cego citado)</div>
+    <div class="why"><b>Por que merece mais atenção:</b> 41% da biomassa florestal viva dos EUA está ameaçada por apenas 15 pragas exóticas — e a madeira é um setor de US$ 350 bilhões. A história costuma ser contada como ecologia. É também balanço patrimonial: um ativo dado como perdido voltando à carteira.</div>
+    <details><summary>Copy Instagram</summary><div class="copy">Uma árvore declarada extinta acabou de voltar.
 
-Arco, flecha e adaga estavam nos túmulos das princesas egípcias desde a escavação, em 1890. A ciência chamou de "simbólico". Mulher não caçava, certo?
+A castanheira-americana dominava as florestas dos EUA. Um fungo trazido da Ásia derrubou praticamente todas no início do século 20.
 
-Errado.
+Décadas de tentativa com engenharia genética. Em 2023, a própria fundação que bancava o projeto retirou o apoio: a árvore tinha defeito.
 
-Novo estudo leu os ossos: musculatura de arqueira. Costelas quebradas e curadas. Pé fraturado e recuperado. A princesa Itaweret treinava. A princesa Ita usava adaga.
+Aí veio a virada.
 
-O dado nunca esteve escondido. A pergunta é que estava.
+Uma startup não mexeu no gene. Leu o DNA de milhares de mudas, previu quais resistiriam e acelerou o cruzamento com luz artificial.
 
-Quantas coisas você já viu e não enxergou porque alguém te disse o que era? 🏹
+Ciclo de 10 anos virou 1.
 
-#MePoupe #Arqueologia #Egito #Ciência #Mulheres #História #QuebrandoParadigmas #PesquisaCientífica #Curiosidade #Conhecimento</p>
-    </details>
+Resultado testado às cegas. E uma muda plantada na Casa Branca.
+
+O que isso ensina sobre dinheiro: teimar no método errado custa décadas. Trocar de método custa um ano.
+
+#MePoupe #EducaçãoFinanceira #Ciência #Inovação #MeioAmbiente #Biotecnologia #Florestas #Startups #DadosEDecisão #LongoPrazo</div></details>
   </div>
+
+  <hr class="hair">
 
   <h2 class="sec">Mundo — notícias internacionais</h2>
   <div class="grid">
-
-    <div class="item">
+    <div class="cell">
       <div class="num">02</div>
-      <div class="cat"><span class="bandeira">🇳🇴</span> Noruega · Infraestrutura</div>
-      <h3>A 300 metros abaixo do mar do Norte, a Noruega escava o maior túnel rodoviário submarino do mundo</h3>
-      <p class="dek">O Rogfast terá quase 27 km — 12 km a mais que o recordista atual, o próprio túnel norueguês de Ryfylke. Vai transformar uma viagem de 5 horas com duas balsas, entre Stavanger e Bergen, em menos de uma hora de carro. Custo estimado em pouco menos de € 1 bilhão, com encontro das duas frentes de escavação previsto para 2029 e abertura em 2033. Os 85 milhões de m³ de rocha retirada vão formar uma ilha artificial. E há um salão subterrâneo iluminado em cores vibrantes — com função prática: impedir que motoristas durmam ao volante na monotonia do escuro.</p>
-      <p class="fonte">Fonte: Good News Network, 20/07/2026 — <a href="https://www.goodnewsnetwork.org/longest-undersea-road-tunnel-to-shorten-travel-times-by-5-hours-and-feature-great-hall-of-lights/">ler matéria</a> · dados da Administração Rodoviária Pública da Noruega e da MIT Technology Review</p>
-      <p class="orig">Título original: “Longest Undersea Road Tunnel to Shorten Travel Times by 5 Hours and Feature ‘Great Hall of Lights’”</p>
-      <div class="callout">
-        <div class="t">Proposta de leitura · Me Poupe!</div>
-        <p>Obra de € 1 bilhão projetada para durar cem anos. Custo alto, prazo longo, retorno geracional — o oposto exato de como a maioria dos países decide investir.</p>
-      </div>
-      <div class="medidor">
-        <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b"></span></div>
-        <span class="mp">Fator MP 4/5</span>
-      </div>
-      <p class="status ok">✅ Nível 1 — Administração Rodoviária Pública da Noruega, com apuração de campo da MIT Technology Review</p>
-      <p class="porque"><b>Por que merece mais atenção:</b> o ângulo não é a engenharia — é o horizonte de decisão. Um projeto que começa a dar retorno sete anos depois do primeiro real gasto e é dimensionado para o século seguinte. E o rejeito virou ativo: a rocha escavada vira ilha em vez de virar problema logístico. Custo evitado é economia real.</p>
-      <details>
-        <summary>Copy Instagram</summary>
-        <p>Cinco horas viram cinquenta minutos.
+      <div class="cat">🇬🇧 Tecnologia para o povo</div>
+      <h3 class="hl">Geladeira enterrada no jardim conserva alimentos a 8–15 °C mesmo em onda de calor — quase sem luz elétrica</h3>
+      <p class="dek">Projetada pelo inventor holandês Floris Schoonderbeek e instalada pela primeira vez no Reino Unido no OmVed Gardens, em Highgate (norte de Londres), a Ground Fridge usa a temperatura estável do subsolo e ventilação movida a energia solar, que puxa o ar frio da noite. Capacidade equivalente a cerca de doze geladeiras familiares. Custa em torno de £ 12 mil mais impostos, com custo de operação mínimo.</p>
+      <div class="src">Fonte: Positive News (Reino Unido), 20/07/2026 · <a href="https://www.positive.news/society/the-underground-fridge-that-keeps-food-cool-even-in-a-heatwave/">ler na fonte</a></div>
+      <div class="orig">Título original: "The underground fridge that keeps food cool – even in a heatwave"</div>
+      <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Caro na compra, barato no uso. É o cálculo que quase ninguém faz na loja de eletrodoméstico: o preço da etiqueta é só a entrada — a conta de luz é a prestação que não acaba.</div>
+      <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></span><span class="mpn">Fator MP 4/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (inventor, local e responsável pela cozinha nomeados)</div>
+      <div class="why"><b>Por que merece mais atenção:</b> a ideia é antiga — casas de gelo e adegas de terra existem há séculos. O que mudou foi o custo relativo da energia. Tecnologia esquecida volta a fazer sentido quando o preço da conta de luz muda a matemática. Vale para geladeira e vale para orçamento doméstico.</div>
+      <details><summary>Copy Instagram</summary><div class="copy">Tem uma geladeira enterrada num jardim de Londres.
 
-A Noruega está explodindo rocha a 300 metros abaixo do mar do Norte para construir o maior túnel rodoviário submarino do planeta. 27 km. € 1 bilhão. Abre em 2033.
+Sem compressor. Sem barulho. Quase sem luz elétrica.
 
-Faz as contas: eles começaram a gastar hoje por um retorno que chega daqui a sete anos — e que dura cem.
+Ela usa o que está debaixo dos seus pés: a temperatura do solo, que quase não muda. Ventilação solar puxa o ar frio da madrugada.
 
-Detalhe nerd: os 85 milhões de m³ de pedra retirada não viram entulho. Viram uma ilha artificial nova.
+Onda de calor lá fora. Entre 8 e 15 graus lá dentro.
 
-Outro detalhe: tem um salão iluminado em cores lá dentro. Não é enfeite. É pra motorista não dormir no volante.
+Preço: caro. Cerca de £ 12 mil.
 
-Investimento de longo prazo é isso. Chato, caro e transformador. 💛
+Aí vem a conta que ninguém faz: ela guarda o equivalente a doze geladeiras e a fatura de energia é quase zero.
 
-#MePoupe #Investimento #LongoPrazo #Infraestrutura #Noruega #Engenharia #PlanejamentoFinanceiro #EducaçãoFinanceira #Curiosidade #Mundo</p>
-      </details>
+Preço de etiqueta é entrada. Custo de uso é prestação.
+
+E prestação é o que quebra orçamento.
+
+#MePoupe #EducaçãoFinanceira #ContaDeLuz #CustoDeVida #Sustentabilidade #OrçamentoDoméstico #Inovação #Economia #ConsumoConsciente #DecisãoDeCompra</div></details>
     </div>
-
-    <div class="item">
+    <div class="cell">
       <div class="num">03</div>
-      <div class="cat"><span class="bandeira">🇺🇸</span> EUA · Trabalho e renda</div>
-      <h3>Passageira vê idoso trabalhando com dificuldade em aeroporto e arrecada cerca de R$ 1 milhão para ele se aposentar</h3>
-      <p class="dek">A passageira LaCinda gravou um vídeo ao notar o esforço de um funcionário idoso durante o expediente. A campanha viralizou e chegou perto de R$ 1 milhão — o bastante para ele parar de trabalhar.</p>
-      <p class="fonte">Fonte: Só Notícia Boa, 18/07/2026, a partir de TikTok (@boymom692) e KSL — <a href="https://www.sonoticiaboa.com.br/2026/07/18/passageira-idoso-trabalhando-dificuldade-aeroporto-arrecada-r-1-milhao-aposentar">ler matéria</a></p>
-      <div class="callout">
-        <div class="t">Proposta de leitura · Me Poupe!</div>
-        <p>Não é história de bondade. É história de previdência que não cobriu — resolvida por vaquinha.</p>
-      </div>
-      <div class="medidor">
-        <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b"></span></div>
-        <span class="mp">Fator MP 4/5</span>
-      </div>
-      <p class="status alerta">⚠️ Nível 2 — origem em rede social, com cobertura da emissora KSL; valor arrecadado não auditado de forma independente</p>
-      <p class="porque"><b>Por que merece mais atenção:</b> o enquadramento óbvio é "internet do bem". O enquadramento útil é o inverso: alguém trabalhando com dor aos 70 e poucos anos não é uma falha de caráter nem um acidente — é o retrato de quem chegou à idade de parar sem reserva. A vaquinha salvou um. O tema salva milhões, se for tratado como planejamento e não como sorte.</p>
-      <details>
-        <summary>Copy Instagram</summary>
-        <p>R$ 1 milhão pra ele poder parar.
+      <div class="cat">🇺🇸 Saúde · Família</div>
+      <h3 class="hl">Menina de 2 anos doa medula e salva a irmã de 5 com anemia aplástica</h3>
+      <p class="dek">Emma Meline, de Salt Lake City, foi diagnosticada com anemia aplástica — doença rara em que a medula deixa de produzir células do sangue — quatro dias antes do Natal de 2025, após a mãe, Amanda, levá-la ao pediatra por causa de uma erupção e um inchaço na perna. Uma das irmãs gêmeas mais novas, Lucy, era compatibilidade genética perfeita. O transplante foi em 17 de fevereiro; a alta, em 11 de março. Cem dias depois, sem recidiva: sucesso completo. "Meu jeito favorito dela dizer era: estou sendo corajosa pela Emma", contou a mãe.</p>
+      <div class="src">Fonte: Good News Network (EUA), 20/07/2026, a partir de entrevista exclusiva à revista People · <a href="https://www.goodnewsnetwork.org/after-5-yo-diagnosed-with-rare-disease-younger-sister-wanted-to-be-her-brave-bone-marrow-donor/">ler na fonte</a></div>
+      <div class="orig">Título original: "After 5-yo Diagnosed with Rare Disease, Little Sister Wanted to Be Her 'Brave' Bone Marrow Donor"</div>
+      <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Doar medula não custa dinheiro. Custa coragem — e no caso, a coragem tinha dois anos de idade.</div>
+      <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></span><span class="mpn">Fator MP 3/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (família nomeada, datas e diagnóstico específicos, entrevista à People)</div>
+      <div class="why"><b>Por que merece mais atenção:</b> transplante de medula depende de compatibilidade, e a maioria dos pacientes não tem um doador dentro de casa — depende de gente desconhecida cadastrada em registro. Toda vez que uma dessas histórias circula, o cadastro sobe. É o raro caso em que a boa notícia é, ela mesma, a política pública.</div>
+      <details><summary>Copy Instagram</summary><div class="copy">Ela tem dois anos. E salvou a irmã de cinco.
 
-Uma passageira viu o funcionário idoso do aeroporto trabalhando com dificuldade. Gravou. Postou. A internet fez o resto.
+Emma foi diagnosticada quatro dias antes do Natal. Anemia aplástica: a medula parou de fabricar sangue.
 
-História linda. E um alerta escancarado.
+Sem transplante, não havia caminho.
 
-Ninguém trabalha com dor aos 70 e tantos por opção. Trabalha porque a reserva não existe.
+A irmã caçula, Lucy, era compatibilidade perfeita.
 
-A vaquinha resolveu um caso. Reserva de aposentadoria resolve o seu.
+Antes de cada coleta de sangue, ela repetia a mesma frase: "estou sendo corajosa pela Emma".
 
-Começa pequeno. Começa hoje. Mas começa. 💛
+Transplante em fevereiro. Alta em março. Cem dias depois: sem recidiva.
 
-#MePoupe #Aposentadoria #ReservaFinanceira #Previdência #EducaçãoFinanceira #PlanejamentoFinanceiro #FinançasPessoais #LongoPrazo #Investimentos #Mundo</p>
-      </details>
+Aqui está o ponto que quase ninguém fala: a maioria dos pacientes não tem doador em casa. Depende de estranho cadastrado.
+
+Doar medula não tira nada do seu bolso.
+
+E devolve uma vida inteira.
+
+#MePoupe #DoaçãoDeMedula #Saúde #Família #Solidariedade #Transplante #Coragem #BoasNotícias #FaçaOCadastro #VidaQueSegue</div></details>
     </div>
-
-    <div class="item">
-      <div class="num">04</div>
-      <div class="cat"><span class="bandeira">🇺🇸</span> EUA · Longevidade</div>
-      <h3>Aos 92 anos, ele continua atendendo em restaurante e explica por quê: “não pretendo parar”</h3>
-      <p class="dek">Conhecido como Mister Gil, ele trabalha em uma unidade do Chick-fil-A em Wilmington e descreve a função como missão: acolher e alegrar quem entra.</p>
-      <p class="fonte">Fonte: Só Notícia Boa, 20/07/2026, a partir de reportagem da WRAL — <a href="https://www.sonoticiaboa.com.br/2026/07/20/idoso-trabalha-92-anos-restaurante-afirma-nao-pretendo-parar-conta-motivo">ler matéria</a></p>
-      <div class="callout">
-        <div class="t">Proposta de leitura · Me Poupe!</div>
-        <p>Trabalhar aos 92 por escolha e trabalhar aos 92 por necessidade são histórias opostas com a mesma fotografia. A diferença chama-se independência financeira.</p>
-      </div>
-      <div class="medidor">
-        <div class="barras"><span class="b on"></span><span class="b on"></span><span class="b on"></span><span class="b"></span><span class="b"></span></div>
-        <span class="mp">Fator MP 3/5</span>
-      </div>
-      <p class="status alerta">⚠️ Nível 2 — relato individual apurado pelo SNB a partir de reportagem da emissora WRAL</p>
-      <p class="porque"><b>Por que merece mais atenção:</b> vale publicar em par com a história anterior. Duas pessoas idosas trabalhando; uma escolheu, a outra não teve alternativa. É o argumento mais claro e menos moralista que existe sobre por que reserva importa — ela não te obriga a parar, te dá o direito de decidir.</p>
-      <details>
-        <summary>Copy Instagram</summary>
-        <p>Dois senhores. Dois empregos. Uma diferença.
-
-Um trabalha aos 92 porque quer. Diz que a missão dele é acolher as pessoas que entram no restaurante. "Não pretendo parar."
-
-O outro trabalhava com dor até a internet arrecadar R$ 1 milhão pra ele poder descansar.
-
-Mesma foto. Histórias opostas.
-
-Independência financeira não é sobre parar de trabalhar.
-
-É sobre poder escolher.
-
-Passa pro lado. Você já entendeu. 💛
-
-#MePoupe #IndependênciaFinanceira #Aposentadoria #Longevidade #EducaçãoFinanceira #Liberdade #PlanejamentoFinanceiro #FinançasPessoais #Reserva #Mundo</p>
-      </details>
-    </div>
-
   </div>
 
-  <div class="descartes">
-    <b>🚫 14 descartadas</b> — repetidas no ledger (bebê Hope/NHS Fife, sapataria salva no TikTok, Move Motoristas/BNDES, Padi Brasil, Fampe Mulher, MEI com 2º funcionário, tumba de Luxor); fora da linha editorial (final da Copa do Mundo, Shakira, Madonna, Nico Williams, Lamine Yamal, mudança do sorteio da Mega-Sena); saúde sem confirmação Nível 1 (polilaminina em tetraplegia, psilocibina em Alzheimer — casos individuais); tragédia adjacente (bebê dado como morto em hospital); pauta viral fraca (pombo com oxigênio, cães escolhendo pelúcia, dinâmica escolar). Também descartada a página "Últimas notícias" da Agência Sebrae, devolvida em <b>cache</b> com conteúdo de 03/07 — fora da janela.
-  </div>
+  <p class="discard">🚫 9 descartadas — 4 por já constarem no ledger (pautas do Sebrae de 16–17/07 e o resumo semanal da Positive News), 2 por estarem fora da janela de 5 dias (velas feitas por refugiados, 07/07; início da coleta da PNS 2026, 12/07), 3 por fragilidade editorial (pombo socorrido por bombeiros, policial que recupera bicicleta furtada, policial de porte avantajado no Texas).</p>
 
-  <div class="fecho">
-    <p>Nove histórias. Em quatro delas, alguém precisou de um vídeo viral, de uma vaquinha ou de um estranho generoso para conseguir o que sistema nenhum entregou — capital de giro, aposentadoria, dignidade no fim da carreira. Nas outras cinco, alguém decidiu <span class="destaque">medir</span>: o que trava o crédito da mulher em Parintins, onde a ciência brasileira empaca, o que os ossos de uma princesa realmente contam. A generosidade comove e resolve um caso. O dado incomoda e resolve o padrão. <span class="destaque">A Me Poupe! aposta no segundo — e é por isso que a gente insiste em ensinar você a fazer conta.</span></p>
-  </div>
+  <hr class="hair">
+
+  <p class="close">A conversa sobre dinheiro no Brasil trava sempre no mesmo ponto: falta crédito, falta juro menor, falta teto maior. Hoje, nenhuma das duas histórias nacionais é sobre dinheiro novo. Uma é curso de graça com mentor ao vivo. A outra é ciência de ponta feita em Porto Velho, Goiânia e Manaus.<br><br><em>Acesso não é o mesmo que capital. E costuma vir antes dele.</em></p>
 
   <footer>
-    GoodNewsMP-20/07/26 · 2ª edição do dia · Curadoria diária Me Poupe! · Janela: últimos 5 dias (15–20/07/2026) · 9 histórias · 5 ✅ · 4 ⚠️ · 14 🚫
+    GoodNewsMP-21/07/26 · Curadoria diária Me Poupe! · Janela editorial: últimos 5 dias (16–21/07/2026)<br>
+    Todas as manchetes verificadas na fonte primária. Nenhum título, dado ou citação inventado. Manchetes estrangeiras traduzidas com o original registrado.
   </footer>
 
 </div>
