@@ -3,249 +3,315 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodNewsMP-21/07/26 — Boas notícias que o Brasil não viu</title>
+<title>GoodNewsMP-28/07/26 — Boas notícias que o Brasil não viu</title>
 <style>
-  :root { color-scheme: light }
-  *{box-sizing:border-box}
-  body{background:#1B0A3A;color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;margin:0;padding:0;line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1040px;margin:0 auto;padding:56px 28px 80px}
-  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#838aff;margin-bottom:22px}
-  h1{font-weight:300;letter-spacing:-.035em;font-size:clamp(34px,6vw,58px);line-height:1.04;margin:0 0 22px}
-  .meta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:12px;color:rgba(255,255,255,.5)}
-  .tag{border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:4px 12px;color:#ffec64}
-  .hair{height:1px;background:rgba(255,255,255,.10);border:0;margin:44px 0}
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.10)}
-  .kpi{background:#1B0A3A;padding:22px 18px}
-  .kpi .n{font-size:30px;font-weight:300;letter-spacing:-.03em;display:block}
-  .kpi .l{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:6px;display:block}
-  .kpi .sub{font-size:11px;color:#838aff;margin-top:4px;display:block}
-  h2.sec{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:500;margin:0 0 30px}
-  .hero{position:relative;padding-top:12px}
-  .ghost{position:absolute;top:-30px;right:0;font-size:150px;font-weight:200;color:rgba(255,255,255,.045);line-height:1;letter-spacing:-.06em;pointer-events:none}
-  .cat{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#838aff;margin-bottom:12px}
-  .hl{font-weight:400;letter-spacing:-.03em;line-height:1.14;margin:0 0 14px}
-  .hero .hl{font-size:clamp(26px,4.2vw,40px)}
-  .grid .hl{font-size:21px}
-  .dek{color:rgba(255,255,255,.7);font-size:15px;margin:0 0 16px;max-width:60ch}
-  .src{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:6px}
-  .src a{color:#838aff;text-decoration:none}
-  .orig{font-size:11px;color:rgba(255,255,255,.32);font-style:italic;margin-bottom:16px}
-  .callout{border-left:2px solid #ffec64;padding:4px 0 4px 16px;margin:18px 0;font-size:14px;color:rgba(255,255,255,.82)}
-  .callout b{color:#ffec64;font-weight:500;display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
-  .mp{display:flex;align-items:center;gap:10px;margin:16px 0 10px}
-  .bars{display:flex;gap:3px}
-  .bar{width:20px;height:5px;background:rgba(255,255,255,.14);border-radius:2px}
-  .bar.on{background:#83e9af}
-  .mpn{font-size:11px;color:rgba(255,255,255,.5);letter-spacing:.08em}
-  .status{font-size:12px;color:#83e9af;margin-bottom:14px}
-  .status.warn{color:#ffec64}
-  .why{font-size:13px;color:rgba(255,255,255,.62);border-top:1px solid rgba(255,255,255,.08);padding-top:14px;max-width:64ch}
-  .why b{color:rgba(255,255,255,.85);font-weight:500}
-  details{margin-top:16px;font-size:13px}
-  summary{cursor:pointer;color:#838aff;font-size:11px;letter-spacing:.12em;text-transform:uppercase;outline:none}
-  details .copy{margin-top:14px;color:rgba(255,255,255,.75);white-space:pre-wrap;border-left:1px solid rgba(255,255,255,.12);padding-left:16px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.10)}
-  .cell{background:#1B0A3A;padding:34px 26px}
-  .num{font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.1em;margin-bottom:14px}
-  .discard{font-size:13px;color:#e6483f;margin:40px 0 0}
-  .close{font-size:19px;font-weight:300;line-height:1.5;color:rgba(255,255,255,.9);max-width:62ch;letter-spacing:-.01em}
-  .close em{color:#ffec64;font-style:normal}
-  footer{margin-top:56px;font-size:11px;color:rgba(255,255,255,.32);line-height:1.8}
-  @media(max-width:760px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}.ghost{font-size:96px}}
+  :root { color-scheme: light;
+    --bg:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af;
+    --fio:rgba(255,255,255,.10); --txt:#fff; --txt2:rgba(255,255,255,.72); --txt3:rgba(255,255,255,.5);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55}
+  .wrap{max-width:1060px;margin:0 auto;padding:56px 28px 80px}
+  .eyebrow{color:var(--lilas);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  header h1{font-size:clamp(34px,5.4vw,58px);font-weight:300;letter-spacing:-.03em;margin:14px 0 10px;line-height:1.08}
+  header h1 strong{font-weight:600}
+  .meta-line{color:var(--txt3);font-size:14px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:10px}
+  .janela{border:1px solid var(--fio);border-radius:999px;padding:3px 14px;font-size:12px;color:var(--amarelo)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio);margin:44px 0 0}
+  .kpi{padding:22px 18px;border-right:1px solid var(--fio)}
+  .kpi:last-child{border-right:none}
+  .kpi .num{font-size:34px;font-weight:300;letter-spacing:-.02em}
+  .kpi .lbl{font-size:12px;color:var(--txt3);margin-top:4px;text-transform:uppercase;letter-spacing:.12em}
+  .kpi .split{font-size:13px;color:var(--txt2)}
+  section{margin-top:64px}
+  .sec-title{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt3);border-bottom:1px solid var(--fio);padding-bottom:12px;margin-bottom:34px;display:flex;justify-content:space-between;align-items:baseline}
+  .hero{position:relative;padding:8px 0 8px 90px}
+  .ghost{position:absolute;left:0;top:-14px;font-size:96px;font-weight:200;color:rgba(255,255,255,.07);letter-spacing:-.05em}
+  .story{position:relative;padding:8px 0 8px 66px;border-bottom:1px solid var(--fio);padding-bottom:34px}
+  .story .ghost{font-size:56px;top:0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-left:0;padding-top:70px}.story{padding-left:0;padding-top:56px}.kpis{grid-template-columns:1fr 1fr}}
+  .cat{color:var(--lilas);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+  .flag{font-size:14px;margin-left:6px}
+  .hero h2{font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:-.025em;line-height:1.15;margin:12px 0}
+  .story h3{font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.25;margin:12px 0}
+  .dek{color:var(--txt2);font-size:15px;margin-bottom:14px}
+  .fonte{font-size:13px;color:var(--txt3)}
+  .fonte a{color:var(--verde);text-decoration:none;border-bottom:1px solid rgba(131,233,175,.35)}
+  .orig{font-size:12px;color:var(--txt3);font-style:italic;margin-top:4px}
+  .callout{border-left:2px solid var(--amarelo);padding:10px 0 10px 16px;margin:18px 0;color:var(--amarelo);font-size:14px}
+  .callout b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;opacity:.8}
+  .fator{display:flex;align-items:center;gap:10px;margin:14px 0 6px}
+  .bars{display:flex;gap:4px}
+  .bar{width:22px;height:8px;border-radius:2px;background:rgba(255,255,255,.12)}
+  .bar.on{background:var(--verde)}
+  .fator .n{font-size:13px;color:var(--txt2)}
+  .status{font-size:13px;margin:6px 0 12px}
+  .status.ok{color:var(--verde)}
+  .status.warn{color:var(--amarelo)}
+  .why{font-size:14px;color:var(--txt2);margin-top:10px}
+  .why b{color:var(--txt);font-weight:600}
+  details{margin-top:16px;border:1px solid var(--fio);border-radius:10px;padding:12px 16px}
+  details summary{cursor:pointer;font-size:13px;color:var(--lilas);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+  details .copy{margin-top:12px;font-size:14px;color:var(--txt2);white-space:pre-line}
+  .descartes{border:1px dashed rgba(230,72,63,.4);border-radius:12px;padding:22px 26px;color:var(--txt2);font-size:14px}
+  .descartes b{color:var(--vermelho)}
+  .fechamento{font-size:18px;font-weight:300;line-height:1.55;color:var(--txt);max-width:760px}
+  .fechamento em{color:var(--amarelo);font-style:normal}
+  footer{margin-top:70px;border-top:1px solid var(--fio);padding-top:22px;color:var(--txt3);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+<header>
   <div class="eyebrow">Me Poupe! · Curadoria diária</div>
-  <h1>Boas notícias que o Brasil não viu</h1>
-  <div class="meta">
-    <span>GoodNewsMP-21/07/26</span>
-    <span class="tag">Janela: últimos 5 dias</span>
+  <h1>Boas notícias que <strong>o Brasil não viu</strong></h1>
+  <div class="meta-line">
+    <span>GoodNewsMP-28/07/26</span>
+    <span class="janela">Janela: últimos 5 dias</span>
   </div>
+</header>
 
-  <hr class="hair">
+<div class="kpis">
+  <div class="kpi"><div class="num">7</div><div class="split">4 nac · 3 int</div><div class="lbl">Histórias</div></div>
+  <div class="kpi"><div class="num">4</div><div class="lbl">Verificadas ✅</div></div>
+  <div class="kpi"><div class="num">12</div><div class="lbl">Descartadas 🚫</div></div>
+  <div class="kpi"><div class="num">4,0</div><div class="lbl">Fator MP médio</div></div>
+</div>
 
-  <div class="kpis">
-    <div class="kpi"><span class="n">5</span><span class="l">Histórias</span><span class="sub">2 nac · 3 int</span></div>
-    <div class="kpi"><span class="n">5</span><span class="l">Verificadas ✅</span><span class="sub">todas Nível 1</span></div>
-    <div class="kpi"><span class="n">9</span><span class="l">Descartadas 🚫</span><span class="sub">janela, repetição, pauta fraca</span></div>
-    <div class="kpi"><span class="n">4,0</span><span class="l">Fator MP médio</span><span class="sub">de 5</span></div>
-  </div>
-
-  <hr class="hair">
-
-  <h2 class="sec">Destaque nacional do dia</h2>
-  <div class="hero">
+<!-- ====== HERO NACIONAL ====== -->
+<section>
+  <div class="sec-title"><span>Destaque nacional do dia</span></div>
+  <article class="hero">
     <div class="ghost">01</div>
-    <div class="cat">Educação · Pequenos negócios</div>
-    <h3 class="hl">Sebrae abre plataforma gratuita de capacitação com mentoria ao vivo para dono de micro e pequena empresa</h3>
-    <p class="dek">O Sebrae Ingresse reúne cursos, jornadas de aprendizagem, mentorias e encontros ao vivo com especialistas — de marketing digital a gestão financeira e tributação — com acesso pelo celular e certificado digital. Em 2025 foram 18 cursos em 1.819 turmas, média de 64,78 matrículas por turma. Há trilha exclusiva para mulheres empreendedoras (Mulheres em Foco, Ganha-Ganha, Invista em Você, Marca Pessoal Poderosa) e o Decola MEI em seis segmentos: Moda, Beleza, Transporte, Entretenimento, Casa e Construção, Alimentos e Bebidas.</p>
-    <div class="src">Fonte: Agência Sebrae de Notícias, 17/07/2026 · <a href="https://agenciasebrae.com.br/cultura-empreendedora/plataforma-gratuita-amplia-acesso-a-capacitacao-e-fortalece-a-competitividade-dos-pequenos-negocios/">ler na fonte</a></div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>A barreira do dono de negócio pequeno nunca foi só dinheiro — foi tempo e acesso. A contadora Aline Grasiela, de Mogi Guaçu (SP), passou uma década como empregada, abriu escritório próprio digital e diz que o curso de marketing foi "um divisor de águas": tinha medo de gravar vídeo. Capacitação gratuita é crédito disfarçado — só que sem juros.</div>
-    <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></span><span class="mpn">Fator MP 5/5</span></div>
-    <div class="status">✅ Verificada — Nível 1 (Agência Sebrae, com fonte nomeada e caso identificado)</div>
-    <div class="why"><b>Por que merece mais atenção:</b> a conversa pública sobre empreendedorismo brasileiro gira em torno de crédito e teto do MEI. Gestão — precificar, separar caixa pessoal do caixa da empresa, vender — é o que quebra o negócio antes do juro. Uma plataforma gratuita com mentor ao vivo ataca exatamente o ponto que ninguém filma.</div>
-    <details><summary>Copy Instagram</summary><div class="copy">Curso de marketing. Gratuito. Com mentor ao vivo.
+    <div class="cat">Educação · Quebra de ciclo</div>
+    <h2>Menino que sofria bullying por fazer balé recebe convite da Escola do Bolshoi</h2>
+    <p class="dek">Romeu, 6 anos, de Campina Grande do Sul (PR), ouvia dos colegas que "balé é coisa de menininha". O vídeo em que desabafa — e diz que nunca vai desistir — passou de 700 mil visualizações e chegou à Escola do Teatro Bolshoi no Brasil, em Joinville (SC), única filial do Bolshoi fora da Rússia. A escola respondeu com um convite oficial para a seleção quando ele completar 9 anos. Neste domingo, Romeu chegou a Joinville para assistir ao Festival de Dança.</p>
+    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/26/menino-bullying-bale-convite-bolshoi-viaja-joinville-video">Só Notícia Boa · 26/07/2026</a></div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>O preconceito cobra juros da infância. A resposta do Bolshoi mostra o que acontece quando uma instituição decide investir onde a sociedade desinveste.</div>
+    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div><span class="n">5/5</span></div>
+    <div class="status warn">⚠️ Nível 2 — origem em vídeo de rede social (Studio Bianca Lopes); convite confirmado em resposta pública da Escola Bolshoi Brasil</div>
+    <p class="why"><b>Por que merece mais atenção:</b> a pauta não é o bullying — é a instituição de elite abrindo a porta na frente de quem tentou fechá-la. Ciclo de exclusão interrompido em tempo real, com prova social de 700 mil views.</p>
+    <details><summary>Copy Instagram</summary><div class="copy">Ele tem 6 anos.
+E já aprendeu o que muito adulto não aprendeu: opinião alheia não paga o seu sonho.
 
-Aline era funcionária de escritório contábil. Dez anos. Abriu o próprio negócio, 100% digital — e travava na hora de gravar vídeo.
+Romeu faz balé no interior do Paraná. Na escola, ouvia que "balé é coisa de menininha". Ele abaixava a cabeça e tampava o ouvido.
 
-Fez quatro cursos do Sebrae Ingresse. Marketing, finanças, marca pessoal.
+Aí o vídeo dele viralizou. 700 mil pessoas assistiram.
 
-Hoje posta com constância. E a carteira de clientes cresceu.
+E sabe quem respondeu? A Escola do Teatro Bolshoi no Brasil. A única filial do Bolshoi FORA da Rússia. Convite oficial: aos 9 anos, ele tem vaga garantida na seleção.
 
-Aqui vai o que ninguém te conta: falta de capacitação é custo. Aparece na margem, no preço errado, no cliente que não volta.
+O bullying tentou cobrar pedágio. O talento passou de graça.
 
-Só que esse custo tem versão gratuita.
+Investir em você mesmo é o único ativo que ninguém confisca. Nem coleguinha maldoso.
 
-Cursos, mentoria ao vivo, certificado. Trilha só para mulheres. Decola MEI em seis segmentos.
+Dança, Romeu. O Brasil está contigo.
 
-Você não precisa de mais crédito. Precisa saber o que fazer com ele.
+#MePoupe #BoasNoticias #Bolshoi #Bale #QuebraDeCiclo #Educacao #Infancia #RespeitoCusta0 #TalentoBrasileiro #NoticiaBoa</div></details>
+  </article>
+</section>
 
-#MePoupe #EducaçãoFinanceira #MEI #PequenosNegócios #Empreendedorismo #Sebrae #GestãoFinanceira #MulheresEmpreendedoras #MarketingDigital #NegócioPróprio</div></details>
-  </div>
-
-  <hr class="hair">
-
-  <h2 class="sec">Brasil — as demais histórias</h2>
+<!-- ====== BRASIL GRID ====== -->
+<section>
+  <div class="sec-title"><span>Brasil — as demais histórias</span></div>
   <div class="grid">
-    <div class="cell">
-      <div class="num">02</div>
-      <div class="cat">Ciência · Saúde pública</div>
-      <h3 class="hl">Três deep techs do Norte e do Centro-Oeste passam para a etapa nacional do desafio que quer levar tecnologia de oncologia ao SUS</h3>
-      <p class="dek">Smart Saag (RO), Biotech Tecnologia Genômica Especializada (GO) e BioSpin Nanotech (AM) foram selecionadas no Hackaton SUS, realizado no Hospital Universitário de Brasília. Duas delas passaram pelo programa Catalisa ICT, do Sebrae. A final, em dezembro de 2026, premia com R$ 100 mil, R$ 50 mil e R$ 30 mil do Ministério da Saúde. Execução prevista até abril de 2027, com acordo entre Sebrae, Ministério da Saúde, MDIC, Anvisa, HU Brasil e Opas.</p>
-      <div class="src">Fonte: Agência Sebrae de Notícias, 16/07/2026 · <a href="https://agenciasebrae.com.br/inovacao-e-tecnologia/startups-das-regioes-norte-e-centro-oeste-criam-solucoes-aplicaveis-para-o-sistema-unico-de-saude/">ler na fonte</a></div>
-      <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Rondônia, Goiás e Amazonas competindo em deep tech de oncologia. O mapa da inovação brasileira que a gente aprendeu na escola tem eixo Rio–São Paulo. Esse aqui não tem.</div>
-      <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></span><span class="mpn">Fator MP 4/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (Agência Sebrae, startups e gestores nomeados)</div>
-      <div class="why"><b>Por que merece mais atenção:</b> o Sebrae atende 25 mil startups no país e a segunda maior carteira é saúde — cerca de 3 mil empresas. Tecnologia de ponta nascendo fora do eixo, com compra pública no horizonte, é política industrial acontecendo sem manchete.</div>
-      <details><summary>Copy Instagram</summary><div class="copy">Rondônia. Goiás. Amazonas.
 
-Três empresas dessas regiões acabaram de passar para a etapa nacional de um desafio de tecnologia em oncologia para o SUS.
+  <article class="story">
+    <div class="ghost">02</div>
+    <div class="cat">Bem-estar animal · Marco legal</div>
+    <h3>Brasil se torna o 1º país da América Latina a proibir o foie gras em âmbito nacional</h3>
+    <p class="dek">A Lei 15.475/2026, sancionada em 24/07 e publicada no Diário Oficial, proíbe a produção e a venda de qualquer alimento obtido por alimentação forçada de animais — prática que faz o fígado de patos e gansos crescer até 10 vezes. Vigência em 180 dias; descumprimento vira maus-tratos, com pena de 3 meses a 1 ano. O quilo do produto custava de R$ 1.750 a R$ 2.000.</p>
+    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/25/brasil-proibe-producao-venda-foie-gras-acaba-crueldade-alimentacao-forcada-animais">Só Notícia Boa · 25/07/2026 (Lei no Planalto/DOU)</a></div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Um produto de R$ 2 mil o quilo, sustentado por sofrimento animal, acaba de perder o mercado brasileiro. Ética também precifica.</div>
+    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div><span class="n">4/5</span></div>
+    <div class="status ok">✅ Nível 1 — Lei 15.475/2026 publicada no Diário Oficial da União</div>
+    <p class="why"><b>Por que merece mais atenção:</b> repercutiu até na França, maior produtora mundial — e quase não apareceu no noticiário nacional. Primeiro precedente latino-americano de proibição em escala de país.</p>
+    <details><summary>Copy Instagram</summary><div class="copy">R$ 2.000 o quilo.
+Esse era o preço do foie gras no Brasil.
 
-Deep tech. A categoria mais difícil de empreender que existe — anos de pesquisa antes do primeiro real de receita.
+O custo real? Um tubo no esôfago de patos e gansos, comida forçada, fígado inchado até 10x o tamanho normal.
 
-Prêmio na final: R$ 100 mil. Ministério da Saúde paga.
+Acabou. Lei sancionada, publicada no Diário Oficial: o Brasil é o PRIMEIRO país da América Latina a proibir produção e venda de foie gras em todo o território.
 
-Aqui está a virada: duas delas foram apoiadas por um programa público de aceleração. Não nasceram em garagem do Vale do Silício.
+Quem insistir responde por maus-tratos. Até 1 ano de prisão.
 
-Nasceram onde ninguém procura.
+A França reclamou. Os patos agradecem.
 
-Inovação não é CEP. É acesso.
+Mercado que só existe com crueldade não é mercado. É dívida moral com juros compostos.
 
-#MePoupe #EducaçãoFinanceira #Startups #DeepTech #SUS #Inovação #Empreendedorismo #Amazonas #Rondônia #CiênciaBrasileira #Sebrae</div></details>
-    </div>
+#MePoupe #BoasNoticias #BemEstarAnimal #FoieGras #Lei15475 #DireitoDosAnimais #ConsumoConsciente #Brasil #NoticiaBoa #EticaNoConsumo</div></details>
+  </article>
+
+  <article class="story">
+    <div class="ghost">03</div>
+    <div class="cat">Futebol feminino · Quebra de barreira</div>
+    <h3>Kerolin vai ao Barcelona na maior transferência da história de uma jogadora brasileira</h3>
+    <p class="dek">O Barcelona acertou com o Manchester City a contratação da atacante por €1,5 milhão (~R$ 8,6 milhões) — recorde absoluto para uma atleta brasileira, superando os US$ 1,1 milhão de Gutierres. Aos 26 anos, Kerolin vem de títulos da Women's Super League e da Copa da Inglaterra e integra a Seleção que se prepara para a Copa de 2027, no Brasil. Acordo verbal; assinatura prevista para os próximos dias.</p>
+    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/27/vendida-barcelona-kerolin-jogadora-brasileira-mais-cara-historia">Só Notícia Boa · 27/07/2026 (via Mundo Deportivo)</a></div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>O futebol feminino brasileiro acaba de repactuar seu próprio teto de valuation — às vésperas de uma Copa em casa.</div>
+    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div><span class="n">4/5</span></div>
+    <div class="status ok">✅ Nível 1 — Mundo Deportivo; valores confirmados; acordo verbal, contrato a assinar</div>
+    <p class="why"><b>Por que merece mais atenção:</b> não é resultado de rodada — é recorde histórico de mercado. Cada teto rompido reprecifica a próxima geração de meninas que jogam bola no Brasil.</p>
+    <details><summary>Copy Instagram</summary><div class="copy">R$ 8,6 milhões.
+Recorde histórico do futebol feminino brasileiro.
+
+Kerolin, 26 anos, saiu da Ponte Preta, passou por Corinthians e Palmeiras, virou campeã inglesa — e agora é a jogadora brasileira mais valorizada de TODOS os tempos. Destino: Barcelona.
+
+Em 2019, uma suspensão quase encerrou a carreira dela. Ela voltou. Em alto nível.
+
+Volta por cima não é frase de coach. É estratégia executada.
+
+E o detalhe que importa: cada recorde desses aumenta o valor de mercado da PRÓXIMA menina que hoje joga descalça no quintal.
+
+Copa de 2027 é no Brasil. Anota esse nome.
+
+#MePoupe #BoasNoticias #FutebolFeminino #Kerolin #Barcelona #RecordeHistorico #MulheresNoEsporte #Selecao #Copa2027 #NoticiaBoa</div></details>
+  </article>
+
+  <article class="story">
+    <div class="ghost">04</div>
+    <div class="cat">Educação · Gerações</div>
+    <h3>Pai que vendeu tudo pelos estudos do filho volta à escola — e o filho, hoje professor, o homenageia em sala</h3>
+    <p class="dek">Em Morro do Chapéu, na Chapada Diamantina (BA), o professor Pertiano Sossa entrou com bolo e flores na turma da EJA onde estuda o próprio pai, Elias Jorge — o homem que vendeu o que tinha para pagar a escola do filho. Hoje é Pertiano quem compra o material escolar do pai e o ajuda nas tarefas. O vídeo da homenagem passou de 1 milhão de visualizações nesta semana.</p>
+    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/27/professor-homenageia-pai-idoso-voltou-estudar-eja-vendeu-tudo-eu-estudar-video">Só Notícia Boa · 27/07/2026</a></div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Educação foi o único investimento que esse pai pôde fazer. O retorno veio em dobro: um filho professor — e a vaga dele mesmo na sala de aula.</div>
+    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div><span class="n">4/5</span></div>
+    <div class="status warn">⚠️ Nível 2 — origem em rede social (@xperty23); vídeo gravado em abril, voltou a viralizar em 27/07 (data de cobertura)</div>
+    <p class="why"><b>Por que merece mais atenção:</b> é o ciclo completo da educação como ativo intergeracional: o sacrifício do pai virou diploma do filho, e o diploma do filho virou matrícula do pai. EJA raramente ganha holofote.</p>
+    <details><summary>Copy Instagram</summary><div class="copy">"Todo mundo pode tirar tudo de você. Menos o conhecimento."
+
+Quem dizia isso era Seu Elias, um homem sem instrução da Chapada Diamantina, que VENDEU TUDO para pagar a escola do filho.
+
+O filho virou professor. Três pós-graduações.
+
+E aí a história virou do avesso: agora é Seu Elias quem está na sala de aula, na EJA. Quem compra o material escolar dele? O filho. Quem ajuda na lição de casa? O filho.
+
+Na semana passada, Pertiano entrou na sala do pai com bolo e flores. Na frente da turma toda: "Ele é meu herói."
+
+1 milhão de pessoas choraram junto.
+
+Educação não é gasto. É o único investimento com retorno garantido em DUAS gerações.
+
+#MePoupe #BoasNoticias #EJA #Educacao #PaiEFilho #ChapadaDiamantina #Bahia #InvestimentoReal #QuebraDeCiclo #NoticiaBoa</div></details>
+  </article>
+
   </div>
+</section>
 
-  <hr class="hair">
-
-  <h2 class="sec">Destaque internacional do dia</h2>
-  <div class="hero">
+<!-- ====== HERO INTERNACIONAL ====== -->
+<section>
+  <div class="sec-title"><span>Destaque internacional do dia</span></div>
+  <article class="hero">
     <div class="ghost">01</div>
-    <div class="cat">🇺🇸 Ciência · Meio ambiente</div>
-    <h3 class="hl">Startup usa dados genômicos para trazer de volta a castanheira-americana — sem engenharia genética</h3>
-    <p class="dek">A SilvaBio cruzou análise genômica com um processo próprio de "reprodução acelerada" por luz de alta intensidade, encurtando o ciclo de melhoramento de mais de 10 anos para cerca de um. O resultado é a cultivar Darling54: em teste duplo-cego, as lesões causadas pela ferrugem-do-castanheiro ficaram ordens de grandeza menores que nas variedades comuns. Um exemplar foi plantado na Casa Branca no Dia da Árvore de 2026. Os fundadores, Andrew Serazin e Michael Bloom, afirmam que a mesma abordagem pode servir ao olmo, ao freixo e ao carvalho-branco americanos.</p>
-    <div class="src">Fonte: Good News Network (EUA), 20/07/2026 · <a href="https://www.goodnewsnetwork.org/biotech-startup-breeds-blight-tolerant-american-chestnut-without-any-genetic-defects/">ler na fonte</a></div>
-    <div class="orig">Título original: "Biotech Startup Breeds Blight Tolerant American Chestnut Without Any Genetic Defects"</div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>A castanheira-americana foi declarada funcionalmente extinta. Em 2023, uma tentativa anterior — árvore geneticamente modificada, décadas de trabalho — perdeu o apoio da própria fundação que a financiava, por defeitos genéticos documentados. Esta versão não mexeu no gene: acelerou a seleção natural. Reconhecer o erro caro e mudar de método é gestão, não só ciência.</div>
-    <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></span><span class="mpn">Fator MP 4/5</span></div>
-    <div class="status">✅ Verificada — Nível 1 (empresa, fundadores e cultivar nomeados; teste duplo-cego citado)</div>
-    <div class="why"><b>Por que merece mais atenção:</b> 41% da biomassa florestal viva dos EUA está ameaçada por apenas 15 pragas exóticas — e a madeira é um setor de US$ 350 bilhões. A história costuma ser contada como ecologia. É também balanço patrimonial: um ativo dado como perdido voltando à carteira.</div>
-    <details><summary>Copy Instagram</summary><div class="copy">Uma árvore declarada extinta acabou de voltar.
+    <div class="cat">Educação · Povos originários <span class="flag">🇺🇸</span></div>
+    <h2>Escolas indígenas dos EUA alcançam a maior taxa de formatura da história do país</h2>
+    <p class="dek">As escolas do Bureau of Indian Education registraram as maiores taxas de graduação já medidas: 8 escolas formaram 100% da turma 2025/26 e outras 13 passaram de 90%. A taxa média alcançou os 87–88% nacionais — eliminando uma disparidade histórica. Em 2015, era de 51%. A virada combinou dados em tempo real, ensino remoto para alunos cuidadores e trilhas técnicas.</p>
+    <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/american-indian-schools-achieve-highest-graduation-rates-in-the-nations-history/">Good News Network · 28/07/2026 (via AP e Bureau of Indian Education)</a></div>
+    <div class="orig">Título original: "American Indian Schools Achieve Highest Graduation Rates in the Nation's History"</div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>De 51% para 88% em uma década. Quando o sistema decide enxergar o aluno, o "impossível" vira média nacional.</div>
+    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div><span class="n">5/5</span></div>
+    <div class="status ok">✅ Nível 1 — AP + comunicados oficiais do Bureau of Indian Education</div>
+    <p class="why"><b>Por que merece mais atenção:</b> comunidades historicamente colocadas na última fila da estatística educacional acabaram de empatar com a média do país mais rico do mundo — e quase ninguém noticiou. Primeiro da história, literalmente.</p>
+    <details><summary>Copy Instagram</summary><div class="copy">2015: 51% dos alunos indígenas se formavam no ensino médio dos EUA.
+2026: 87-88%. Empatados com a média nacional.
 
-A castanheira-americana dominava as florestas dos EUA. Um fungo trazido da Ásia derrubou praticamente todas no início do século 20.
+Primeira vez na HISTÓRIA.
 
-Décadas de tentativa com engenharia genética. Em 2023, a própria fundação que bancava o projeto retirou o apoio: a árvore tinha defeito.
+8 escolas indígenas formaram 100% da turma. Outras 13 passaram de 90%.
 
-Aí veio a virada.
+Como? Sem mágica: dados em tempo real para identificar aluno em risco, ensino remoto para quem cuida da família ou trabalha, formação técnica para quem quer ofício.
 
-Uma startup não mexeu no gene. Leu o DNA de milhares de mudas, previu quais resistiriam e acelerou o cruzamento com luz artificial.
+"Nossos estudantes estão mostrando ao país o que é a excelência nativa", disse o diretor do Bureau of Indian Education.
 
-Ciclo de 10 anos virou 1.
+Uma década. 37 pontos percentuais. Um ciclo de séculos interrompido.
 
-Resultado testado às cegas. E uma muda plantada na Casa Branca.
+Desigualdade não é destino. É subinvestimento. E subinvestimento se corrige.
 
-O que isso ensina sobre dinheiro: teimar no método errado custa décadas. Trocar de método custa um ano.
+#MePoupe #BoasNoticias #Educacao #PovosOriginarios #EUA #QuebraDeCiclo #ExcelenciaNativa #EnsinoMedio #Formatura #NoticiaBoa #MudancaReal</div></details>
+  </article>
+</section>
 
-#MePoupe #EducaçãoFinanceira #Ciência #Inovação #MeioAmbiente #Biotecnologia #Florestas #Startups #DadosEDecisão #LongoPrazo</div></details>
-  </div>
-
-  <hr class="hair">
-
-  <h2 class="sec">Mundo — notícias internacionais</h2>
+<!-- ====== MUNDO GRID ====== -->
+<section>
+  <div class="sec-title"><span>Mundo — notícias internacionais</span></div>
   <div class="grid">
-    <div class="cell">
-      <div class="num">02</div>
-      <div class="cat">🇬🇧 Tecnologia para o povo</div>
-      <h3 class="hl">Geladeira enterrada no jardim conserva alimentos a 8–15 °C mesmo em onda de calor — quase sem luz elétrica</h3>
-      <p class="dek">Projetada pelo inventor holandês Floris Schoonderbeek e instalada pela primeira vez no Reino Unido no OmVed Gardens, em Highgate (norte de Londres), a Ground Fridge usa a temperatura estável do subsolo e ventilação movida a energia solar, que puxa o ar frio da noite. Capacidade equivalente a cerca de doze geladeiras familiares. Custa em torno de £ 12 mil mais impostos, com custo de operação mínimo.</p>
-      <div class="src">Fonte: Positive News (Reino Unido), 20/07/2026 · <a href="https://www.positive.news/society/the-underground-fridge-that-keeps-food-cool-even-in-a-heatwave/">ler na fonte</a></div>
-      <div class="orig">Título original: "The underground fridge that keeps food cool – even in a heatwave"</div>
-      <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Caro na compra, barato no uso. É o cálculo que quase ninguém faz na loja de eletrodoméstico: o preço da etiqueta é só a entrada — a conta de luz é a prestação que não acaba.</div>
-      <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></span><span class="mpn">Fator MP 4/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (inventor, local e responsável pela cozinha nomeados)</div>
-      <div class="why"><b>Por que merece mais atenção:</b> a ideia é antiga — casas de gelo e adegas de terra existem há séculos. O que mudou foi o custo relativo da energia. Tecnologia esquecida volta a fazer sentido quando o preço da conta de luz muda a matemática. Vale para geladeira e vale para orçamento doméstico.</div>
-      <details><summary>Copy Instagram</summary><div class="copy">Tem uma geladeira enterrada num jardim de Londres.
 
-Sem compressor. Sem barulho. Quase sem luz elétrica.
+  <article class="story">
+    <div class="ghost">02</div>
+    <div class="cat">Biodiversidade · Restauração <span class="flag">🇮🇳</span></div>
+    <h3>Ave que havia sumido há 60 anos volta a se reproduzir sozinha em parque na Índia</h3>
+    <p class="dek">O calau-cinzento-indiano não nidificava no Parque Nacional de Gir, em Gujarat, desde os anos 1960. Após anos de restauração de hábitat e um programa de reintrodução iniciado em 2021, a população chegou a ~40 aves e, pelo 4º ano seguido, casais criaram filhotes — ponto em que a espécie se sustenta sem novas solturas. O calau é espécie-indicadora: onde ele prospera, a floresta está saudável.</p>
+    <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/vanished-hornbill-species-reintroduced-4-years-ago-now-self-sustaining-again/">Good News Network · 27/07/2026 (via The Better India)</a></div>
+    <div class="orig">Título original: "Vanished Hornbill Species Breeding Again After 60 Years Among Old Trees"</div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Restaurar hábitat é renda passiva ecológica: você investe uma vez na floresta e a natureza passa a se pagar sozinha.</div>
+    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div><span class="n">3/5</span></div>
+    <div class="status ok">✅ Nível 1 — The Better India / programa oficial do Parque Nacional de Gir</div>
+    <p class="why"><b>Por que merece mais atenção:</b> "autossustentável" é a palavra que quase nunca aparece em conservação. Aqui, apareceu: a população não precisa mais de intervenção humana. Ciclo de 60 anos de ausência, quebrado.</p>
+    <details><summary>Copy Instagram</summary><div class="copy">60 anos de ausência.
+4 anos de trabalho.
+E ela voltou pra ficar.
 
-Ela usa o que está debaixo dos seus pés: a temperatura do solo, que quase não muda. Ventilação solar puxa o ar frio da madrugada.
+O calau-cinzento-indiano sumiu do Parque de Gir, na Índia, nos anos 1960. A árvore velha que ele precisa pra fazer ninho tinha acabado.
 
-Onda de calor lá fora. Entre 8 e 15 graus lá dentro.
+O plano não foi soltar aves e torcer. Foi restaurar a floresta PRIMEIRO. Anos preparando o terreno, protegendo árvores maduras.
 
-Preço: caro. Cerca de £ 12 mil.
+Resultado: 40 aves, 4 anos seguidos de filhotes — e o melhor: a população agora se sustenta SOZINHA. Sem novas solturas. Sem intervenção.
 
-Aí vem a conta que ninguém faz: ela guarda o equivalente a doze geladeiras e a fatura de energia é quase zero.
+Isso, no mercado, chama-se ativo que gera renda passiva. Na natureza, chama-se floresta viva.
 
-Preço de etiqueta é entrada. Custo de uso é prestação.
+Você investe no hábitat. O hábitat devolve com juros.
 
-E prestação é o que quebra orçamento.
+#MePoupe #BoasNoticias #Biodiversidade #India #Conservacao #Rewilding #MeioAmbiente #FlorestaViva #Natureza #NoticiaBoa</div></details>
+  </article>
 
-#MePoupe #EducaçãoFinanceira #ContaDeLuz #CustoDeVida #Sustentabilidade #OrçamentoDoméstico #Inovação #Economia #ConsumoConsciente #DecisãoDeCompra</div></details>
-    </div>
-    <div class="cell">
-      <div class="num">03</div>
-      <div class="cat">🇺🇸 Saúde · Família</div>
-      <h3 class="hl">Menina de 2 anos doa medula e salva a irmã de 5 com anemia aplástica</h3>
-      <p class="dek">Emma Meline, de Salt Lake City, foi diagnosticada com anemia aplástica — doença rara em que a medula deixa de produzir células do sangue — quatro dias antes do Natal de 2025, após a mãe, Amanda, levá-la ao pediatra por causa de uma erupção e um inchaço na perna. Uma das irmãs gêmeas mais novas, Lucy, era compatibilidade genética perfeita. O transplante foi em 17 de fevereiro; a alta, em 11 de março. Cem dias depois, sem recidiva: sucesso completo. "Meu jeito favorito dela dizer era: estou sendo corajosa pela Emma", contou a mãe.</p>
-      <div class="src">Fonte: Good News Network (EUA), 20/07/2026, a partir de entrevista exclusiva à revista People · <a href="https://www.goodnewsnetwork.org/after-5-yo-diagnosed-with-rare-disease-younger-sister-wanted-to-be-her-brave-bone-marrow-donor/">ler na fonte</a></div>
-      <div class="orig">Título original: "After 5-yo Diagnosed with Rare Disease, Little Sister Wanted to Be Her 'Brave' Bone Marrow Donor"</div>
-      <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Doar medula não custa dinheiro. Custa coragem — e no caso, a coragem tinha dois anos de idade.</div>
-      <div class="mp"><span class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></span><span class="mpn">Fator MP 3/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (família nomeada, datas e diagnóstico específicos, entrevista à People)</div>
-      <div class="why"><b>Por que merece mais atenção:</b> transplante de medula depende de compatibilidade, e a maioria dos pacientes não tem um doador dentro de casa — depende de gente desconhecida cadastrada em registro. Toda vez que uma dessas histórias circula, o cadastro sobe. É o raro caso em que a boa notícia é, ela mesma, a política pública.</div>
-      <details><summary>Copy Instagram</summary><div class="copy">Ela tem dois anos. E salvou a irmã de cinco.
+  <article class="story">
+    <div class="ghost">03</div>
+    <div class="cat">Empreendedorismo · Ciência para todos <span class="flag">🇺🇸</span></div>
+    <h3>"Fazenda de telescópios" no Texas leva céu sem poluição luminosa a quem vive na cidade</h3>
+    <p class="dek">Em Rockwood, zona rural do Texas com escuridão máxima (Bortle 1), o astrofotógrafo Bray Falls criou a Starfront Observatories: donos de telescópio do mundo inteiro enviam seus equipamentos, que são instalados em pilares de concreto alinhados ao polo celeste e operados remotamente pela internet — por US$ 99 a 149/mês. São centenas de telescópios em galpões cujos tetos se abrem à noite.</p>
+    <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/unusual-texas-ranch-raises-telescopes-to-provide-remote-dark-sky-viewing-for-those-living-amid-light-pollution/">Good News Network · 27/07/2026 (Starfront Observatories; entrevista BBC Earth)</a></div>
+    <div class="orig">Título original: "Odd Texas Ranch 'Raises' Telescopes to Provide Dark Sky Viewing for Stargazers in Cities Remotely"</div>
+    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Um problema (poluição luminosa) + um ativo ocioso (40 acres no meio do nada) = um modelo de negócio que democratiza o universo por assinatura.</div>
+    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div><span class="n">3/5</span></div>
+    <div class="status warn">⚠️ Nível 2 — matéria submetida por colaborador ao GNN; empresa e fundador corroborados por entrevista à BBC Earth</div>
+    <p class="why"><b>Por que merece mais atenção:</b> é microempreendedorismo puro resolvendo um problema que a ciência conhece bem: 80% da humanidade vive sob céu poluído de luz. O modelo transforma terra barata e céu escuro em infraestrutura científica compartilhada.</p>
+    <details><summary>Copy Instagram</summary><div class="copy">Você mora na cidade. Nunca viu a Via Láctea.
 
-Emma foi diagnosticada quatro dias antes do Natal. Anemia aplástica: a medula parou de fabricar sangue.
+Um jovem astrofotógrafo no Texas olhou pra esse problema e enxergou um modelo de negócio.
 
-Sem transplante, não havia caminho.
+Bray Falls tem 40 acres num dos céus mais escuros dos EUA. A ideia: você MANDA seu telescópio pra fazenda dele. Ele instala num pilar de concreto, alinha com o eixo da Terra, conecta na internet.
 
-A irmã caçula, Lucy, era compatibilidade perfeita.
+De casa, do seu computador, você controla seu telescópio a milhares de km — e fotografa nebulosas como um observatório profissional.
 
-Antes de cada coleta de sangue, ela repetia a mesma frase: "estou sendo corajosa pela Emma".
+Custo: a partir de US$ 99/mês. Menos que muita mensalidade de academia.
 
-Transplante em fevereiro. Alta em março. Cem dias depois: sem recidiva.
+Terra barata + céu escuro + internet = infraestrutura científica por assinatura.
 
-Aqui está o ponto que quase ninguém fala: a maioria dos pacientes não tem doador em casa. Depende de estranho cadastrado.
+Empreender é isso: achar o ativo que ninguém precificou.
 
-Doar medula não tira nada do seu bolso.
+#MePoupe #BoasNoticias #Empreendedorismo #Astronomia #CeuEscuro #Startup #ModeloDeNegocio #Ciencia #Texas #NoticiaBoa</div></details>
+  </article>
 
-E devolve uma vida inteira.
-
-#MePoupe #DoaçãoDeMedula #Saúde #Família #Solidariedade #Transplante #Coragem #BoasNotícias #FaçaOCadastro #VidaQueSegue</div></details>
-    </div>
   </div>
+</section>
 
-  <p class="discard">🚫 9 descartadas — 4 por já constarem no ledger (pautas do Sebrae de 16–17/07 e o resumo semanal da Positive News), 2 por estarem fora da janela de 5 dias (velas feitas por refugiados, 07/07; início da coleta da PNS 2026, 12/07), 3 por fragilidade editorial (pombo socorrido por bombeiros, policial que recupera bicicleta furtada, policial de porte avantajado no Texas).</p>
+<!-- ====== DESCARTES ====== -->
+<section>
+  <div class="descartes">
+    <b>🚫 12 descartadas</b> — repetidas (elefanta Julie, vaquita, papagaio-do-mar, bolsa perpétua PUC-Rio, foguete Skyroot, reservas marinhas NZ — todas já entregues); fato já coberto (qualidade do ar na Europa, versão w27 entregue em 03/07); fora da janela (biocosméticos ribeirinhos do Pará, 03/07 — armadilha de data em URL recente); celebridades (McCartney, Chaka Khan, Camila Pitanga, Isabelle Drummond); esporte de rotina (Alison dos Santos, Calderano, Tour de France); virais sem fato verificável (cachorrinha Caramela, bilhete do neto, feira de adoção); alegação incerta ("exolua" ainda em interrogação no próprio título).
+  </div>
+</section>
 
-  <hr class="hair">
+<!-- ====== FECHAMENTO ====== -->
+<section>
+  <p class="fechamento">Hoje o fio é um só: <em>portas que se abrem para quem sempre ouviu "não"</em>. Um menino de 6 anos convidado pelo Bolshoi. Um pai idoso de volta à escola que ele pagou para o filho. Estudantes indígenas empatando com a média do país mais rico do mundo. O sistema adora dizer que a fila não anda. Anda — quando alguém decide investir onde ninguém investia. A pergunta que fica: qual porta você abre hoje?</p>
+</section>
 
-  <p class="close">A conversa sobre dinheiro no Brasil trava sempre no mesmo ponto: falta crédito, falta juro menor, falta teto maior. Hoje, nenhuma das duas histórias nacionais é sobre dinheiro novo. Uma é curso de graça com mentor ao vivo. A outra é ciência de ponta feita em Porto Velho, Goiânia e Manaus.<br><br><em>Acesso não é o mesmo que capital. E costuma vir antes dele.</em></p>
-
-  <footer>
-    GoodNewsMP-21/07/26 · Curadoria diária Me Poupe! · Janela editorial: últimos 5 dias (16–21/07/2026)<br>
-    Todas as manchetes verificadas na fonte primária. Nenhum título, dado ou citação inventado. Manchetes estrangeiras traduzidas com o original registrado.
-  </footer>
+<footer>
+  <span>GoodNewsMP · Curadoria diária Me Poupe! · 28/07/2026</span>
+  <span>7 histórias · 4 ✅ · 3 ⚠️ · 12 🚫 · Fator MP médio 4,0</span>
+</footer>
 
 </div>
 </body>
