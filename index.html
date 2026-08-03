@@ -3,62 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodNewsMP-28/07/26 — Boas notícias que o Brasil não viu</title>
+<title>GoodNewsMP-03/08/26 · Boas notícias que o Brasil não viu</title>
 <style>
-  :root { color-scheme: light;
-    --bg:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af;
-    --fio:rgba(255,255,255,.10); --txt:#fff; --txt2:rgba(255,255,255,.72); --txt3:rgba(255,255,255,.5);
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55}
-  .wrap{max-width:1060px;margin:0 auto;padding:56px 28px 80px}
-  .eyebrow{color:var(--lilas);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
-  header h1{font-size:clamp(34px,5.4vw,58px);font-weight:300;letter-spacing:-.03em;margin:14px 0 10px;line-height:1.08}
-  header h1 strong{font-weight:600}
-  .meta-line{color:var(--txt3);font-size:14px;display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:10px}
-  .janela{border:1px solid var(--fio);border-radius:999px;padding:3px 14px;font-size:12px;color:var(--amarelo)}
-  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio);margin:44px 0 0}
-  .kpi{padding:22px 18px;border-right:1px solid var(--fio)}
-  .kpi:last-child{border-right:none}
-  .kpi .num{font-size:34px;font-weight:300;letter-spacing:-.02em}
-  .kpi .lbl{font-size:12px;color:var(--txt3);margin-top:4px;text-transform:uppercase;letter-spacing:.12em}
-  .kpi .split{font-size:13px;color:var(--txt2)}
-  section{margin-top:64px}
-  .sec-title{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt3);border-bottom:1px solid var(--fio);padding-bottom:12px;margin-bottom:34px;display:flex;justify-content:space-between;align-items:baseline}
-  .hero{position:relative;padding:8px 0 8px 90px}
-  .ghost{position:absolute;left:0;top:-14px;font-size:96px;font-weight:200;color:rgba(255,255,255,.07);letter-spacing:-.05em}
-  .story{position:relative;padding:8px 0 8px 66px;border-bottom:1px solid var(--fio);padding-bottom:34px}
-  .story .ghost{font-size:56px;top:0}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
-  @media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-left:0;padding-top:70px}.story{padding-left:0;padding-top:56px}.kpis{grid-template-columns:1fr 1fr}}
-  .cat{color:var(--lilas);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
-  .flag{font-size:14px;margin-left:6px}
-  .hero h2{font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:-.025em;line-height:1.15;margin:12px 0}
-  .story h3{font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.25;margin:12px 0}
-  .dek{color:var(--txt2);font-size:15px;margin-bottom:14px}
-  .fonte{font-size:13px;color:var(--txt3)}
-  .fonte a{color:var(--verde);text-decoration:none;border-bottom:1px solid rgba(131,233,175,.35)}
-  .orig{font-size:12px;color:var(--txt3);font-style:italic;margin-top:4px}
-  .callout{border-left:2px solid var(--amarelo);padding:10px 0 10px 16px;margin:18px 0;color:var(--amarelo);font-size:14px}
-  .callout b{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;opacity:.8}
-  .fator{display:flex;align-items:center;gap:10px;margin:14px 0 6px}
+  :root { color-scheme: light; --bg:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af; --fio:rgba(255,255,255,.1); }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:56px 32px 80px}
+  .eyebrow{color:var(--lilas);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+  header h1{font-size:clamp(34px,5vw,54px);font-weight:300;letter-spacing:-.03em;margin:14px 0 10px;line-height:1.08}
+  header .meta{color:rgba(255,255,255,.55);font-size:14px}
+  header .meta b{color:var(--amarelo);font-weight:600}
+  .janela{display:inline-block;margin-left:14px;border:1px solid var(--fio);border-radius:999px;padding:3px 12px;font-size:12px;color:rgba(255,255,255,.65)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio);margin:44px 0 0;padding:26px 0}
+  .kpi{padding:0 22px;border-left:1px solid var(--fio)}
+  .kpi:first-child{border-left:none;padding-left:0}
+  .kpi .n{font-size:34px;font-weight:300;letter-spacing:-.02em}
+  .kpi .l{color:rgba(255,255,255,.5);font-size:12px;letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+  .kpi .n small{font-size:15px;color:rgba(255,255,255,.6);font-weight:400}
+  section{margin-top:72px}
+  .sec-title{color:var(--lilas);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding-bottom:16px;border-bottom:1px solid var(--fio)}
+  .hero{position:relative;padding:44px 0 40px;border-bottom:1px solid var(--fio)}
+  .ghost{position:absolute;top:24px;right:0;font-size:150px;font-weight:200;color:rgba(255,255,255,.05);line-height:1;letter-spacing:-.05em;user-select:none}
+  .cat{color:var(--lilas);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .flag{font-size:15px;margin-right:6px}
+  .hero h2{font-size:clamp(26px,3.6vw,40px);font-weight:400;letter-spacing:-.025em;line-height:1.15;margin:12px 0 14px;max-width:820px}
+  .dek{color:rgba(255,255,255,.72);font-size:16px;max-width:760px}
+  .fonte{margin-top:14px;font-size:13px;color:rgba(255,255,255,.5)}
+  .fonte a{color:var(--verde);text-decoration:none;border-bottom:1px solid rgba(131,233,175,.3)}
+  .orig{font-size:12px;color:rgba(255,255,255,.38);margin-top:4px;font-style:italic}
+  .callout{border-left:2px solid var(--amarelo);padding:10px 0 10px 18px;margin:20px 0 0;max-width:740px}
+  .callout .cl{color:var(--amarelo);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-bottom:6px}
+  .callout p{color:rgba(255,255,255,.85);font-size:15px}
+  .fator{display:flex;align-items:center;gap:10px;margin-top:20px}
   .bars{display:flex;gap:4px}
   .bar{width:22px;height:8px;border-radius:2px;background:rgba(255,255,255,.12)}
   .bar.on{background:var(--verde)}
-  .fator .n{font-size:13px;color:var(--txt2)}
-  .status{font-size:13px;margin:6px 0 12px}
-  .status.ok{color:var(--verde)}
-  .status.warn{color:var(--amarelo)}
-  .why{font-size:14px;color:var(--txt2);margin-top:10px}
-  .why b{color:var(--txt);font-weight:600}
-  details{margin-top:16px;border:1px solid var(--fio);border-radius:10px;padding:12px 16px}
-  details summary{cursor:pointer;font-size:13px;color:var(--lilas);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
-  details .copy{margin-top:12px;font-size:14px;color:var(--txt2);white-space:pre-line}
-  .descartes{border:1px dashed rgba(230,72,63,.4);border-radius:12px;padding:22px 26px;color:var(--txt2);font-size:14px}
+  .fator span{font-size:13px;color:rgba(255,255,255,.6)}
+  .status{margin-top:10px;font-size:13px;color:rgba(255,255,255,.6)}
+  .why{margin-top:16px;max-width:760px}
+  .why b{color:var(--lilas);font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:block;margin-bottom:6px}
+  .why p{color:rgba(255,255,255,.7);font-size:14px}
+  details{margin-top:18px;max-width:760px}
+  summary{cursor:pointer;color:var(--amarelo);font-size:13px;font-weight:600;letter-spacing:.04em}
+  details pre{white-space:pre-wrap;font-family:inherit;font-size:14px;color:rgba(255,255,255,.8);background:rgba(255,255,255,.04);border:1px solid var(--fio);border-radius:8px;padding:16px;margin-top:10px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .card{position:relative;padding:36px 32px 34px 0;border-bottom:1px solid var(--fio)}
+  .grid .card:nth-child(odd){padding-right:40px}
+  .grid .card:nth-child(even){border-left:1px solid var(--fio);padding-left:40px;padding-right:0}
+  .card .ghost{font-size:84px;top:20px}
+  .card h3{font-size:21px;font-weight:500;letter-spacing:-.015em;line-height:1.25;margin:10px 0 10px}
+  .card .dek{font-size:14px}
+  .card .bar{width:16px;height:6px}
+  .descartes{margin-top:64px;border-top:1px solid var(--fio);padding-top:28px;color:rgba(255,255,255,.55);font-size:14px;max-width:820px}
   .descartes b{color:var(--vermelho)}
-  .fechamento{font-size:18px;font-weight:300;line-height:1.55;color:var(--txt);max-width:760px}
-  .fechamento em{color:var(--amarelo);font-style:normal}
-  footer{margin-top:70px;border-top:1px solid var(--fio);padding-top:22px;color:var(--txt3);font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+  .fecho{margin-top:64px;border-top:1px solid var(--fio);padding-top:36px;max-width:780px}
+  .fecho h4{color:var(--amarelo);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+  .fecho p{color:rgba(255,255,255,.8);font-size:16px;margin-bottom:12px}
+  footer{margin-top:70px;border-top:1px solid var(--fio);padding-top:24px;color:rgba(255,255,255,.4);font-size:12px}
+  @media(max-width:760px){.kpis{grid-template-columns:1fr 1fr;row-gap:24px}.kpi{border-left:none;padding:0}.grid{grid-template-columns:1fr}.grid .card:nth-child(even){border-left:none;padding-left:0}.grid .card:nth-child(odd){padding-right:0}.ghost{display:none}}
 </style>
 </head>
 <body>
@@ -66,252 +68,371 @@
 
 <header>
   <div class="eyebrow">Me Poupe! · Curadoria diária</div>
-  <h1>Boas notícias que <strong>o Brasil não viu</strong></h1>
-  <div class="meta-line">
-    <span>GoodNewsMP-28/07/26</span>
-    <span class="janela">Janela: últimos 5 dias</span>
-  </div>
+  <h1>Boas notícias que o Brasil não viu</h1>
+  <div class="meta"><b>GoodNewsMP-03/08/26</b><span class="janela">Janela: últimos 5 dias</span></div>
 </header>
 
 <div class="kpis">
-  <div class="kpi"><div class="num">7</div><div class="split">4 nac · 3 int</div><div class="lbl">Histórias</div></div>
-  <div class="kpi"><div class="num">4</div><div class="lbl">Verificadas ✅</div></div>
-  <div class="kpi"><div class="num">12</div><div class="lbl">Descartadas 🚫</div></div>
-  <div class="kpi"><div class="num">4,0</div><div class="lbl">Fator MP médio</div></div>
+  <div class="kpi"><div class="n">11 <small>6 nac · 5 int</small></div><div class="l">Histórias</div></div>
+  <div class="kpi"><div class="n">11 ✅</div><div class="l">Verificadas</div></div>
+  <div class="kpi"><div class="n">7 🚫</div><div class="l">Descartadas</div></div>
+  <div class="kpi"><div class="n">3,9</div><div class="l">Fator MP médio</div></div>
 </div>
 
-<!-- ====== HERO NACIONAL ====== -->
+<!-- ═══════════ HERO NACIONAL ═══════════ -->
 <section>
-  <div class="sec-title"><span>Destaque nacional do dia</span></div>
+  <div class="sec-title">Destaque nacional do dia</div>
   <article class="hero">
     <div class="ghost">01</div>
-    <div class="cat">Educação · Quebra de ciclo</div>
-    <h2>Menino que sofria bullying por fazer balé recebe convite da Escola do Bolshoi</h2>
-    <p class="dek">Romeu, 6 anos, de Campina Grande do Sul (PR), ouvia dos colegas que "balé é coisa de menininha". O vídeo em que desabafa — e diz que nunca vai desistir — passou de 700 mil visualizações e chegou à Escola do Teatro Bolshoi no Brasil, em Joinville (SC), única filial do Bolshoi fora da Rússia. A escola respondeu com um convite oficial para a seleção quando ele completar 9 anos. Neste domingo, Romeu chegou a Joinville para assistir ao Festival de Dança.</p>
-    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/26/menino-bullying-bale-convite-bolshoi-viaja-joinville-video">Só Notícia Boa · 26/07/2026</a></div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>O preconceito cobra juros da infância. A resposta do Bolshoi mostra o que acontece quando uma instituição decide investir onde a sociedade desinveste.</div>
-    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div><span class="n">5/5</span></div>
-    <div class="status warn">⚠️ Nível 2 — origem em vídeo de rede social (Studio Bianca Lopes); convite confirmado em resposta pública da Escola Bolshoi Brasil</div>
-    <p class="why"><b>Por que merece mais atenção:</b> a pauta não é o bullying — é a instituição de elite abrindo a porta na frente de quem tentou fechá-la. Ciclo de exclusão interrompido em tempo real, com prova social de 700 mil views.</p>
-    <details><summary>Copy Instagram</summary><div class="copy">Ele tem 6 anos.
-E já aprendeu o que muito adulto não aprendeu: opinião alheia não paga o seu sonho.
+    <div class="cat">Microempreendedorismo · Quebra de ciclo</div>
+    <h2>Vendendo pastel, mãe feirante paga a faculdade de Medicina das duas filhas no Tocantins</h2>
+    <p class="dek">Há 29 anos na feira da 304 Sul, em Palmas (TO), Marly Moreira Silvestre, 55, banca duas mensalidades integrais de Medicina com o caixa da barraca. Ela foi a primeira a vender pastel naquela feira, em 1997, ampliou o negócio com massas, recheios e esfihas — e as filhas, de 27 e 29 anos, ajudam na barraca depois das aulas.</p>
+    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/30/vendendo-pastei-mae-feirante-paga-faculdade-2-filhas-tocantins">Só Notícia Boa (30/07)</a> · primária: G1 Tocantins (29/07)</div>
+    <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Um pastel é margem de contribuição; três décadas de disciplina viraram patrimônio. O fluxo de caixa mais subestimado do Brasil — a feira livre — financiando o ativo de maior retorno que existe: educação.</p></div>
+    <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div></div><span>5/5</span></div>
+    <div class="status">✅ Verificada — fonte primária Nível 1 (G1)</div>
+    <div class="why"><b>Por que merece mais atenção</b><p>É a tese da Me Poupe! em uma história: microempreendedorismo popular quebrando ciclo de renda entre gerações, sem crédito subsidiado, sem herança — só gestão de caixa e constância.</p></div>
+    <details><summary>Copy Instagram sugerida</summary><pre>Tem MBA que não ensina o que a Marly sabe.
 
-Romeu faz balé no interior do Paraná. Na escola, ouvia que "balé é coisa de menininha". Ele abaixava a cabeça e tampava o ouvido.
+Há 29 anos ela vende pastel na feira da 304 Sul, em Palmas (TO).
+Sem herança. Sem investidor. Capital de giro: massa, recheio e disciplina.
 
-Aí o vídeo dele viralizou. 700 mil pessoas assistiram.
+Hoje o caixa da barraca paga DUAS mensalidades integrais de Medicina.
+As filhas saem da aula e vão ajudar a mãe na feira.
 
-E sabe quem respondeu? A Escola do Teatro Bolshoi no Brasil. A única filial do Bolshoi FORA da Rússia. Convite oficial: aos 9 anos, ele tem vaga garantida na seleção.
+Dizem que pobre não planeja.
+A Marly planejou por três décadas.
+E o retorno chega de jaleco branco.
 
-O bullying tentou cobrar pedágio. O talento passou de graça.
+Pastel é margem.
+Educação é patrimônio.
 
-Investir em você mesmo é o único ativo que ninguém confisca. Nem coleguinha maldoso.
-
-Dança, Romeu. O Brasil está contigo.
-
-#MePoupe #BoasNoticias #Bolshoi #Bale #QuebraDeCiclo #Educacao #Infancia #RespeitoCusta0 #TalentoBrasileiro #NoticiaBoa</div></details>
+#MePoupe #EducacaoFinanceira #Empreendedorismo #QuebraDeCiclo #MaesQueEmpreendem #FeiraLivre #Medicina #Tocantins #DinheiroComProposito #MicroNegocios</pre></details>
   </article>
 </section>
 
-<!-- ====== BRASIL GRID ====== -->
+<!-- ═══════════ BRASIL GRID ═══════════ -->
 <section>
-  <div class="sec-title"><span>Brasil — as demais histórias</span></div>
+  <div class="sec-title">Brasil — as demais histórias</div>
   <div class="grid">
 
-  <article class="story">
-    <div class="ghost">02</div>
-    <div class="cat">Bem-estar animal · Marco legal</div>
-    <h3>Brasil se torna o 1º país da América Latina a proibir o foie gras em âmbito nacional</h3>
-    <p class="dek">A Lei 15.475/2026, sancionada em 24/07 e publicada no Diário Oficial, proíbe a produção e a venda de qualquer alimento obtido por alimentação forçada de animais — prática que faz o fígado de patos e gansos crescer até 10 vezes. Vigência em 180 dias; descumprimento vira maus-tratos, com pena de 3 meses a 1 ano. O quilo do produto custava de R$ 1.750 a R$ 2.000.</p>
-    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/25/brasil-proibe-producao-venda-foie-gras-acaba-crueldade-alimentacao-forcada-animais">Só Notícia Boa · 25/07/2026 (Lei no Planalto/DOU)</a></div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Um produto de R$ 2 mil o quilo, sustentado por sofrimento animal, acaba de perder o mercado brasileiro. Ética também precifica.</div>
-    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div><span class="n">4/5</span></div>
-    <div class="status ok">✅ Nível 1 — Lei 15.475/2026 publicada no Diário Oficial da União</div>
-    <p class="why"><b>Por que merece mais atenção:</b> repercutiu até na França, maior produtora mundial — e quase não apareceu no noticiário nacional. Primeiro precedente latino-americano de proibição em escala de país.</p>
-    <details><summary>Copy Instagram</summary><div class="copy">R$ 2.000 o quilo.
-Esse era o preço do foie gras no Brasil.
+    <article class="card">
+      <div class="ghost">02</div>
+      <div class="cat">Primeiros da história</div>
+      <h3>Primeira promotora de Justiça trans do Brasil toma posse no Amazonas</h3>
+      <p class="dek">A advogada e professora Fabi Diniz de Queiroz Pilate tomou posse no Ministério Público do Amazonas (MPAM) e se tornou a primeira promotora de Justiça trans do país.</p>
+      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/02/primeira-promotora-trans-brasil-posse-historia-amazonas-video">Só Notícia Boa (02/08)</a> · imagem/registro: MPAM</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Concurso público é o elevador social mais concorrido do país — e uma barreira histórica acaba de cair dentro dele.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div></div><span>5/5</span></div>
+      <div class="status">✅ Verificada — registro institucional (MPAM)</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>"Primeira da história" de verdade: carreira jurídica de elite, via concurso, no Norte do país — três barreiras rompidas de uma vez.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Tem teto que não é de vidro. É de edital.
 
-O custo real? Um tubo no esôfago de patos e gansos, comida forçada, fígado inchado até 10x o tamanho normal.
+O concurso para promotor de Justiça é um dos mais duros do Brasil.
+Anos de estudo. Milhares de candidatos. Pouquíssimas vagas.
 
-Acabou. Lei sancionada, publicada no Diário Oficial: o Brasil é o PRIMEIRO país da América Latina a proibir produção e venda de foie gras em todo o território.
+Fabi Diniz de Queiroz Pilate passou.
+E fez história: primeira promotora trans do país, empossada no Amazonas.
 
-Quem insistir responde por maus-tratos. Até 1 ano de prisão.
+Ninguém deu. Ela conquistou.
+Prova escrita não pergunta sobrenome. Nem identidade.
 
-A França reclamou. Os patos agradecem.
+Barreira rompida vira porta aberta.
+E porta aberta não se fecha mais.
 
-Mercado que só existe com crueldade não é mercado. É dívida moral com juros compostos.
+#MePoupe #PrimeiraDaHistoria #ConcursoPublico #Representatividade #Amazonas #MPAM #QuebraDeBarreiras #MulheresQueFazem #Justica #Inclusao</pre></details>
+    </article>
 
-#MePoupe #BoasNoticias #BemEstarAnimal #FoieGras #Lei15475 #DireitoDosAnimais #ConsumoConsciente #Brasil #NoticiaBoa #EticaNoConsumo</div></details>
-  </article>
+    <article class="card">
+      <div class="ghost">03</div>
+      <div class="cat">Educação financeira · Tecnologia para o povo</div>
+      <h3>Pix já funciona em 8 países — e sai mais barato que o cartão de crédito</h3>
+      <p class="dek">Argentina, Uruguai, Chile, Paraguai, EUA, Portugal, Espanha e França já aceitam pagamento via QR Code com conversão em reais na hora, sem a surpresa da cotação na fatura. O BC esclarece: as operações são feitas por empresas autorizadas, não por um sistema oficial no exterior.</p>
+      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/31/pix-valendo-8-paises-mais-barato-cartao-credito-veja">Só Notícia Boa (31/07)</a> · levantamento ICL; posição do Banco Central citada</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Transparência de preço antes de confirmar o pagamento — no cartão internacional, você só descobre o custo real na fatura. Spread é imposto invisível de quem não compara.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div></div><span>4/5</span></div>
+      <div class="status">✅ Verificada — SNB + ICL, com ressalva oficial do BC registrada</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>Pauta de bolso puro: viajante brasileiro pagando menos taxa. E a nuance (não é sistema oficial do BC) é exatamente o tipo de precisão que diferencia a Me Poupe! do hype.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Seu Pix atravessou a fronteira. Sua fatura agradece.
 
-  <article class="story">
-    <div class="ghost">03</div>
-    <div class="cat">Futebol feminino · Quebra de barreira</div>
-    <h3>Kerolin vai ao Barcelona na maior transferência da história de uma jogadora brasileira</h3>
-    <p class="dek">O Barcelona acertou com o Manchester City a contratação da atacante por €1,5 milhão (~R$ 8,6 milhões) — recorde absoluto para uma atleta brasileira, superando os US$ 1,1 milhão de Gutierres. Aos 26 anos, Kerolin vem de títulos da Women's Super League e da Copa da Inglaterra e integra a Seleção que se prepara para a Copa de 2027, no Brasil. Acordo verbal; assinatura prevista para os próximos dias.</p>
-    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/27/vendida-barcelona-kerolin-jogadora-brasileira-mais-cara-historia">Só Notícia Boa · 27/07/2026 (via Mundo Deportivo)</a></div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>O futebol feminino brasileiro acaba de repactuar seu próprio teto de valuation — às vésperas de uma Copa em casa.</div>
-    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div><span class="n">4/5</span></div>
-    <div class="status ok">✅ Nível 1 — Mundo Deportivo; valores confirmados; acordo verbal, contrato a assinar</div>
-    <p class="why"><b>Por que merece mais atenção:</b> não é resultado de rodada — é recorde histórico de mercado. Cada teto rompido reprecifica a próxima geração de meninas que jogam bola no Brasil.</p>
-    <details><summary>Copy Instagram</summary><div class="copy">R$ 8,6 milhões.
-Recorde histórico do futebol feminino brasileiro.
+8 países já aceitam: Argentina, Uruguai, Chile, Paraguai, EUA, Portugal, Espanha e França.
+QR Code na maquininha. Valor em reais na tela. Confirma e pronto.
 
-Kerolin, 26 anos, saiu da Ponte Preta, passou por Corinthians e Palmeiras, virou campeã inglesa — e agora é a jogadora brasileira mais valorizada de TODOS os tempos. Destino: Barcelona.
+O detalhe que ninguém te conta:
+no cartão internacional, a cotação fecha DIAS depois. Surpresa na fatura.
+No Pix, o preço final aparece ANTES de você pagar.
 
-Em 2019, uma suspensão quase encerrou a carreira dela. Ela voltou. Em alto nível.
+Informação antes do gasto = poder de decisão.
 
-Volta por cima não é frase de coach. É estratégia executada.
+Atenção: não é sistema oficial do BC lá fora — são empresas autorizadas fazendo a conversão. Compare taxas antes de viajar.
 
-E o detalhe que importa: cada recorde desses aumenta o valor de mercado da PRÓXIMA menina que hoje joga descalça no quintal.
+Spread é imposto de quem não pesquisa.
 
-Copa de 2027 é no Brasil. Anota esse nome.
+#MePoupe #Pix #EducacaoFinanceira #Viagem #CartaoDeCredito #Spread #DinheiroInteligente #Cambio #FinancasPessoais #Economia</pre></details>
+    </article>
 
-#MePoupe #BoasNoticias #FutebolFeminino #Kerolin #Barcelona #RecordeHistorico #MulheresNoEsporte #Selecao #Copa2027 #NoticiaBoa</div></details>
-  </article>
+    <article class="card">
+      <div class="ghost">04</div>
+      <div class="cat">Quebra de ciclos sociais · Finanças da família</div>
+      <h3>Lei do Pix Pensão entra em vigor: pensão alimentícia cai automático na conta</h3>
+      <p class="dek">Sancionada em 29/07 e já publicada no DOU, a lei cria transferência automática da conta do devedor para o beneficiário, definida por decisão judicial. Sem saldo? O juiz pode bloquear outros ativos, com repasse em até 24 horas.</p>
+      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/30/lei-pix-pensao-em-vigor-pagamento-automatico-pensao-alimenticia">Só Notícia Boa (30/07)</a> · primária: Agência Brasil / DOU</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Previsibilidade de fluxo de caixa para quem cria filho sozinha: a conta que mais atrasa no Brasil vira débito automático com força de Justiça.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div></div><span>4/5</span></div>
+      <div class="status">✅ Verificada — lei sancionada, DOU + Agência Brasil</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>Impacto direto no orçamento de milhões de famílias chefiadas por mulheres — e quase nenhum veículo tratou como pauta de finanças pessoais.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>A conta que mais atrasa no Brasil acaba de virar débito automático.
 
-  <article class="story">
-    <div class="ghost">04</div>
-    <div class="cat">Educação · Gerações</div>
-    <h3>Pai que vendeu tudo pelos estudos do filho volta à escola — e o filho, hoje professor, o homenageia em sala</h3>
-    <p class="dek">Em Morro do Chapéu, na Chapada Diamantina (BA), o professor Pertiano Sossa entrou com bolo e flores na turma da EJA onde estuda o próprio pai, Elias Jorge — o homem que vendeu o que tinha para pagar a escola do filho. Hoje é Pertiano quem compra o material escolar do pai e o ajuda nas tarefas. O vídeo da homenagem passou de 1 milhão de visualizações nesta semana.</p>
-    <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/27/professor-homenageia-pai-idoso-voltou-estudar-eja-vendeu-tudo-eu-estudar-video">Só Notícia Boa · 27/07/2026</a></div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Educação foi o único investimento que esse pai pôde fazer. O retorno veio em dobro: um filho professor — e a vaga dele mesmo na sala de aula.</div>
-    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div><span class="n">4/5</span></div>
-    <div class="status warn">⚠️ Nível 2 — origem em rede social (@xperty23); vídeo gravado em abril, voltou a viralizar em 27/07 (data de cobertura)</div>
-    <p class="why"><b>Por que merece mais atenção:</b> é o ciclo completo da educação como ativo intergeracional: o sacrifício do pai virou diploma do filho, e o diploma do filho virou matrícula do pai. EJA raramente ganha holofote.</p>
-    <details><summary>Copy Instagram</summary><div class="copy">"Todo mundo pode tirar tudo de você. Menos o conhecimento."
+Lei do Pix Pensão: sancionada, publicada, valendo.
 
-Quem dizia isso era Seu Elias, um homem sem instrução da Chapada Diamantina, que VENDEU TUDO para pagar a escola do filho.
+Como funciona:
+O juiz define valor, data, contas e reajuste.
+Todo mês, o dinheiro sai da conta do devedor e cai na do beneficiário.
+Automático.
 
-O filho virou professor. Três pós-graduações.
+Faltou saldo? O sistema avisa a Justiça.
+Bloqueio de outros ativos. Repasse em até 24h.
 
-E aí a história virou do avesso: agora é Seu Elias quem está na sala de aula, na EJA. Quem compra o material escolar dele? O filho. Quem ajuda na lição de casa? O filho.
+Pensão não é favor. É orçamento de criança.
+E orçamento precisa de previsibilidade.
 
-Na semana passada, Pertiano entrou na sala do pai com bolo e flores. Na frente da turma toda: "Ele é meu herói."
+Quem cria filho sozinha sabe o peso de cada atraso.
+Agora a Justiça cobra por você.
 
-1 milhão de pessoas choraram junto.
+#MePoupe #PixPensao #PensaoAlimenticia #FinancasFamiliares #Maes #Orcamento #Direitos #EducacaoFinanceira #FluxoDeCaixa #Familia</pre></details>
+    </article>
 
-Educação não é gasto. É o único investimento com retorno garantido em DUAS gerações.
+    <article class="card">
+      <div class="ghost">05</div>
+      <div class="cat">Conquista acadêmica</div>
+      <h3>Médica de Congonhas (MG) conquista bolsas em Harvard, Columbia, Johns Hopkins e Duke — e escolhe Harvard</h3>
+      <p class="dek">Bianca Cardoso Lopes, 25, formada pela UFOP e residente de Cirurgia Geral, foi aprovada com bolsa nas quatro universidades. No mestrado em Harvard, vai pesquisar tecnologia para centros cirúrgicos mais seguros — com apoio das fundações Lemann e Maria Emília.</p>
+      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/31/medica-brasileira-conquista-bolsa-4-universidades-eua-escolhe-harvard">Só Notícia Boa (31/07)</a> · primária: Prefeitura de Congonhas</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Ensino público na base (IFMG + UFOP), bolsa integral no topo: a rota de maior ROI educacional do país continua sendo pouco contada.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div></div><span>4/5</span></div>
+      <div class="status">✅ Verificada — nota oficial da Prefeitura de Congonhas</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>Interior de Minas → federal → 4 aprovações da Ivy League com bolsa. Ela pretende voltar o conhecimento para a medicina brasileira — ciclo virtuoso completo.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Harvard disse sim. Columbia disse sim. Johns Hopkins disse sim. Duke disse sim.
 
-#MePoupe #BoasNoticias #EJA #Educacao #PaiEFilho #ChapadaDiamantina #Bahia #InvestimentoReal #QuebraDeCiclo #NoticiaBoa</div></details>
-  </article>
+Bianca, 25 anos, de Congonhas (MG), só precisava de um.
+Conseguiu os quatro. Com bolsa.
+
+A rota dela:
+Escola em Congonhas. Ensino médio no IFMG. Medicina na UFOP.
+Pesquisa, extensão, estágio internacional. Currículo construído tijolo a tijolo.
+
+Educação pública na base.
+Bolsa integral no topo.
+
+Ninguém patrocinou atalho. Ela investiu no ativo que ninguém confisca: conhecimento.
+
+E o plano? Trazer tudo de volta pra medicina brasileira.
+
+#MePoupe #Harvard #EducacaoPublica #UFOP #MulheresNaMedicina #MinasGerais #Bolsa #InvestimentoEmEducacao #BrasileirosPeloMundo #ROI</pre></details>
+    </article>
+
+    <article class="card">
+      <div class="ghost">06</div>
+      <div class="cat">Ciência na escola</div>
+      <h3>Estudantes de todo o país lançam foguetes na Jornada de Foguetes 2026</h3>
+      <p class="dek">Começa hoje (03/08) em Barra do Piraí (RJ) a jornada que reúne 18 equipes com os melhores desempenhos da Olimpíada Brasileira de Foguetes — alunos de escolas públicas e privadas, urbanas e rurais, do 6º ano ao ensino médio. Realização SAB, com Agência Espacial Brasileira e CNPq.</p>
+      <div class="fonte">Fonte: <a href="https://agenciabrasil.ebc.com.br/educacao/noticia/2026-07/estudantes-de-todo-o-pais-participam-da-jornada-de-foguetes-2026">Agência Brasil (02/08)</a></div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Foguete de vinagre e bicarbonato hoje, engenheiro aeroespacial amanhã: ciência divertida é a porta de entrada mais barata para carreiras de alto salário.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div><div class="bar"></div></div><span>3/5</span></div>
+      <div class="status">✅ Verificada — Agência Brasil, Nível 1</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>Escola rural lançando foguete ao lado de colégio privado, no mesmo campeonato: é o retrato de mobilidade via ciência que quase nunca vira manchete.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Tem criança de escola rural lançando foguete hoje no Brasil.
+
+Jornada de Foguetes 2026: começa agora, em Barra do Piraí (RJ).
+18 equipes. Os melhores da Olimpíada Brasileira de Foguetes.
+Escola pública e privada. Urbana e rural. Lado a lado.
+
+Ensino médio lança foguete de vinagre com bicarbonato.
+Fundamental, de água e ar comprimido.
+Química, física e trabalho em equipe — na prática.
+
+Custo do experimento: quase zero.
+Retorno: uma geração que aprende que ciência é pra ela também.
+
+Investimento não é só dinheiro. É repertório.
+
+#MePoupe #Ciencia #Educacao #Foguetes #OBA #EscolaPublica #STEM #Astronomia #FuturoDoBrasil #Conhecimento</pre></details>
+    </article>
 
   </div>
 </section>
 
-<!-- ====== HERO INTERNACIONAL ====== -->
+<!-- ═══════════ HERO INTERNACIONAL ═══════════ -->
 <section>
-  <div class="sec-title"><span>Destaque internacional do dia</span></div>
+  <div class="sec-title">Destaque internacional do dia</div>
   <article class="hero">
     <div class="ghost">01</div>
-    <div class="cat">Educação · Povos originários <span class="flag">🇺🇸</span></div>
-    <h2>Escolas indígenas dos EUA alcançam a maior taxa de formatura da história do país</h2>
-    <p class="dek">As escolas do Bureau of Indian Education registraram as maiores taxas de graduação já medidas: 8 escolas formaram 100% da turma 2025/26 e outras 13 passaram de 90%. A taxa média alcançou os 87–88% nacionais — eliminando uma disparidade histórica. Em 2015, era de 51%. A virada combinou dados em tempo real, ensino remoto para alunos cuidadores e trilhas técnicas.</p>
-    <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/american-indian-schools-achieve-highest-graduation-rates-in-the-nations-history/">Good News Network · 28/07/2026 (via AP e Bureau of Indian Education)</a></div>
-    <div class="orig">Título original: "American Indian Schools Achieve Highest Graduation Rates in the Nation's History"</div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>De 51% para 88% em uma década. Quando o sistema decide enxergar o aluno, o "impossível" vira média nacional.</div>
-    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div><span class="n">5/5</span></div>
-    <div class="status ok">✅ Nível 1 — AP + comunicados oficiais do Bureau of Indian Education</div>
-    <p class="why"><b>Por que merece mais atenção:</b> comunidades historicamente colocadas na última fila da estatística educacional acabaram de empatar com a média do país mais rico do mundo — e quase ninguém noticiou. Primeiro da história, literalmente.</p>
-    <details><summary>Copy Instagram</summary><div class="copy">2015: 51% dos alunos indígenas se formavam no ensino médio dos EUA.
-2026: 87-88%. Empatados com a média nacional.
+    <div class="cat"><span class="flag">🇫🇮</span>Energia limpa · Inovação</div>
+    <h2>Cidade finlandesa corta 70% das emissões do aquecimento com a maior bateria de areia do mundo</h2>
+    <p class="dek">Em Pornainen (5 mil habitantes), um silo de 13 metros com 2.000 toneladas de esteatita triturada armazena calor gerado com eletricidade renovável barata. Resultado: consumo de óleo zerado, queima de lenha -60% — e aquecimento garantido por semanas, resolvendo a intermitência das renováveis. Tecnologia da Polar Night Energy.</p>
+    <div class="fonte">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-31-of-2026/">Positive News, roundup da semana 31 (31/07)</a></div>
+    <div class="orig">Título original: "Finland warmed to a giant sand battery"</div>
+    <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Comprar energia barata fora de pico e "guardar" em areia para usar depois: é a lógica do estoque inteligente aplicada à conta de luz de uma cidade inteira.</p></div>
+    <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div></div><span>4/5</span></div>
+    <div class="status">✅ Verificada — Positive News; empresa e prefeito nomeados</div>
+    <div class="why"><b>Por que merece mais atenção</b><p>Resolve o calcanhar de aquiles da energia limpa (intermitência) com o material mais banal do planeta. Solução simples, escalável e municipal — não depende de megaprojeto.</p></div>
+    <details><summary>Copy Instagram sugerida</summary><pre>Uma cidade inteira está economizando com... areia.
 
-Primeira vez na HISTÓRIA.
+Pornainen, Finlândia. 5 mil habitantes.
+Um silo de 13 metros. 2.000 toneladas de pedra triturada.
 
-8 escolas indígenas formaram 100% da turma. Outras 13 passaram de 90%.
+A mágica:
+Compram eletricidade renovável quando está BARATA (fora de pico).
+Esquentam a areia. A areia guarda o calor por semanas.
+Depois, aquecem a cidade com esse calor.
 
-Como? Sem mágica: dados em tempo real para identificar aluno em risco, ensino remoto para quem cuida da família ou trabalha, formação técnica para quem quer ofício.
+Resultado:
+Óleo: zerado.
+Lenha: -60%.
+Emissões do aquecimento: -70%.
 
-"Nossos estudantes estão mostrando ao país o que é a excelência nativa", disse o diretor do Bureau of Indian Education.
+É a regra de ouro do consumo inteligente: compre na baixa, use quando precisar.
+Eles só aplicaram na conta de luz de uma cidade inteira.
 
-Uma década. 37 pontos percentuais. Um ciclo de séculos interrompido.
-
-Desigualdade não é destino. É subinvestimento. E subinvestimento se corrige.
-
-#MePoupe #BoasNoticias #Educacao #PovosOriginarios #EUA #QuebraDeCiclo #ExcelenciaNativa #EnsinoMedio #Formatura #NoticiaBoa #MudancaReal</div></details>
+#MePoupe #EnergiaLimpa #Inovacao #Finlandia #Sustentabilidade #ContaDeLuz #Economia #BateriaDeAreia #ConsumoInteligente #FuturoVerde</pre></details>
   </article>
 </section>
 
-<!-- ====== MUNDO GRID ====== -->
+<!-- ═══════════ MUNDO GRID ═══════════ -->
 <section>
-  <div class="sec-title"><span>Mundo — notícias internacionais</span></div>
+  <div class="sec-title">Mundo — notícias internacionais</div>
   <div class="grid">
 
-  <article class="story">
-    <div class="ghost">02</div>
-    <div class="cat">Biodiversidade · Restauração <span class="flag">🇮🇳</span></div>
-    <h3>Ave que havia sumido há 60 anos volta a se reproduzir sozinha em parque na Índia</h3>
-    <p class="dek">O calau-cinzento-indiano não nidificava no Parque Nacional de Gir, em Gujarat, desde os anos 1960. Após anos de restauração de hábitat e um programa de reintrodução iniciado em 2021, a população chegou a ~40 aves e, pelo 4º ano seguido, casais criaram filhotes — ponto em que a espécie se sustenta sem novas solturas. O calau é espécie-indicadora: onde ele prospera, a floresta está saudável.</p>
-    <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/vanished-hornbill-species-reintroduced-4-years-ago-now-self-sustaining-again/">Good News Network · 27/07/2026 (via The Better India)</a></div>
-    <div class="orig">Título original: "Vanished Hornbill Species Breeding Again After 60 Years Among Old Trees"</div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Restaurar hábitat é renda passiva ecológica: você investe uma vez na floresta e a natureza passa a se pagar sozinha.</div>
-    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div><span class="n">3/5</span></div>
-    <div class="status ok">✅ Nível 1 — The Better India / programa oficial do Parque Nacional de Gir</div>
-    <p class="why"><b>Por que merece mais atenção:</b> "autossustentável" é a palavra que quase nunca aparece em conservação. Aqui, apareceu: a população não precisa mais de intervenção humana. Ciclo de 60 anos de ausência, quebrado.</p>
-    <details><summary>Copy Instagram</summary><div class="copy">60 anos de ausência.
-4 anos de trabalho.
-E ela voltou pra ficar.
+    <article class="card">
+      <div class="ghost">02</div>
+      <div class="cat"><span class="flag">🌍</span>Inovação social</div>
+      <h3>Bancos de alimentos salvam 500 mil toneladas de comida do lixo — e servem 2 bilhões de refeições</h3>
+      <p class="dek">Parcerias com agricultores e varejistas pouparam frutas e legumes "feios" do aterro em 2025: 2 milhões de toneladas de CO2 evitadas (o equivalente a tirar 473 mil carros das ruas) e 40,5 milhões de pessoas alimentadas, segundo a Global FoodBanking Network.</p>
+      <div class="fonte">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-31-of-2026/">Positive News, semana 31 (31/07)</a> · primária: GFN</div>
+      <div class="orig">Título original: "Food banks turned waste into billions of meals"</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Desperdício é dinheiro no lixo — na sua geladeira e na cadeia global. Aqui, logística transformou perda em 2 bilhões de refeições.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div></div><span>4/5</span></div>
+      <div class="status">✅ Verificada — GFN, presidente nomeada</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>A face dupla e honesta da notícia: eficiência recorde contra o desperdício e, ao mesmo tempo, alerta de fome crescente. Jornalismo positivo sem ingenuidade.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Meio milhão de toneladas de comida ia pro lixo. Virou 2 bilhões de refeições.
 
-O calau-cinzento-indiano sumiu do Parque de Gir, na Índia, nos anos 1960. A árvore velha que ele precisa pra fazer ninho tinha acabado.
+O "crime": fruta feia, legume torto.
+O mercado rejeita. O aterro recebe. O planeta paga.
 
-O plano não foi soltar aves e torcer. Foi restaurar a floresta PRIMEIRO. Anos preparando o terreno, protegendo árvores maduras.
+Em 2025, bancos de alimentos do mundo inteiro mudaram a rota:
+500 mil toneladas resgatadas.
+40,5 milhões de pessoas alimentadas.
+2 milhões de toneladas de CO2 evitadas — 473 mil carros a menos nas ruas.
 
-Resultado: 40 aves, 4 anos seguidos de filhotes — e o melhor: a população agora se sustenta SOZINHA. Sem novas solturas. Sem intervenção.
+Desperdício é dinheiro no lixo.
+Na cadeia global. E na sua geladeira também.
 
-Isso, no mercado, chama-se ativo que gera renda passiva. Na natureza, chama-se floresta viva.
+Comida não precisa ser bonita. Precisa chegar ao prato.
 
-Você investe no hábitat. O hábitat devolve com juros.
+#MePoupe #Desperdicio #BancoDeAlimentos #Sustentabilidade #Fome #Economia #ConsumoConsciente #ImpactoSocial #Alimentacao #Solidariedade</pre></details>
+    </article>
 
-#MePoupe #BoasNoticias #Biodiversidade #India #Conservacao #Rewilding #MeioAmbiente #FlorestaViva #Natureza #NoticiaBoa</div></details>
-  </article>
+    <article class="card">
+      <div class="ghost">03</div>
+      <div class="cat"><span class="flag">🇪🇺</span>Saúde com base científica</div>
+      <h3>Europa aprova implante de retina que devolve visão central a pacientes com degeneração macular</h3>
+      <p class="dek">O implante PRIMA, da Science Corporation, recebeu certificação CE e pode chegar a 30 países europeus. Nos ensaios clínicos, 80% dos pacientes com DMRI recuperaram visão central útil — "algo que nunca havia sido feito", segundo o consultor do Moorfields Eye Hospital que liderou o braço britânico do estudo.</p>
+      <div class="fonte">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-31-of-2026/">Positive News, semana 31 (31/07)</a> · primária: Science Corp / Moorfields</div>
+      <div class="orig">Título original: "Specs to the future: hi-tech eye implant approved in Europe"</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Envelhecer com autonomia também é pauta financeira: visão preservada é independência, trabalho e menos custo de cuidado para milhões de famílias.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div></div><span>4/5</span></div>
+      <div class="status">✅ Verificada — certificação CE + hospital e especialista nomeados</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>DMRI é uma das maiores causas de perda de visão acima dos 50 — restaurar visão central "nunca havia sido feito". Marco regulatório real, não promessa de laboratório.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Pela primeira vez, a perda de visão que atinge milhões de idosos tem caminho de volta.
 
-  <article class="story">
-    <div class="ghost">03</div>
-    <div class="cat">Empreendedorismo · Ciência para todos <span class="flag">🇺🇸</span></div>
-    <h3>"Fazenda de telescópios" no Texas leva céu sem poluição luminosa a quem vive na cidade</h3>
-    <p class="dek">Em Rockwood, zona rural do Texas com escuridão máxima (Bortle 1), o astrofotógrafo Bray Falls criou a Starfront Observatories: donos de telescópio do mundo inteiro enviam seus equipamentos, que são instalados em pilares de concreto alinhados ao polo celeste e operados remotamente pela internet — por US$ 99 a 149/mês. São centenas de telescópios em galpões cujos tetos se abrem à noite.</p>
-    <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/unusual-texas-ranch-raises-telescopes-to-provide-remote-dark-sky-viewing-for-those-living-amid-light-pollution/">Good News Network · 27/07/2026 (Starfront Observatories; entrevista BBC Earth)</a></div>
-    <div class="orig">Título original: "Odd Texas Ranch 'Raises' Telescopes to Provide Dark Sky Viewing for Stargazers in Cities Remotely"</div>
-    <div class="callout"><b>Proposta de leitura · Me Poupe!</b>Um problema (poluição luminosa) + um ativo ocioso (40 acres no meio do nada) = um modelo de negócio que democratiza o universo por assinatura.</div>
-    <div class="fator"><div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div><span class="n">3/5</span></div>
-    <div class="status warn">⚠️ Nível 2 — matéria submetida por colaborador ao GNN; empresa e fundador corroborados por entrevista à BBC Earth</div>
-    <p class="why"><b>Por que merece mais atenção:</b> é microempreendedorismo puro resolvendo um problema que a ciência conhece bem: 80% da humanidade vive sob céu poluído de luz. O modelo transforma terra barata e céu escuro em infraestrutura científica compartilhada.</p>
-    <details><summary>Copy Instagram</summary><div class="copy">Você mora na cidade. Nunca viu a Via Láctea.
+Degeneração macular: a visão central some. Ler, dirigir, reconhecer rostos — tudo fica embaçado.
 
-Um jovem astrofotógrafo no Texas olhou pra esse problema e enxergou um modelo de negócio.
+A virada: um implante de retina com centenas de pixels + um óculos especial que envia sinais de luz.
+Nos testes, 80% dos pacientes recuperaram visão central útil.
 
-Bray Falls tem 40 acres num dos céus mais escuros dos EUA. A ideia: você MANDA seu telescópio pra fazenda dele. Ele instala num pilar de concreto, alinha com o eixo da Terra, conecta na internet.
+Agora tem certificação europeia. Pode chegar a 30 países.
 
-De casa, do seu computador, você controla seu telescópio a milhares de km — e fotografa nebulosas como um observatório profissional.
+"Nunca havia sido feito", diz o especialista do Moorfields, em Londres.
 
-Custo: a partir de US$ 99/mês. Menos que muita mensalidade de academia.
+Enxergar é autonomia.
+E autonomia na velhice não tem preço — mas tem ciência.
 
-Terra barata + céu escuro + internet = infraestrutura científica por assinatura.
+#MePoupe #Saude #Ciencia #Visao #Longevidade #Inovacao #Tecnologia #TerceiraIdade #Autonomia #Medicina</pre></details>
+    </article>
 
-Empreender é isso: achar o ativo que ninguém precificou.
+    <article class="card">
+      <div class="ghost">04</div>
+      <div class="cat"><span class="flag">🇭🇰</span>Saúde com base científica</div>
+      <h3>Menos açúcar nos primeiros mil dias de vida pode cortar risco de demência em 23%</h3>
+      <p class="dek">Estudo publicado na revista Neurology analisou 65 mil pessoas do UK Biobank usando o fim do racionamento de açúcar pós-guerra como "experimento natural": menos açúcar da gestação aos 2 anos associou-se a 23% menos risco de demência, início 2,6 anos mais tardio e mais massa cinzenta.</p>
+      <div class="fonte">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-31-of-2026/">Positive News, semana 31 (31/07)</a> · primária: Neurology / HKUST Guangzhou</div>
+      <div class="orig">Título original: "Scientists found the low-sugar recipe for healthier brains"</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Prevenção é o melhor juro composto que existe: uma decisão de hoje (menos açúcar no bebê) pagando dividendos de saúde 70 anos depois.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div><div class="bar"></div></div><span>3/5</span></div>
+      <div class="status">✅ Verificada — periódico revisado por pares, universidade nomeada</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>Estudo de associação sério (não causa provada), com desenho engenhoso e amostra de 65 mil pessoas — informação prática para pais, sem terrorismo nutricional.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Uma decisão nos primeiros 2 anos de vida. Um efeito 70 anos depois.
 
-#MePoupe #BoasNoticias #Empreendedorismo #Astronomia #CeuEscuro #Startup #ModeloDeNegocio #Ciencia #Texas #NoticiaBoa</div></details>
-  </article>
+Cientistas usaram um "experimento natural" genial:
+o fim do racionamento de açúcar no pós-guerra britânico.
+
+65 mil pessoas analisadas. O achado:
+Menos açúcar da gestação aos 2 anos =
+23% menos risco de demência.
+Início 2,6 anos mais tardio.
+Mais massa cinzenta no cérebro.
+
+É associação, não sentença. Mas o recado é claro.
+
+Prevenção é o juro composto da saúde:
+pequeno aporte hoje, patrimônio cognitivo lá na frente.
+
+Poupar açúcar também é poupança.
+
+#MePoupe #Saude #Ciencia #Demencia #Alzheimer #Maternidade #Alimentacao #Prevencao #JurosCompostos #Cerebro</pre></details>
+    </article>
+
+    <article class="card">
+      <div class="ghost">05</div>
+      <div class="cat"><span class="flag">🇸🇪</span>Meio ambiente · Regulação</div>
+      <h3>Suécia marca data para o fim dos "químicos eternos": banimento a partir de 2028</h3>
+      <p class="dek">O país vai proibir PFAS — substâncias presentes de panelas a cosméticos, ligadas a maior risco de alguns cânceres e que levam anos para se degradar — em uma série de produtos de consumo a partir de janeiro de 2028, saindo na frente da legislação em construção na União Europeia.</p>
+      <div class="fonte">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-31-of-2026/">Positive News, semana 31 (31/07)</a></div>
+      <div class="orig">Título original: "Sweden set an end date for forever chemicals"</div>
+      <div class="callout"><div class="cl">Proposta de leitura · Me Poupe!</div><p>Quando o regulador age, o mercado inteiro se move: a conta da "durabilidade barata" dos PFAS estava sendo paga pela saúde pública.</p></div>
+      <div class="fator"><div class="bars"><div class="bar on"></div><div class="bar on"></div><div class="bar on"></div><div class="bar"></div><div class="bar"></div></div><span>3/5</span></div>
+      <div class="status">✅ Verificada — política oficial anunciada; Nível 1</div>
+      <div class="why"><b>Por que merece mais atenção</b><p>Precedente regulatório que tende a puxar a UE inteira — e o Brasil consome os mesmos produtos. Externalidade invisível finalmente ganhando preço.</p></div>
+      <details><summary>Copy Instagram sugerida</summary><pre>Tem química na sua panela que dura mais que a sua hipoteca.
+
+PFAS: os "químicos eternos".
+Estão na frigideira antiaderente, no cosmético, na embalagem.
+Resistem a água, óleo, calor... e ao tempo. Anos no seu corpo. Décadas na natureza.
+
+O custo escondido: risco aumentado de alguns cânceres.
+
+A Suécia cansou e marcou data:
+banimento em produtos de consumo a partir de janeiro de 2028.
+Na frente da União Europeia inteira.
+
+Barato que sai caro é a regra mais antiga da economia.
+Agora ela chegou à prateleira.
+
+#MePoupe #PFAS #Saude #MeioAmbiente #Suecia #Regulacao #ConsumoConsciente #QuimicosEternos #CustoInvisivel #Sustentabilidade</pre></details>
+    </article>
 
   </div>
 </section>
 
-<!-- ====== DESCARTES ====== -->
-<section>
-  <div class="descartes">
-    <b>🚫 12 descartadas</b> — repetidas (elefanta Julie, vaquita, papagaio-do-mar, bolsa perpétua PUC-Rio, foguete Skyroot, reservas marinhas NZ — todas já entregues); fato já coberto (qualidade do ar na Europa, versão w27 entregue em 03/07); fora da janela (biocosméticos ribeirinhos do Pará, 03/07 — armadilha de data em URL recente); celebridades (McCartney, Chaka Khan, Camila Pitanga, Isabelle Drummond); esporte de rotina (Alison dos Santos, Calderano, Tour de France); virais sem fato verificável (cachorrinha Caramela, bilhete do neto, feira de adoção); alegação incerta ("exolua" ainda em interrogação no próprio título).
-  </div>
-</section>
+<div class="descartes">🚫 <b>7 descartadas</b> — matéria do Sebrae "97% das empresas" (datada de 12/08/2025 — cache fora da janela); fã e Matheus Cunha (celebridade); "superidosa de 126 anos" (sem registro verificável); coleta de sangue sem agulha (fonte única comercial); 5G via satélite na Europa (fonte única agregador); meteoros e eclipses de agosto (já entregue em 29/07); virais de pets sem fato Nível 1.</div>
 
-<!-- ====== FECHAMENTO ====== -->
-<section>
-  <p class="fechamento">Hoje o fio é um só: <em>portas que se abrem para quem sempre ouviu "não"</em>. Um menino de 6 anos convidado pelo Bolshoi. Um pai idoso de volta à escola que ele pagou para o filho. Estudantes indígenas empatando com a média do país mais rico do mundo. O sistema adora dizer que a fila não anda. Anda — quando alguém decide investir onde ninguém investia. A pergunta que fica: qual porta você abre hoje?</p>
-</section>
+<div class="fecho">
+  <h4>Fechamento editorial</h4>
+  <p>Hoje o fio é um só: sistema que funciona quando alguém insiste. A Marly insistiu 29 anos numa barraca de pastel e comprou dois diplomas de Medicina. A Fabi insistiu num edital que nunca tinha aprovado alguém como ela. A Finlândia insistiu que areia guarda calor — e zerou o óleo de uma cidade.</p>
+  <p>O sistema não muda sozinho. Muda quando o boleto da insistência é pago todo dia. E esse rendimento, nenhuma corretora oferece: só a constância entrega.</p>
+</div>
 
-<footer>
-  <span>GoodNewsMP · Curadoria diária Me Poupe! · 28/07/2026</span>
-  <span>7 histórias · 4 ✅ · 3 ⚠️ · 12 🚫 · Fator MP médio 4,0</span>
-</footer>
+<footer>GoodNewsMP-03/08/26 · Curadoria diária de boas notícias · Me Poupe! · Fontes verificadas na data de publicação · Janela editorial: 120h</footer>
 
 </div>
 </body>
