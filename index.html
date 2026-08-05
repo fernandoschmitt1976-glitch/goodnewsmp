@@ -1,497 +1,333 @@
 <!DOCTYPE html>
-<script type="application/json" id="cowork-artifact-meta">
-{
-  "name": "Boas Noticias Mp",
-  "schemaVersion": 1,
-  "description": "Curadoria diária Me Poupe! — boas notícias subnoticiadas do Brasil e do mundo. Edição 04/08/26."
-}
-</script>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodNewsMP-04/08/26 — Boas notícias que o Brasil não viu</title>
+<title>GoodNewsMP-05/08/26 · Boas notícias que o Brasil não viu</title>
 <style>
-  :root { color-scheme: light }
-  *{box-sizing:border-box}
-  body{
-    background:#1B0A3A;color:#fff;margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;line-height:1.55;
-  }
-  .wrap{max-width:1040px;margin:0 auto;padding:56px 28px 96px}
-  .hair{height:1px;background:rgba(255,255,255,.10);border:0;margin:44px 0}
-  .hair-soft{height:1px;background:rgba(255,255,255,.07);border:0;margin:30px 0}
-
-  .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#838aff;font-weight:600}
-  h1{font-size:clamp(34px,5.4vw,58px);font-weight:300;letter-spacing:-.035em;line-height:1.05;margin:16px 0 18px}
-  .stamp{font-size:13px;color:rgba(255,255,255,.5);letter-spacing:.02em}
-  .tag{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;
-       color:#ffec64;border:1px solid rgba(255,236,100,.35);border-radius:999px;padding:5px 12px}
-
-  .kpis{display:flex;flex-wrap:wrap;gap:48px;margin:38px 0 4px}
-  .kpi .n{font-size:32px;font-weight:300;letter-spacing:-.03em;line-height:1}
-  .kpi .l{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:8px}
-  .kpi .sub{font-size:12px;color:rgba(255,255,255,.55);margin-top:4px}
-  .kpi.g .n{color:#83e9af}.kpi.y .n{color:#ffec64}.kpi.r .n{color:#e6483f}
-
-  h2.section{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);
-             font-weight:600;margin:0 0 30px}
-
-  .hero{position:relative;padding-top:6px}
-  .ghost{position:absolute;top:-26px;left:-6px;font-size:150px;font-weight:200;letter-spacing:-.06em;
-         color:rgba(255,255,255,.055);line-height:1;pointer-events:none;user-select:none}
-  .hero .body{position:relative}
-  .cat{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:#838aff;font-weight:600}
-  .hero h3{font-size:clamp(26px,3.6vw,40px);font-weight:300;letter-spacing:-.03em;line-height:1.14;margin:12px 0 14px}
-  .dek{font-size:16px;color:rgba(255,255,255,.72);max-width:74ch;margin:0 0 16px}
-  .src{font-size:12.5px;color:rgba(255,255,255,.45)}
-  .src a{color:#838aff;text-decoration:none;border-bottom:1px solid rgba(131,138,255,.3)}
-  .orig{font-size:11.5px;color:rgba(255,255,255,.3);margin-top:4px;font-style:italic}
-
-  .callout{border-left:2px solid #ffec64;padding:2px 0 2px 16px;margin:20px 0 18px;
-           font-size:14.5px;color:rgba(255,255,255,.82);max-width:70ch}
-  .callout b{color:#ffec64;font-weight:600;display:block;font-size:10.5px;letter-spacing:.14em;
-             text-transform:uppercase;margin-bottom:6px}
-
-  .meter{display:flex;align-items:center;gap:10px;margin:16px 0 12px}
-  .bars{display:flex;gap:4px}
-  .bar{width:26px;height:4px;background:rgba(255,255,255,.13);border-radius:2px}
-  .bar.on{background:#83e9af}
-  .meter .num{font-size:12px;color:rgba(255,255,255,.55);letter-spacing:.04em}
-  .meter .lab{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35)}
-
-  .status{font-size:12.5px;color:#83e9af;margin-bottom:14px}
-  .status.warn{color:#ffec64}
-  .why{font-size:14.5px;color:rgba(255,255,255,.66);max-width:72ch}
-  .why b{color:rgba(255,255,255,.9);font-weight:600}
-
-  details{margin-top:16px;border-top:1px solid rgba(255,255,255,.08);padding-top:14px}
-  summary{cursor:pointer;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#838aff;
-          list-style:none;font-weight:600}
-  summary::-webkit-details-marker{display:none}
-  summary::before{content:"↓ ";opacity:.6}
-  .copy{margin-top:14px;font-size:14.5px;color:rgba(255,255,255,.78);white-space:pre-line;max-width:70ch}
-  .hash{margin-top:12px;font-size:13px;color:#838aff;line-height:1.7}
-
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:52px 56px}
-  @media(max-width:820px){.grid{grid-template-columns:1fr;gap:44px}}
-  .item{position:relative}
-  .num-sm{font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.1em;margin-bottom:10px}
-  .item h3{font-size:clamp(19px,2.2vw,24px);font-weight:400;letter-spacing:-.02em;line-height:1.2;margin:10px 0 12px}
-  .item .dek{font-size:14.5px;margin-bottom:14px}
-  .flag{margin-right:7px}
-
-  .discard{font-size:13px;color:rgba(255,255,255,.4);margin:8px 0 0}
-  .close{font-size:19px;font-weight:300;line-height:1.5;letter-spacing:-.015em;color:rgba(255,255,255,.88);max-width:74ch}
-  .close .hit{color:#ffec64}
-  footer{margin-top:56px;font-size:11.5px;color:rgba(255,255,255,.3);letter-spacing:.03em}
+  :root { color-scheme: light; --roxo:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af; --fio:rgba(255,255,255,.1); }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--roxo);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:56px 32px 80px}
+  .eyebrow{color:var(--lilas);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+  header h1{font-size:clamp(34px,5.4vw,58px);font-weight:300;letter-spacing:-.03em;line-height:1.08;margin:14px 0 10px}
+  header h1 b{font-weight:600}
+  .data-line{color:rgba(255,255,255,.55);font-size:14px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+  .janela{border:1px solid var(--fio);border-radius:999px;padding:3px 12px;font-size:12px;color:var(--amarelo)}
+  .kpis{display:flex;gap:0;margin:44px 0 8px;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
+  .kpi{flex:1;padding:20px 8px;text-align:center}
+  .kpi+.kpi{border-left:1px solid var(--fio)}
+  .kpi .num{font-size:30px;font-weight:300;letter-spacing:-.02em}
+  .kpi .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px}
+  .kpi .split{font-size:12px;color:var(--lilas);margin-top:2px}
+  section{margin-top:64px}
+  .sec-title{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;padding-bottom:14px;border-bottom:1px solid var(--fio);margin-bottom:34px}
+  .hero{position:relative;padding-left:24px}
+  .ghost{position:absolute;right:0;top:-30px;font-size:150px;font-weight:200;color:rgba(255,255,255,.05);line-height:1;user-select:none}
+  .story{position:relative}
+  .story .cat{color:var(--lilas);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+  .story h2{font-weight:500;letter-spacing:-.02em;line-height:1.18;margin:10px 0 10px}
+  .hero .story h2{font-size:clamp(26px,3.6vw,40px);font-weight:300;max-width:820px}
+  .grid .story h2{font-size:20px}
+  .dek{color:rgba(255,255,255,.72);font-size:15px;max-width:760px}
+  .fonte{margin-top:12px;font-size:13px;color:rgba(255,255,255,.55)}
+  .fonte a{color:var(--verde);text-decoration:none;border-bottom:1px solid rgba(131,233,175,.35)}
+  .orig{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px;font-style:italic}
+  .callout{border-left:2px solid var(--amarelo);padding:10px 16px;margin:18px 0 0;max-width:760px}
+  .callout .tag{color:var(--amarelo);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+  .callout p{font-size:14px;color:rgba(255,255,255,.8);margin-top:5px}
+  .fator{display:flex;align-items:center;gap:10px;margin-top:18px}
+  .barras{display:flex;gap:4px}
+  .barra{width:20px;height:8px;border-radius:2px;background:rgba(255,255,255,.12)}
+  .barra.on{background:var(--lilas)}
+  .fator .n{font-size:13px;color:rgba(255,255,255,.65)}
+  .status{margin-top:10px;font-size:13px;color:var(--verde)}
+  .porque{margin-top:14px;max-width:760px}
+  .porque .t{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600}
+  .porque p{font-size:14px;color:rgba(255,255,255,.75);margin-top:5px}
+  details{margin-top:16px;max-width:760px}
+  details summary{cursor:pointer;font-size:13px;color:var(--amarelo);letter-spacing:.04em}
+  details .copy{white-space:pre-line;font-size:14px;color:rgba(255,255,255,.85);border:1px solid var(--fio);border-radius:10px;padding:16px 18px;margin-top:10px;background:rgba(255,255,255,.03)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 44px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}.ghost{font-size:90px}}
+  .num-item{font-size:44px;font-weight:200;color:rgba(255,255,255,.14);line-height:1;margin-bottom:8px}
+  .bandeira{font-size:14px;margin-right:6px}
+  .descartes{border-top:1px solid var(--fio);margin-top:70px;padding-top:26px;color:rgba(255,255,255,.55);font-size:14px;max-width:860px}
+  .descartes b{color:var(--vermelho);font-weight:600}
+  .fecho{margin-top:56px;border-left:2px solid var(--lilas);padding:6px 22px;max-width:820px}
+  .fecho p{font-size:17px;font-weight:300;color:rgba(255,255,255,.9)}
+  .fecho p+p{margin-top:12px}
+  .uma-linha{margin-top:12px}
+  footer{margin-top:70px;border-top:1px solid var(--fio);padding-top:22px;font-size:12px;color:rgba(255,255,255,.4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 </style>
 </head>
 <body>
 <div class="wrap">
 
-  <!-- CABEÇALHO -->
+<header>
   <div class="eyebrow">Me Poupe! · Curadoria diária</div>
-  <h1>Boas notícias que o<br>Brasil não viu</h1>
-  <div class="stamp">GoodNewsMP-04/08/26</div>
-  <div class="tag">Janela: últimos 5 dias</div>
-
-  <!-- KPIs -->
-  <div class="kpis">
-    <div class="kpi">
-      <div class="n">8</div>
-      <div class="l">Histórias</div>
-      <div class="sub">5 nac · 3 int</div>
-    </div>
-    <div class="kpi g">
-      <div class="n">8</div>
-      <div class="l">Verificadas ✅</div>
-      <div class="sub">fonte Nível 1</div>
-    </div>
-    <div class="kpi r">
-      <div class="n">9</div>
-      <div class="l">Descartadas 🚫</div>
-      <div class="sub">janela, repetição, tom</div>
-    </div>
-    <div class="kpi y">
-      <div class="n">3,8</div>
-      <div class="l">Fator MP médio</div>
-      <div class="sub">escala 1–5</div>
-    </div>
+  <h1>Boas notícias que o <b>Brasil não viu</b></h1>
+  <div class="data-line">
+    <span>GoodNewsMP-05/08/26</span>
+    <span class="janela">Janela: últimos 5 dias</span>
   </div>
+</header>
 
-  <hr class="hair">
+<div class="kpis">
+  <div class="kpi"><div class="num">8</div><div class="lbl">histórias</div><div class="split">4 nac · 4 int</div></div>
+  <div class="kpi"><div class="num">8</div><div class="lbl">verificadas ✅</div></div>
+  <div class="kpi"><div class="num">9</div><div class="lbl">descartadas 🚫</div></div>
+  <div class="kpi"><div class="num">4,0</div><div class="lbl">Fator MP médio</div></div>
+</div>
 
-  <!-- DESTAQUE NACIONAL -->
-  <h2 class="section">Destaque nacional do dia</h2>
-
+<!-- HERO NACIONAL -->
+<section>
+  <div class="sec-title">Destaque nacional do dia</div>
   <div class="hero">
     <div class="ghost">01</div>
-    <div class="body">
-      <div class="cat">Justiça · Bolso da família</div>
-      <h3>O STF acabou de devolver o carro com isenção a quem a Reforma Tributária tinha deixado de fora</h3>
-      <p class="dek">Por unanimidade, o plenário derrubou nesta segunda o trecho da Lei Complementar 214/2025 que zerava IBS e CBS na compra de automóvel nacional apenas para deficiência moderada ou grave. Ficavam de fora quem tem deficiência leve e quem tem autismo de nível de suporte 1. Relator, Alexandre de Moraes: “essa definição de exclusão total é inconstitucional”. As ações foram protocoladas pelo Instituto Nacional de Direitos da Pessoa com Deficiência Oceano Azul e pela Associação Nacional de Apoio às Pessoas com Deficiência.</p>
-      <div class="src">Fonte: <a href="https://agenciabrasil.ebc.com.br/justica/noticia/2026-08/stf-derruba-restricao-compra-de-veiculos-por-pessoas-com-deficiencia">Agência Brasil</a> · 03/08/2026</div>
+    <div class="story">
+      <div class="cat">Quebra de ciclo · Maranhão</div>
+      <h2>Chamada de "macaca" ao vender cheiro-verde, dona Rosa recebe onda de solidariedade — e vai ganhar o próprio negócio</h2>
+      <p class="dek">Rosa Mire Peixoto, 54 anos, caminha quase 10 km por dia vendendo cheiro-verde no povoado de Cafezal (MA) para sustentar 4 filhos. Na quinta-feira, sofreu injúria racial na rua. A empresária Tatiara Mandu, cliente antiga, acolheu, denunciou ao Ministério Público e abriu uma vaquinha que já passa de R$ 20 mil — o plano inclui fogão novo, reforma da casa e um pequeno negócio de lanches para que ela pare de caminhar 10 km por dia.</p>
+      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/02/sofrer-racismo-vendendo-cheiro-verde-dona-rosa-recebe-onda-solidariedade-video">Só Notícia Boa</a> · 02/08/2026 (entrevista própria com Tatiara Mandu)</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>O racismo tentou tirar a dignidade; a comunidade respondeu com capital de giro. A vaquinha não é caridade — é investimento coletivo em uma microempreendedora que já trabalhava. Renda no lugar onde ela mora: isso é quebra de ciclo de verdade.</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div></div><span class="n">5/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (SNB, apuração própria; caso registrado no MP)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>A grande mídia cobre o crime; quase ninguém cobre a virada. A resposta coletiva transformou violência em ativo produtivo — e o desfecho (negócio próprio) é o que faz a diferença entre comoção passageira e mudança de vida.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Dona Rosa caminha 10 km por dia vendendo cheiro-verde no Maranhão. Semana passada, um homem a chamou de "macaca".
 
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        Isenção de tributo sobre carro não é conforto. É meio de trabalho, é chegar na consulta, é a mãe que leva o filho autista à terapia três vezes por semana sem depender de aplicativo. A LC 214 tinha criado uma régua clínica dentro de uma lei fiscal — e a régua decidia quem economizava dezenas de milhares de reais e quem não. O STF tirou a régua. Vale acompanhar: a redução a zero de IBS e CBS volta a alcançar deficiência leve e TEA nível 1.
-      </div>
+Poderia terminar aí. Não terminou.
 
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i></span>
-        <span class="num">5/5</span>
-      </div>
-      <div class="status">✅ Verificada — Agência Brasil (EBC), veículo institucional Nível 1, publicação de 03/08/2026 às 17h47 confirmada na página.</div>
-      <p class="why"><b>Por que merece mais atenção:</b> a manchete parece jurídica e some no noticiário de tribunal. O efeito é de caixa doméstico. Autismo nível 1 e deficiência leve descrevem justamente as famílias que trabalham, dirigem e sustentam a casa — e que tinham sido cortadas do benefício por um critério de gravidade clínica escrito dentro de uma norma tributária. Decisão unânime, dez ministros acompanhando o relator.</p>
+Uma cliente antiga viu, acolheu, denunciou ao Ministério Público — e abriu uma vaquinha. Resultado: mais de R$ 20 mil, fogão novo, reforma da casa e um plano de negócio próprio pra ela vender lanches sem sair do povoado.
 
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">Unânime.
+Presta atenção no detalhe: ninguém deu esmola. Deram capital.
 
-Dez ministros, uma decisão, e um carro que voltou a caber no orçamento de milhares de famílias brasileiras.
+Capital pra quem já trabalhava. Renda recorrente no lugar de caridade pontual. É assim que ciclo se quebra: com dignidade E fluxo de caixa.
 
-A Reforma Tributária zerou IBS e CBS na compra de automóvel nacional por pessoa com deficiência. Boa notícia. Só que a letra miúda dizia: moderada ou grave. Deficiência leve, fora. Autismo nível de suporte 1, fora.
+O ódio gritou. A comunidade investiu.
 
-Aqui está o detalhe que ninguém comenta: nível 1 não quer dizer pouco. Quer dizer que a pessoa trabalha, dirige, sustenta a casa — e ainda assim precisa do carro para a terapia, para a escola, para a consulta.
-
-O STF derrubou o corte nesta segunda. Relator Alexandre de Moraes: exclusão total é inconstitucional.
-
-Uma linha de lei fiscal decidia quem economizava dezenas de milhares de reais. Deixou de decidir.
-
-Isenção não é luxo. É mobilidade. E mobilidade, para quem tem deficiência, é renda.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #ReformaTributária #PCD #Autismo #InclusãoFinanceira #DireitosDaPessoaComDeficiência #STF #Isenção #Acessibilidade #DinheiroNaPrática #FinançasDaFamília</div>
-      </details>
+#MePoupe #EducaçãoFinanceira #Empreendedorismo #DonaRosa #Maranhão #QuebraDeCiclo #Microempreendedor #RendaExtra #Solidariedade #BoasNotícias #NotíciaBoa #Brasil</div></details>
     </div>
   </div>
+</section>
 
-  <hr class="hair">
-
-  <!-- BRASIL — DEMAIS -->
-  <h2 class="section">Brasil — as demais histórias</h2>
-
+<!-- DEMAIS NACIONAIS -->
+<section>
+  <div class="sec-title">Brasil — as demais histórias</div>
   <div class="grid">
 
-    <div class="item">
-      <div class="num-sm">02</div>
-      <div class="cat">Saúde da mulher · Ciência</div>
-      <h3>R$ 60 milhões para estudar a dor que faz quatro em cada dez alunas faltarem à aula</h3>
-      <p class="dek">O CNPq abriu chamada pública para pesquisa e desenvolvimento de tecnologias em endometriose, dor pélvica e saúde menstrual, com foco em soluções aplicáveis no SUS. São R$ 50 milhões do Ministério da Ciência, Tecnologia e Inovação mais R$ 10 milhões do grupo Alana. Inscrições até 12 de agosto, resultado em 2 de dezembro. Cinco eixos: causa e prevenção, diagnóstico, tratamento, biorrepositório e impacto social.</p>
-      <div class="src">Fonte: <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-08/aberta-chamada-publica-para-pesquisas-sobre-endometriose">Agência Brasil</a> · 03/08/2026</div>
+    <div class="story">
+      <div class="num-item">02</div>
+      <div class="cat">Educação financeira · Nacional</div>
+      <h2>Desenrola Brasil 2.0 é prorrogado: dívidas bancárias podem ser renegociadas até 31 de agosto</h2>
+      <p class="dek">Portaria MF nº 2.302, publicada no Diário Oficial em 1º/08, estende o prazo do programa de renegociação. Regras inalteradas; sem novo aporte público ao FGO. Beneficia também quem quer trocar de veículo pelo Move Brasil — motoristas de app, taxistas, entregadores e caminhoneiros.</p>
+      <div class="fonte">Fonte: <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/programa-de-renegociacao-de-dividas-e-prorrogado-ate-31-de-agosto">Agência Brasil</a> · 01/08/2026 (portaria no DOU)</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Um mês a mais para limpar o nome sem pagar juros de cheque especial pelo resto da vida. Prazo é ativo: quem negocia agora recupera acesso a crédito antes da alta de fim de ano.</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div></div><span class="n">5/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (Agência Brasil + Diário Oficial da União)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Saiu num sábado à noite e afundou no noticiário. Para o público da Me Poupe!, é a notícia mais acionável da semana: prazo concreto, regra clara, impacto direto no CPF.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Seu nome tá sujo? O governo acabou de te dar 30 dias a mais.
 
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        Os números da própria chamada explicam por que isso é assunto de economia. Seis em cada dez estudantes que menstruam relatam cólicas fortes ou moderadas. Quatro em cada dez faltam à aula todo mês por isso. E a cólica intensa — sintoma principal da endometriose — pode custar até 10,8 horas de trabalho por semana. Dor não diagnosticada é renda que evapora sem aparecer em nenhuma planilha.
-      </div>
+O Desenrola Brasil 2.0 foi prorrogado: agora você tem até 31 DE AGOSTO pra renegociar dívidas bancárias.
 
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span>
-        <span class="num">4/5</span>
-      </div>
-      <div class="status">✅ Verificada — Agência Brasil (EBC), 03/08/2026 às 9h54; chamada CNPq nº 25/2026 linkada na matéria.</div>
-      <p class="why"><b>Por que merece mais atenção:</b> um eixo temático de impacto social dentro de um edital do CNPq é raro. Ele reconhece que endometriose não é só biologia: é evasão escolar, é afastamento do trabalho, é diagnóstico que demora anos. A pesquisa tem que sair aplicável ao SUS — ou seja, para quem não paga clínica particular.</p>
+Saiu no Diário Oficial no sábado à noite — horário em que ninguém lê nada. Por isso quase ninguém ficou sabendo.
 
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">10,8 horas.
+As regras não mudaram. O que mudou foi o seu prazo.
 
-É o que uma mulher com cólica intensa pode perder de trabalho. Por semana.
+E olha o bônus: quem é motorista de app, taxista, entregador ou caminhoneiro e quer trocar de veículo pelo Move Brasil também entra na janela.
 
-Agora o número escolar: seis em cada dez estudantes que menstruam relatam cólica forte ou moderada. Quatro em cada dez faltam à aula todo mês.
+Nome limpo não é estética. É taxa de juros menor, crédito mais barato, respiro no orçamento.
 
-Some. Uma vida inteira de aulas perdidas e turnos perdidos, sem que nada disso apareça em qualquer estatística de produtividade.
+Corre. Agosto passa rápido.
 
-O CNPq abriu R$ 60 milhões para pesquisa em endometriose, dor pélvica e saúde menstrual — R$ 50 mi do MCTI, R$ 10 mi do grupo Alana. Com uma exigência que muda tudo: a solução tem que ser aplicável no SUS.
-
-E um dos cinco eixos do edital se chama impacto social. Não é biologia. É dinheiro, escola e trabalho.
-
-Dor mal diagnosticada é renda evaporando em silêncio.
-
-Inscrições até 12 de agosto. Resultado em 2 de dezembro.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #SaúdeDaMulher #Endometriose #SaúdeMenstrual #SUS #CNPq #CiênciaBrasileira #MulheresNoTrabalho #RendaEDor #DinheiroNaPrática #Equidade</div>
-      </details>
+#MePoupe #Desenrola #DívidaZero #NomeLimpo #EducaçãoFinanceira #Renegociação #Serasa #Crédito #DinheiroNaMão #FinançasPessoais #BoasNotícias</div></details>
     </div>
 
-    <div class="item">
-      <div class="num-sm">03</div>
-      <div class="cat">Cultura · Turismo de base comunitária</div>
-      <h3>Quatro territórios vão virar rede nacional de afroturismo — e as inscrições estão abertas</h3>
-      <p class="dek">O projeto Rede Memória Viva selecionará quatro territórios para integrar uma rede voltada à memória e à cultura afro-brasileiras. Os escolhidos recebem formação, desenvolvimento de projetos e estratégia de turismo de base comunitária e economia da cultura. Inscrições até 3 de outubro, resultado em 22 de outubro. O consórcio Viva Pequena África reúne o Centro de Articulação de Populações Marginalizadas, a Diáspora.Black e a Feira Preta, e faz em paralelo um mapeamento nacional de quilombos, museus comunitários e centros culturais.</p>
-      <div class="src">Fonte: <a href="https://agenciabrasil.ebc.com.br/cultura/noticia/2026-08/projeto-seleciona-quatro-territorios-para-rede-nacional-de-afroturismo">Agência Brasil</a> · 03/08/2026</div>
+    <div class="story">
+      <div class="num-item">03</div>
+      <div class="cat">Educação · Goiás</div>
+      <h2>Vaquinha da família leva menino de 10 anos aos EUA — e ele volta com ouro em olimpíada internacional de matemática</h2>
+      <p class="dek">Pedro de Oliveira Farias, aluno do 5º ano em Goiânia, tirou a 2ª maior nota da Copernicus Mathematics Olympiad, na Universidade de Columbia (NY), e ganhou prêmio especial reservado aos 3 melhores. Um mês antes, não tinha dinheiro para a passagem: escola e família se mobilizaram. Bernardo Martini Mendes, 11, levou bronze. Pedro soma mais de 70 medalhas, 33 só em 2026.</p>
+      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/04/menino-brasileiro-ouro-olimpiada-internacional-matematica-premio-especial-veja">Só Notícia Boa</a> · 04/08/2026</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>O talento existia; faltava o capital. Uma vaquinha de família e escola destravou uma medalha internacional. Quantos Pedros o Brasil perde por ano por falta de uma passagem aérea?</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (SNB, com material da família e da organização)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Não é história de gênio isolado: é história de infraestrutura. A barreira entre um aluno de escola de Goiânia e o pódio em Columbia era financeira, não intelectual.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Um menino de 10 anos de Goiânia acabou de ganhar ouro em Nova York.
 
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        Turismo de base comunitária é o raro modelo em que o dinheiro do visitante fica no bairro em vez de sair pelo aeroporto. Quem hospeda, cozinha, guia e conta a história é quem mora ali. Para um território quilombola ou uma comunidade de terreiro, entrar numa rede nacional significa acesso a formação, projeto e visibilidade — três coisas que costumam ser cobradas caro de quem menos tem.
-      </div>
+Mas um mês antes, ele nem sabia se ia embarcar.
 
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span>
-        <span class="num">4/5</span>
-      </div>
-      <div class="status">✅ Verificada — Agência Brasil (EBC), 03/08/2026 às 16h26; edital e site oficial linkados na matéria.</div>
-      <p class="why"><b>Por que merece mais atenção:</b> editais de cultura raramente chegam a quem eles deveriam alcançar. Este tem prazo longo (até 3 de outubro), site próprio e um mapeamento nacional em andamento que já vale por si — inventariar quilombos, museus comunitários e organizações que guardam herança africana é construir o cadastro que essas iniciativas nunca tiveram.</p>
+Pedro tirou a 2ª maior nota da Copernicus Mathematics Olympiad, na Universidade de Columbia. Prêmio especial dado só aos 3 melhores do mundo. Ele tem mais de 70 medalhas — 33 só em 2026.
 
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">Onde fica o dinheiro do turista?
+O que quase impediu tudo isso? Dinheiro de passagem.
 
-Quase sempre: no hotel de rede, na companhia aérea, na operadora. Sai do lugar antes de o visitante ir embora.
+A escola e a família fizeram uma mobilização pra bancar viagem e hospedagem. O talento já existia. Faltava o investimento.
 
-Turismo de base comunitária inverte a rota. Quem hospeda, cozinha, guia e conta a história mora ali. A receita fica no território.
+Genialidade sem capital fica em casa. Pensa nisso quando falarem que educação é gasto.
 
-O projeto Rede Memória Viva vai selecionar quatro territórios de memória afro-brasileira para uma rede nacional. Formação, desenvolvimento de projeto, estratégia de economia da cultura.
-
-Por trás, um consórcio que conhece o assunto: Ceap, Diáspora.Black e Feira Preta.
-
-E tem um segundo movimento acontecendo em paralelo, mais silencioso e talvez mais importante: o mapeamento nacional de quilombos, museus comunitários e centros culturais que preservam herança africana no Brasil. Um cadastro que nunca existiu.
-
-Inscrições até 3 de outubro. Resultado em 22.
-
-Ancestralidade também é ativo.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #Afroturismo #EconomiaCriativa #TurismoDeBaseComunitária #Quilombo #CulturaNegra #FeiraPreta #EmpreendedorismoNegro #RendaLocal #DinheiroNaPrática #MemóriaViva</div>
-      </details>
+#MePoupe #Educação #Matemática #OlimpíadaDeMatemática #Goiânia #TalentoBrasileiro #InvestimentoEmEducação #Vaquinha #FuturoDoBrasil #BoasNotícias #Brasil</div></details>
     </div>
 
-    <div class="item">
-      <div class="num-sm">04</div>
-      <div class="cat">Educação · Quebra de ciclo</div>
-      <h3>Ele entrou na colação de grau ao som dos Racionais — e avisou que não era história de mérito</h3>
-      <p class="dek">Lucas Machado, jovem quilombola, formou-se em bacharelado em Nutrição em Santa Catarina e escolheu “A Vida É Desafio”, dos Racionais MC’s, para entrar na cerimônia. O vídeo viralizou. Na legenda, ele recusou a leitura fácil: “Minha formatura não prova que ‘quem quer, consegue’. Ela mostra que, mesmo diante das barreiras, é possível chegar”. Dedicou o diploma à família, às raízes e à comunidade.</p>
-      <div class="src">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/03/jovem-quilombola-forma-nutricao-som-racionais-mcs-emociona-turma-video">Só Notícia Boa</a> · 03/08/2026</div>
+    <div class="story">
+      <div class="num-item">04</div>
+      <div class="cat">Celebra o povo · Rio de Janeiro</div>
+      <h2>Bia, empregada doméstica e mãe solo, segurou o andaime com o próprio corpo e salvou 3 pintores na ventania do Rio</h2>
+      <p class="dek">Isabela Beatriz Rodrigues, a Bia, 1,50 m de altura, usou o corpo para travar o andaime que batia contra o prédio e orientou os três trabalhadores a pular para a varanda do 6º andar. Depois do resgate, deixou os pintores cobertos de tinta entrarem no apartamento: "Amanhã eu limpo". Ela sonha em fazer curso gratuito para ser cuidadora de idosos.</p>
+      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/03/conheca-heroina-salvou-3-pintores-presos-andaime-ventania-rio-video">Só Notícia Boa</a> · 03/08/2026 (entrevista em live no Instagram do SNB)</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>A grande imprensa mostrou o andaime; ninguém mostrou quem segurou. Trabalhadora invisível salva trabalhadores invisíveis — e o sonho dela custa um curso gratuito. O Brasil real se salva sozinho todos os dias.</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (SNB, entrevista própria com a protagonista)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>O vídeo do resgate rodou o país sem nome, sem rosto, sem história. A heroína tem nome, tem sonho profissional e tem um plano — só falta o acesso.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Você viu o vídeo dos 3 pintores pendurados no andaime na ventania do Rio.
 
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        A frase dele é a melhor aula de educação financeira do dia, e nem é sobre dinheiro. Meritocracia é a narrativa que transforma sorte estrutural em virtude pessoal e culpa individual em explicação para pobreza. Lucas desmontou isso na própria festa. Quem chega apesar da barreira não prova que a barreira não existe — prova o contrário.
-      </div>
+O que você não viu: quem salvou.
 
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span>
-        <span class="num">4/5</span>
-      </div>
-      <div class="status">✅ Verificada — Só Notícia Boa, 03/08/2026 às 12h15, com vídeo e declarações do próprio formando no Instagram (@lucasmachado.nutri).</div>
-      <p class="why"><b>Por que merece mais atenção:</b> a internet adora a história de superação e detesta a legenda que a acompanha. Ele podia ter aceitado o papel de exceção inspiradora. Escolheu apontar a estrutura. Nutrição, ainda por cima, é a profissão que ele leva de volta para uma comunidade quilombola — território onde acesso a alimento e a atendimento não é detalhe.</p>
+Bia. Empregada doméstica. Mãe solo de 3. Um metro e meio de altura.
 
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">“Minha formatura não prova que ‘quem quer, consegue’.”
+Ela travou o andaime com o PRÓPRIO CORPO e gritou pros três pularem pra varanda do sexto andar. Depois, com os homens cobertos de tinta, mandou entrar: "Amanhã eu limpo".
 
-Foi ele mesmo quem escreveu.
+A empresa dos pintores prometeu "um presente". A Bia não pediu nada.
 
-Lucas Machado é quilombola, preto, e acabou de se formar em Nutrição em Santa Catarina. Entrou na colação ao som de “A Vida É Desafio”, dos Racionais.
+O sonho dela? Um curso de cuidadora de idosos. Gratuito, porque pago não cabe no orçamento.
 
-O vídeo viralizou, como sempre viraliza. E aí veio a parte que a internet costuma pular: a legenda.
+O Brasil funciona porque gente assim segura o andaime. Tá na hora de segurar elas também.
 
-“Ela mostra que, mesmo diante das barreiras, é possível chegar.”
-
-Sacou a diferença? Uma frase diz que o problema é falta de vontade. A outra diz que existe barreira — e que ele passou por ela.
-
-Meritocracia é a história que transforma sorte estrutural em virtude e pobreza em falha de caráter. É a mesma lógica que faz alguém achar que não enriquece porque tomou café fora.
-
-Ele dedicou o diploma à família, às raízes e à comunidade.
-
-E leva Nutrição de volta para um território quilombola. Isso não é final feliz. É começo.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #Quilombo #EnsinoSuperior #Nutrição #Meritocracia #EducaçãoTransforma #RacionaisMCs #QuebraDeCiclo #PrimeiroDaFamília #DinheiroNaPrática #Representatividade</div>
-      </details>
-    </div>
-
-    <div class="item">
-      <div class="num-sm">05</div>
-      <div class="cat">Longevidade · Saúde</div>
-      <h3>Aos 73 anos, dona Azul subiu no ringue: “parece que tenho 15 anos”</h3>
-      <p class="dek">Turmas de boxe para idosas ganham espaço e mudam a rotina de mulheres que passaram a vida ouvindo que era hora de desacelerar. Dona Azul, de 73 anos, relata ganho de força, disposição e autoestima depois de começar a treinar. O caso foi registrado em reportagem fotográfica da Folhapress.</p>
-      <div class="src">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/03/idosas-aprendem-boxe-recuperam-forca-autoestima-parece-tenho-15-anos">Só Notícia Boa</a> · 03/08/2026 · imagens Zanone Fraissat/Folhapress</div>
-
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        Massa muscular depois dos 60 é ativo financeiro. Sarcopenia leva a queda, queda leva a fratura de fêmur, fratura leva a internação, cirurgia, cuidador e perda de autonomia — a sequência mais cara que existe no orçamento de uma família brasileira. Treino de força é a aplicação com melhor retorno e ninguém a vende porque não dá para cobrar taxa de administração.
-      </div>
-
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i><i class="bar"></i></span>
-        <span class="num">3/5</span>
-      </div>
-      <div class="status">✅ Verificada — Só Notícia Boa, 03/08/2026, com registro fotográfico creditado à Folhapress.</div>
-      <p class="why"><b>Por que merece mais atenção:</b> a pauta de longevidade no Brasil ainda é escrita no tom da resignação — remédio, repouso, cadeira. Uma mulher de 73 anos aprendendo a bater no saco muda o enquadramento inteiro. E o país que envelhece rápido vai precisar dessa mudança de enquadramento muito mais do que precisa de mais um suplemento.</p>
-
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">“Parece que tenho 15 anos.”
-
-Quem falou tem 73 e acabou de aprender boxe.
-
-Dona Azul entrou numa turma de idosas e voltou com força, disposição e autoestima. A frase é dela.
-
-Agora a conta que ninguém faz.
-
-Perda de massa muscular depois dos 60 tem nome: sarcopenia. E tem uma sequência conhecida — queda, fratura de fêmur, internação, cirurgia, cuidador, perda de autonomia. É a linha de despesa mais pesada que pode entrar de uma vez no orçamento de uma família.
-
-Treino de força é o que interrompe essa sequência.
-
-Custa pouco. Rende muito. E ninguém te oferece, porque não dá para cobrar taxa de administração de agachamento.
-
-O Brasil envelhece rápido. Aos 73, dona Azul entendeu antes do resto do país.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #Longevidade #Aposentadoria #SaúdeFinanceira #TerceiraIdade #Sarcopenia #TreinoDeForça #Autonomia #EnvelhecerBem #DinheiroNaPrática #60Mais</div>
-      </details>
+#MePoupe #BiaHeroína #RioDeJaneiro #MãeSolo #TrabalhadoraDoméstica #Coragem #BrasilReal #Qualificação #CursoGratuito #BoasNotícias #Heroína</div></details>
     </div>
 
   </div>
+</section>
 
-  <hr class="hair">
-
-  <!-- DESTAQUE INTERNACIONAL -->
-  <h2 class="section">Destaque internacional do dia</h2>
-
+<!-- HERO INTERNACIONAL -->
+<section>
+  <div class="sec-title">Destaque internacional do dia</div>
   <div class="hero">
     <div class="ghost">01</div>
-    <div class="body">
-      <div class="cat"><span class="flag">🇪🇺</span>Tecnologia · Inclusão digital</div>
-      <h3>A Europa acaba de fazer a primeira transmissão 5G via satélite — e o alvo é quem não tem antena por perto</h3>
-      <p class="dek">Um consórcio europeu de pesquisa concluiu a primeira transmissão de rede 5G não terrestre do continente usando o satélite Hispasat 30W-6. O projeto Trantor, financiado pela União Europeia, é coordenado pelo Centro Tecnológico de Telecomunicações da Catalunha e reúne parceiros de Espanha, Alemanha, Itália e Luxemburgo, entre outros. O teste confirma que a tecnologia funciona e libera fabricantes para desenvolver equipamentos compatíveis com o novo padrão.</p>
-      <div class="src">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/07/30/europa-primeira-transmissao-5g-via-satelite-internet-qualquer-lugar-planeta">Só Notícia Boa</a>, a partir de comunicado da Comissão Europeia · 30/07/2026</div>
+    <div class="story">
+      <div class="cat"><span class="bandeira">🇬🇧</span>Quebra de ciclo · Reino Unido</div>
+      <h2>Aos 64 anos, imigrante nigeriano se forma enfermeiro — estudando na mesma universidade que o filho</h2>
+      <p class="dek">John Adesoye cresceu numa família pobre de agricultores na Nigéria, trabalhou como técnico de eletrônica na Grécia e migrou para o Reino Unido. Pai de 5, formou-se em Enfermagem pela University of the West of England após 4 anos entre programa de associate e aprendizagem no NHS — cruzando com o filho Daniel, aluno de tecnologia musical, no campus. Já tem emprego garantido no Southmead Hospital, onde fez o estágio.</p>
+      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/64-yo-father-of-5-graduates-as-a-nurse-after-studying-alongside-his-son/">Good News Network</a> · 04/08/2026, com release oficial da UWE Bristol</div>
+      <div class="orig">Título original: "64-yo Father of 5 Graduates as a Nurse After Studying Alongside His Son"</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Aos 64, quando o mercado manda aposentar, ele investiu em qualificação — e saiu formado com emprego garantido. Requalificação não tem idade; tem retorno.</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (release da University of the West of England)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Da roça na Nigéria ao diploma britânico aos 64: três países, cinco filhos e um ciclo quebrado em duas gerações ao mesmo tempo — pai e filho na mesma universidade.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Ele tem 64 anos, 5 filhos e acabou de se formar enfermeiro.
 
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        Onde não chega torre, não chega banco digital, telemedicina, aula remota nem venda pela internet. No Brasil isso descreve ribeirinho, sertão, assentamento e boa parte do interior do Norte. Integrar 5G a satélite significa que a cobertura deixa de depender de a operadora achar economicamente viável erguer uma antena. Ainda leva tempo para chegar ao consumidor — mas a barreira que caiu é técnica, e barreira técnica é a que costuma demorar mais.
-      </div>
+Na mesma universidade que o FILHO.
 
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i></span>
-        <span class="num">4/5</span>
-      </div>
-      <div class="status">✅ Verificada — cobertura de 30/07/2026 ancorada em comunicado oficial da Comissão Europeia (digital-strategy.ec.europa.eu) linkado na matéria.</div>
-      <p class="why"><b>Por que merece mais atenção:</b> a notícia foi lida como curiosidade de telecom. Ela é política de inclusão digital com outro nome. As regiões citadas no anúncio — montanhas, ilhas e áreas atingidas por desastre — são exatamente onde a conta de instalar infraestrutura nunca fecha. E, em emergência climática, conexão é logística de resgate.</p>
+John Adesoye cresceu numa família pobre de agricultores na Nigéria. Virou técnico de eletrônica na Grécia. Migrou pro Reino Unido. E aos 60+, quando todo mundo manda "descansar", ele fez o contrário: 4 anos de estudo e aprendizado dentro do sistema público de saúde.
 
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">Sem torre, sem banco.
+Resultado? Diploma E emprego garantido no hospital onde estagiou.
 
-Parece exagero? Faça a lista do que você não consegue fazer sem sinal de celular: transferir dinheiro, marcar consulta, assistir aula, vender pela internet, pedir socorro.
+Frase dele: "Não escute quem diz que você é velho demais pra universidade."
 
-Agora pense em quem mora onde a operadora nunca achou viável levantar uma antena. Ribeirinho. Sertão. Assentamento. Ilha.
+Requalificação não é custo. É o investimento com melhor prazo de retorno que existe — em qualquer idade.
 
-A Europa acaba de concluir a primeira transmissão de 5G via satélite do continente. Projeto Trantor, satélite Hispasat 30W-6, coordenação do Centro Tecnológico de Telecomunicações da Catalunha, dinheiro da União Europeia.
+Aposentar o quê?
 
-O que isso destrava: cobertura que não depende mais de a conta da antena fechar.
-
-Vai demorar para chegar ao seu bolso. Mas a barreira que caiu foi a técnica — e essa é sempre a que trava mais tempo.
-
-Conexão virou infraestrutura básica. Como água e luz.
-
-Quem está fora da rede está fora da economia.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #InclusãoDigital #5G #Conectividade #Satélite #BancoDigital #InteriorDoBrasil #TecnologiaParaTodos #AcessoAoDinheiro #DinheiroNaPrática #Infraestrutura</div>
-      </details>
+#MePoupe #NuncaÉTarde #Requalificação #Enfermagem #60Mais #Educação #InvestimentoEmVocê #QuebraDeCiclo #Imigrante #BoasNotícias #Inspiração</div></details>
     </div>
   </div>
+</section>
 
-  <hr class="hair">
-
-  <!-- MUNDO — DEMAIS -->
-  <h2 class="section">Mundo — notícias internacionais</h2>
-
+<!-- DEMAIS INTERNACIONAIS -->
+<section>
+  <div class="sec-title">Mundo — notícias internacionais</div>
   <div class="grid">
 
-    <div class="item">
-      <div class="num-sm">02</div>
-      <div class="cat"><span class="flag">🇺🇸</span>Meio ambiente · Ciência aplicada</div>
-      <h3>Uma enzima aplicada a frio pode selar rejeito de mineração sem máquina pesada</h3>
-      <p class="dek">Pesquisadores da Universidade Estadual do Arizona desenvolveram um tratamento à base de enzima que forma ligações minerais naturais dentro do solo, criando uma crosta protetora que reduz erosão e poeira em depósitos de rejeito. O objetivo é impedir que arsênio, chumbo e resíduos de cianeto cheguem a rios e lençol freático. O teste de campo acontece na mina abandonada Cash Mine, perto de Prescott, com apoio do órgão ambiental do Arizona.</p>
-      <div class="src">Fonte: <a href="https://www.goodnewsnetwork.org/scientists-develop-enzyme-to-limit-environmental-impact-of-mine-waste-testing-underway/">Good News Network</a> · 31/07/2026</div>
-      <div class="orig">Título original: “Scientists Develop Enzyme to Limit Environmental Impact of Mine Waste, Testing Underway”</div>
+    <div class="story">
+      <div class="num-item">02</div>
+      <div class="cat"><span class="bandeira">🇺🇸</span>Inclusão · Estados Unidos</div>
+      <h2>Estranho dá piano de US$ 15 mil a menino autista — e um talento "nível Mozart" transforma a vida da família</h2>
+      <p class="dek">Jude Kofie, filho de imigrante ganês no Colorado, descobriu aos 9 anos um talento raro num teclado esquecido no porão. O afinador de pianos Bill Magnuson leu a história no jornal local, foi vê-lo tocar e gastou parte da herança da família num piano de cauda novo — com afinação vitalícia e aulas profissionais. Hoje, aos 14, Jude faz turnês e lançou o álbum "Introducing: Jude Kofie".</p>
+      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/after-stranger-gives-boy-a-piano-a-mozart-level-is-revealed-in-spite-of-autism/">Good News Network</a> · 03/08/2026, via CBS News "On the Road"</div>
+      <div class="orig">Título original: "After Stranger Gives Boy a Piano, a 'Mozart Level' Is Revealed in Spite of Autism"</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Um estranho trocou herança parada por futuro em movimento. O piano não foi presente: foi capital semente com afinação vitalícia inclusa — e o retorno veio em forma de carreira.</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (reportagem CBS News, com os envolvidos nomeados)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>História de 5 anos de maturação: do teclado no porão ao álbum próprio. Mostra o que acontece quando talento atípico encontra mecenato de gente comum — não de fundação bilionária.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Um afinador de pianos gastou parte da herança da família num menino que ele nem conhecia.
 
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        O detalhe decisivo está numa frase do coordenador, Hamed Khodadadi Tirkolaei: a solução pode ser preparada no local, sem equipamento especializado nem maquinário pesado. Isso muda o custo de remediar mina abandonada em área remota — que é precisamente o passivo que ninguém assume porque o orçamento nunca fecha. Brasil tem milhares desses passivos, e Mariana e Brumadinho ensinaram o preço de tratar rejeito como problema de outro.
-      </div>
+Loucura? Espera.
 
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i><i class="bar"></i></span>
-        <span class="num">3/5</span>
-      </div>
-      <div class="status">✅ Verificada — pesquisador e instituição nomeados (ASU Mining Innovation Initiative), teste de campo em curso com apoio do Arizona Department of Environmental Quality; publicação de 31/07/2026.</div>
-      <p class="why"><b>Por que merece mais atenção:</b> tecnologia de remediação barata quase nunca vira manchete porque não tem foguete nem robô. Mas o gargalo ambiental da mineração não é falta de solução — é solução que só funciona com caminhão, energia e engenheiro no local. Um pó que se prepara na beira do depósito muda quem consegue limpar.</p>
+Jude Kofie, autista, filho de imigrante ganês no Colorado, achou um teclado velho no porão aos 9 anos. Colocou as mãos. Saiu música de outro mundo — "nível Mozart", nas palavras de quem entende.
 
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">Mariana. Brumadinho.
+Bill Magnuson leu a história no jornal, foi ver de perto e tomou uma decisão de 15 mil dólares: piano de cauda novo, afinação vitalícia e aulas profissionais.
 
-O Brasil aprendeu do jeito mais caro o que é rejeito de mineração.
+Cinco anos depois: Jude tem 14 anos, faz turnês e lançou o próprio álbum.
 
-Agora, uma pesquisa da Universidade Estadual do Arizona. Uma enzima que, aplicada sobre o depósito, forma ligações minerais dentro do próprio solo e cria uma crosta. A crosta segura o pó e trava a erosão que carrega arsênio, chumbo e resto de cianeto até o rio.
+Herança parada não muda vida nenhuma. Capital em movimento, sim.
 
-Legal. Mas isso já existe de outras formas.
-
-A virada está numa frase do coordenador, Hamed Khodadadi Tirkolaei: dá para preparar a solução no local, sem equipamento especializado, sem maquinário pesado.
-
-Traduzindo para a linguagem que interessa: barato o suficiente para chegar em mina abandonada no meio do nada.
-
-Passivo ambiental é dívida sem vencimento marcado. Alguém sempre paga. Costuma ser quem mora rio abaixo.
-
-Teste em campo na Cash Mine, Arizona. Vale acompanhar.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #MeioAmbiente #Mineração #PassivoAmbiental #Rejeitos #CiênciaAplicada #Sustentabilidade #ESG #ÁguaLimpa #DinheiroNaPrática #Inovação</div>
-      </details>
+#MePoupe #Inclusão #Autismo #Música #Talento #Generosidade #CapitalSemente #Mecenato #HistóriaReal #BoasNotícias #Inspiração</div></details>
     </div>
 
-    <div class="item">
-      <div class="num-sm">03</div>
-      <div class="cat"><span class="flag">🇺🇸</span>Espaço · Ciência</div>
-      <h3>O Curiosity subiu um vale marciano e encontrou um mar de polígonos até onde a câmera alcança</h3>
-      <p class="dek">Ao percorrer o vale Valle Grande em junho, o jipe-robô da NASA registrou uma paisagem coberta por texturas em favo de mel. Fraturas poligonais já haviam sido vistas antes, nunca nessa escala: no panorama de 360 graus captado em 19 e 20 de junho, as formas se espalham em todas as direções e sobem pelas laterais de uma elevação apelidada Miraflores, de 6 metros. “Já vimos muitas paisagens fascinantes pelos olhos do Curiosity, mas esse mar de polígonos tirou nosso fôlego”, disse Ashwin Vasavada, cientista do projeto no Jet Propulsion Laboratory.</p>
-      <div class="src">Fonte: <a href="https://www.goodnewsnetwork.org/mars-rover-discovers-mysterious-field-of-honeycomb-textures-on-red-planet/">Good News Network</a>, a partir de comunicado da NASA · 01/08/2026</div>
-      <div class="orig">Título original: “Mars Rover Discovers Mysterious Field of Honeycomb Textures on Red Planet: ‘Took Our Breath Away’”</div>
+    <div class="story">
+      <div class="num-item">03</div>
+      <div class="cat"><span class="bandeira">🇺🇸</span>Meio ambiente · Estados Unidos</div>
+      <h2>Pântano de Okefenokee vira Patrimônio Mundial da UNESCO ao lado de Grand Canyon e Yellowstone</h2>
+      <p class="dek">O maior pantanal de água doce sobre turfa da zona subtropical do planeta, na Geórgia (EUA), entrou na lista da UNESCO: 163 mil hectares, 856 espécies de plantas, 238 de aves e uma população significativa de jacarés-americanos. A área é protegida desde 1936 e guarda turfeiras que funcionam como arquivo climático e estoque crítico de carbono.</p>
+      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/okefenokee-swamp-clinches-world-heritage-status-joining-ranks-of-top-natural-wonders/">Good News Network</a> · 03/08/2026, com a listagem oficial da UNESCO</div>
+      <div class="orig">Título original: "Okefenokee Swamp Clinches World Heritage Status, Joining Ranks of Top Natural Wonders"</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Um pântano que virou patrimônio da humanidade é a prova de que conservação é ativo de longo prazo: 90 anos de proteção pública viraram selo global — e turismo, pesquisa e carbono estocado.</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div><div class="barra"></div></div><span class="n">3/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (UNESCO, lista oficial)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Pântanos são os patinhos feios da conservação — e estão entre os maiores estoques de carbono do planeta. O reconhecimento reposiciona um ecossistema inteiro que raramente ganha manchete.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Um PÂNTANO acabou de entrar pro mesmo clube do Grand Canyon e de Yellowstone.
 
-      <div class="callout">
-        <b>Proposta de leitura · Me Poupe!</b>
-        Catorze anos. É o tempo que o Curiosity está rodando em Marte desde 2012, muito além do previsto. Nesse período confirmou que o planeta teve água, química e nutrientes compatíveis com vida microbiana e achou moléculas de carbono precursoras de RNA e DNA. Equipamento que dura três vezes mais do que a garantia é a definição prática de bom investimento — vale para sonda, vale para geladeira.
-      </div>
+Sim, um pântano.
 
-      <div class="meter">
-        <span class="lab">Fator MP</span>
-        <span class="bars"><i class="bar on"></i><i class="bar on"></i><i class="bar on"></i><i class="bar"></i><i class="bar"></i></span>
-        <span class="num">3/5</span>
-      </div>
-      <div class="status">✅ Verificada — comunicado da NASA (nasa.gov) linkado, cientista de missão nomeado, datas de captura informadas; publicação de 01/08/2026.</div>
-      <p class="why"><b>Por que merece mais atenção:</b> a hipótese para os polígonos ainda está aberta — rachadura de lama, ciclo de calor e frio, ou compressão que espremeu água do sedimento quando a superfície estava soterrada. Todas apontam para o mesmo lugar: água. E ciência que admite não saber, e diz exatamente o que vai medir para descobrir, é o oposto do conteúdo que circula como certeza na internet.</p>
+Okefenokee, na Geórgia (EUA), virou Patrimônio Mundial da UNESCO: o maior pantanal de água doce sobre turfa da zona subtropical do planeta. 856 espécies de plantas. 238 de aves. Jacarés por todo lado.
 
-      <details>
-        <summary>Copy Instagram</summary>
-        <div class="copy">Favo de mel. Em Marte.
+O detalhe que ninguém conta: as turfeiras dali são um cofre de carbono. Proteger isso desde 1936 foi o investimento — o selo da UNESCO é o dividendo.
 
-O Curiosity subiu o vale Valle Grande em junho e mandou de volta uma imagem que a própria NASA não esperava: polígonos se espalhando em todas as direções, até onde a câmera enxerga, subindo pelas laterais de uma elevação de 6 metros.
+Conservação não é gasto bonito. É poupança de longuíssimo prazo que o planeta inteiro saca junto.
 
-“Esse mar de polígonos tirou nosso fôlego”, disse Ashwin Vasavada, do Jet Propulsion Laboratory.
+#MePoupe #MeioAmbiente #UNESCO #PatrimônioMundial #Okefenokee #Carbono #Conservação #Natureza #LongoPrazo #BoasNotícias #Sustentabilidade</div></details>
+    </div>
 
-E aqui vem a parte que a gente mais gosta: eles não sabem por quê.
+    <div class="story">
+      <div class="num-item">04</div>
+      <div class="cat"><span class="bandeira">🇨🇦</span>Inovação verde · Canadá</div>
+      <h2>Nova mina de níquel do Canadá vai capturar 1,5 milhão de toneladas de CO₂ por ano enquanto opera</h2>
+      <p class="dek">O projeto Crawford, da Canada Nickel, recebeu em 31/07 a aprovação final do governo de Ontário — a primeira sob a nova lei de avaliação de impacto do país. A tecnologia proprietária IPT Carbonization injeta CO₂ nos rejeitos ainda no circuito de processamento, fixando o carbono na rocha moída: efeito equivalente a tirar 350 mil carros das ruas por ano, durante os 41 anos de vida útil da mina.</p>
+      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/canadas-newest-nickel-mine-will-store-1-5-millions-tons-of-carbon-every-year-during-operation/">Good News Network</a> · 03/08/2026, com anúncio oficial da Canada Nickel (31/07)</div>
+      <div class="orig">Título original: "Canada's Newest Nickel Mine Will Store 1.5 Millions Tons of Carbon Every Year During Operation"</div>
+      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Mineração que vira sumidouro de carbono e se financia em parte com créditos de CO₂: o custo ambiental deixou de ser externalidade e entrou no modelo de negócio. É o mercado precificando o que antes fingia não ver.</p></div>
+      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div><div class="barra"></div></div><span class="n">3/5</span></div>
+      <div class="status">✅ Verificada — Nível 1 (anúncio da empresa + aprovação do governo de Ontário)</div>
+      <div class="porque"><div class="t">Por que merece mais atenção</div><p>67% do níquel mundial vem da Indonésia, com desmatamento documentado. Uma alternativa ocidental que estoca carbono em escala muda o tabuleiro do metal que alimenta as baterias dos carros elétricos.</p></div>
+      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Uma MINA que limpa o ar. Parece pegadinha, não é.
 
-Pode ser rachadura de lama. Pode ser ciclo de calor e frio. Pode ser compressão que espremeu a água do sedimento quando aquilo tudo estava soterrado.
+O Canadá aprovou a mina de níquel Crawford — e ela vai capturar 1,5 MILHÃO de toneladas de CO₂ por ano enquanto opera.
 
-Repare que as três hipóteses levam ao mesmo lugar. Água.
+Como? A tecnologia injeta o carbono direto na rocha moída do rejeito, que vira uma esponja mineral. Efeito: o mesmo que tirar 350 mil carros das ruas. Todo ano. Por 41 anos.
 
-Agora o número que ninguém comenta: o Curiosity pousou em 2012. Está rodando há catorze anos, muito além do que foi projetado para durar.
+E o mais interessante: parte do financiamento vem da venda de créditos de carbono. O que era passivo ambiental virou linha de receita.
 
-Equipamento que entrega o triplo da garantia tem nome. Chama-se bom investimento.</div>
-        <div class="hash">#EducaçãoFinanceira #MePoupe #Ciência #NASA #Marte #Curiosity #Astronomia #Nerd #ExploraçãoEspacial #CuriosidadeCientífica #DinheiroNaPrática #ValeOInvestimento</div>
-      </details>
+Níquel é o metal das baterias dos elétricos. Hoje, 67% vem da Indonésia, com desmatamento na conta.
+
+Quando o mercado precifica o carbono, até mina muda de lado.
+
+#MePoupe #CréditoDeCarbono #Sustentabilidade #Inovação #Canadá #CarrosElétricos #ESG #EconomiaVerde #Níquel #BoasNotícias #MudançaClimática</div></details>
     </div>
 
   </div>
+</section>
 
-  <hr class="hair">
+<div class="descartes">🚫 <b>9 descartadas</b> — Homem-Aranha: bilheteria recorde (celebridade consagrada); Shakira e Ghetto Kids (celebridade); Mega-Sena R$ 135 mi (fora do universo MP); vídeo viral arrecada US$ 174 mil para veterano em aeroporto (já entregue em 20/07); campo de polígonos em Marte (já entregue em 04/08); chihuahua fareja câncer de mama (viral pet-saúde, fonte única SWNS — Nível 2); gata mais velha do mundo, 31 anos (trivia sem quebra de ciclo); brasileira de 114 anos em cirurgia de fêmur (29/07 — fora da janela de 5 dias); cabotegravir no SUS (29/07 — fora da janela).</div>
 
-  <p class="discard">🚫 9 descartadas — fora da janela de 5 dias (transplante de córnea impresso em 3D, de dez/2025; revestimento para vidros, de 2020; dados do Sebrae de 26/06; transplante inédito na Itália, de 29/07); fato central antigo reembalado (bebê mais prematuro do mundo completando 2 anos, nascimento em 2024); já entregues em edição anterior (Pix em 8 países, primeira promotora trans, mãe feirante de Palmas); fora do universo Me Poupe! (acumulado da Mega-Sena, acidente aéreo com final feliz). Positive News semana 31 esgotada nas duas edições de 03/08.</p>
+<div class="fecho">
+  <p>O padrão do dia é desconfortável: em quase todas as histórias, o talento, a coragem e o trabalho já existiam. O que faltava era capital — uma passagem aérea para Pedro, um fogão para dona Rosa, um curso gratuito para Bia, um piano para Jude.</p>
+  <p class="uma-linha">A pergunta que fica para o feed: quanto potencial o Brasil deixa na mesa por falta de um empurrão de R$ 2 mil?</p>
+  <p class="uma-linha"><b>Exigência do dia:</b> se o Desenrola te alcança, negocie até 31/08. Prazo dado é prazo usado.</p>
+</div>
 
-  <hr class="hair">
-
-  <p class="close">Uma linha de lei tributária decidia quem podia comprar carro com isenção. Um edital decide se a dor menstrual continua sendo tratada como frescura ou vira dado de política pública. Um satélite decide se banco digital chega ao ribeirinho. <span class="hit">Nada disso é acaso — é escolha de alguém, escrita em algum lugar, quase sempre longe de quem paga a conta.</span> A boa notícia de hoje é que cinco dessas escolhas mudaram de lado. Leia as letras miúdas. É lá que mora o seu dinheiro.</p>
-
-  <footer>Me Poupe! · GoodNewsMP-04/08/26 · Curadoria diária de boas notícias subnoticiadas · Janela: últimos 5 dias · Todas as histórias verificadas em fonte primária citável</footer>
+<footer>
+  <span>GoodNewsMP-05/08/26 · Curadoria automática diária · Me Poupe!</span>
+  <span>Fontes: Só Notícia Boa · Agência Brasil · Good News Network · UNESCO · UWE Bristol</span>
+</footer>
 
 </div>
 </body>
