@@ -1,333 +1,476 @@
-<!DOCTYPE html>
+<!DOCTYPE html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Boas Noticias Mp",
+  "schemaVersion": 1,
+  "description": "Curadoria diária Me Poupe! — boas notícias subnoticiadas do Brasil e do mundo. Edição 15/09/26."
+}
+</script>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GoodNewsMP-05/08/26 · Boas notícias que o Brasil não viu</title>
+<title>GoodNewsMP-15/09/26 — Boas notícias que o Brasil não viu</title>
 <style>
-  :root { color-scheme: light; --roxo:#1B0A3A; --lilas:#838aff; --amarelo:#ffec64; --vermelho:#e6483f; --verde:#83e9af; --fio:rgba(255,255,255,.1); }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--roxo);color:#fff;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:1060px;margin:0 auto;padding:56px 32px 80px}
-  .eyebrow{color:var(--lilas);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
-  header h1{font-size:clamp(34px,5.4vw,58px);font-weight:300;letter-spacing:-.03em;line-height:1.08;margin:14px 0 10px}
-  header h1 b{font-weight:600}
-  .data-line{color:rgba(255,255,255,.55);font-size:14px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
-  .janela{border:1px solid var(--fio);border-radius:999px;padding:3px 12px;font-size:12px;color:var(--amarelo)}
-  .kpis{display:flex;gap:0;margin:44px 0 8px;border-top:1px solid var(--fio);border-bottom:1px solid var(--fio)}
-  .kpi{flex:1;padding:20px 8px;text-align:center}
-  .kpi+.kpi{border-left:1px solid var(--fio)}
-  .kpi .num{font-size:30px;font-weight:300;letter-spacing:-.02em}
-  .kpi .lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:4px}
-  .kpi .split{font-size:12px;color:var(--lilas);margin-top:2px}
-  section{margin-top:64px}
-  .sec-title{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);font-weight:600;padding-bottom:14px;border-bottom:1px solid var(--fio);margin-bottom:34px}
-  .hero{position:relative;padding-left:24px}
-  .ghost{position:absolute;right:0;top:-30px;font-size:150px;font-weight:200;color:rgba(255,255,255,.05);line-height:1;user-select:none}
-  .story{position:relative}
-  .story .cat{color:var(--lilas);font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
-  .story h2{font-weight:500;letter-spacing:-.02em;line-height:1.18;margin:10px 0 10px}
-  .hero .story h2{font-size:clamp(26px,3.6vw,40px);font-weight:300;max-width:820px}
-  .grid .story h2{font-size:20px}
-  .dek{color:rgba(255,255,255,.72);font-size:15px;max-width:760px}
-  .fonte{margin-top:12px;font-size:13px;color:rgba(255,255,255,.55)}
-  .fonte a{color:var(--verde);text-decoration:none;border-bottom:1px solid rgba(131,233,175,.35)}
-  .orig{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px;font-style:italic}
-  .callout{border-left:2px solid var(--amarelo);padding:10px 16px;margin:18px 0 0;max-width:760px}
-  .callout .tag{color:var(--amarelo);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
-  .callout p{font-size:14px;color:rgba(255,255,255,.8);margin-top:5px}
-  .fator{display:flex;align-items:center;gap:10px;margin-top:18px}
-  .barras{display:flex;gap:4px}
-  .barra{width:20px;height:8px;border-radius:2px;background:rgba(255,255,255,.12)}
-  .barra.on{background:var(--lilas)}
-  .fator .n{font-size:13px;color:rgba(255,255,255,.65)}
-  .status{margin-top:10px;font-size:13px;color:var(--verde)}
-  .porque{margin-top:14px;max-width:760px}
-  .porque .t{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600}
-  .porque p{font-size:14px;color:rgba(255,255,255,.75);margin-top:5px}
-  details{margin-top:16px;max-width:760px}
-  details summary{cursor:pointer;font-size:13px;color:var(--amarelo);letter-spacing:.04em}
-  details .copy{white-space:pre-line;font-size:14px;color:rgba(255,255,255,.85);border:1px solid var(--fio);border-radius:10px;padding:16px 18px;margin-top:10px;background:rgba(255,255,255,.03)}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 44px}
-  @media(max-width:760px){.grid{grid-template-columns:1fr}.ghost{font-size:90px}}
-  .num-item{font-size:44px;font-weight:200;color:rgba(255,255,255,.14);line-height:1;margin-bottom:8px}
-  .bandeira{font-size:14px;margin-right:6px}
-  .descartes{border-top:1px solid var(--fio);margin-top:70px;padding-top:26px;color:rgba(255,255,255,.55);font-size:14px;max-width:860px}
-  .descartes b{color:var(--vermelho);font-weight:600}
-  .fecho{margin-top:56px;border-left:2px solid var(--lilas);padding:6px 22px;max-width:820px}
-  .fecho p{font-size:17px;font-weight:300;color:rgba(255,255,255,.9)}
-  .fecho p+p{margin-top:12px}
-  .uma-linha{margin-top:12px}
-  footer{margin-top:70px;border-top:1px solid var(--fio);padding-top:22px;font-size:12px;color:rgba(255,255,255,.4);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  :root { color-scheme: light }
+  *{box-sizing:border-box}
+  body{
+    background:#1B0A3A;color:#fff;margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;line-height:1.55;
+  }
+  .wrap{max-width:1000px;margin:0 auto;padding:72px 32px 96px}
+  .hair{border:0;border-top:1px solid rgba(255,255,255,.10);margin:0}
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#838aff;font-weight:600;margin:0 0 18px}
+  h1{font-size:52px;line-height:1.02;letter-spacing:-.035em;font-weight:300;margin:0 0 22px;max-width:14ch}
+  .meta{display:flex;flex-wrap:wrap;gap:14px;align-items:center;font-size:13px;color:rgba(255,255,255,.55)}
+  .tag{border:1px solid rgba(255,255,255,.16);border-radius:100px;padding:4px 12px;font-size:11px;letter-spacing:.06em;color:rgba(255,255,255,.7)}
+
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:56px 0 0}
+  .kpi{padding:26px 20px 26px 0}
+  .kpi + .kpi{border-left:1px solid rgba(255,255,255,.10);padding-left:26px}
+  .kpi .n{font-size:38px;font-weight:300;letter-spacing:-.04em;line-height:1}
+  .kpi .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:10px}
+  .kpi .s{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px}
+
+  .sec{margin-top:88px}
+  .sec-title{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.45);font-weight:600;margin:0 0 34px}
+
+  .hero{position:relative;padding-top:8px}
+  .ghost{position:absolute;top:-38px;left:-8px;font-size:150px;font-weight:200;letter-spacing:-.06em;color:rgba(255,255,255,.05);line-height:1;pointer-events:none;user-select:none}
+  .hero-in{position:relative}
+  .cat{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#838aff;font-weight:600;margin:0 0 14px}
+  .hl{font-size:38px;line-height:1.1;letter-spacing:-.03em;font-weight:400;margin:0 0 16px;max-width:24ch}
+  .dek{font-size:17px;color:rgba(255,255,255,.72);margin:0 0 20px;max-width:62ch;font-weight:300}
+  .src{font-size:12.5px;color:rgba(255,255,255,.45);margin:0 0 6px}
+  .src a{color:#838aff;text-decoration:none;border-bottom:1px solid rgba(131,138,255,.3)}
+  .orig{font-size:11.5px;color:rgba(255,255,255,.32);font-style:italic;margin:0 0 20px}
+  .callout{border-left:2px solid #ffec64;padding:2px 0 2px 18px;margin:22px 0}
+  .callout .ct{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#ffec64;font-weight:600;margin:0 0 7px}
+  .callout p{margin:0;font-size:15px;color:rgba(255,255,255,.85);font-weight:300}
+  .mp{display:flex;align-items:center;gap:12px;margin:22px 0 16px}
+  .bars{display:flex;gap:4px}
+  .bar{width:26px;height:5px;border-radius:2px;background:rgba(255,255,255,.13)}
+  .bar.on{background:#83e9af}
+  .mpn{font-size:12px;letter-spacing:.1em;color:rgba(255,255,255,.55)}
+  .status{font-size:12.5px;color:rgba(255,255,255,.6);margin:0 0 16px}
+  .why{font-size:14.5px;color:rgba(255,255,255,.62);max-width:64ch;font-weight:300;margin:0}
+  .why b{color:rgba(255,255,255,.85);font-weight:500}
+  details{margin-top:22px;border-top:1px solid rgba(255,255,255,.10);padding-top:16px}
+  summary{cursor:pointer;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#ffec64;font-weight:600;list-style:none}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"↳ ";opacity:.6}
+  .copy{font-size:14.5px;color:rgba(255,255,255,.8);white-space:pre-line;margin-top:16px;font-weight:300;max-width:60ch}
+  .hash{color:#838aff;font-size:13px;margin-top:14px;display:block}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+  .item{padding:38px 0;border-top:1px solid rgba(255,255,255,.10);position:relative}
+  .num{font-size:11px;letter-spacing:.14em;color:rgba(255,255,255,.3);margin:0 0 14px;font-weight:600}
+  .item .hl{font-size:23px;line-height:1.18;max-width:28ch}
+  .item .dek{font-size:15px}
+  .item .why{font-size:13.5px}
+  .flag{font-size:13px;margin-right:6px}
+
+  .discard{margin-top:64px;padding-top:26px;border-top:1px solid rgba(255,255,255,.10);font-size:13px;color:rgba(255,255,255,.45)}
+  .discard b{color:#e6483f;font-weight:600}
+  .close{margin-top:72px;padding-top:34px;border-top:1px solid rgba(255,255,255,.10)}
+  .close p{font-size:20px;line-height:1.45;font-weight:300;color:rgba(255,255,255,.86);max-width:52ch;margin:0}
+  .close p .hi{color:#ffec64}
+  footer{margin-top:80px;padding-top:24px;border-top:1px solid rgba(255,255,255,.10);font-size:11.5px;color:rgba(255,255,255,.32);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  @media (max-width:760px){
+    .wrap{padding:48px 20px 64px}
+    h1{font-size:34px}
+    .hl{font-size:27px}
+    .item .hl{font-size:20px}
+    .grid{grid-template-columns:1fr;gap:0}
+    .kpis{grid-template-columns:1fr 1fr}
+    .kpi + .kpi{border-left:0;padding-left:0}
+    .kpi:nth-child(2),.kpi:nth-child(4){border-left:1px solid rgba(255,255,255,.10);padding-left:22px}
+    .ghost{font-size:100px;top:-24px}
+  }
 </style>
 </head>
 <body>
 <div class="wrap">
 
-<header>
-  <div class="eyebrow">Me Poupe! · Curadoria diária</div>
-  <h1>Boas notícias que o <b>Brasil não viu</b></h1>
-  <div class="data-line">
-    <span>GoodNewsMP-05/08/26</span>
-    <span class="janela">Janela: últimos 5 dias</span>
+  <p class="eyebrow">Me Poupe! · Curadoria diária</p>
+  <h1>Boas notícias que o Brasil não viu</h1>
+  <div class="meta">
+    <span>GoodNewsMP-15/09/26</span>
+    <span class="tag">Janela: últimos 5 dias</span>
   </div>
-</header>
 
-<div class="kpis">
-  <div class="kpi"><div class="num">8</div><div class="lbl">histórias</div><div class="split">4 nac · 4 int</div></div>
-  <div class="kpi"><div class="num">8</div><div class="lbl">verificadas ✅</div></div>
-  <div class="kpi"><div class="num">9</div><div class="lbl">descartadas 🚫</div></div>
-  <div class="kpi"><div class="num">4,0</div><div class="lbl">Fator MP médio</div></div>
-</div>
-
-<!-- HERO NACIONAL -->
-<section>
-  <div class="sec-title">Destaque nacional do dia</div>
-  <div class="hero">
-    <div class="ghost">01</div>
-    <div class="story">
-      <div class="cat">Quebra de ciclo · Maranhão</div>
-      <h2>Chamada de "macaca" ao vender cheiro-verde, dona Rosa recebe onda de solidariedade — e vai ganhar o próprio negócio</h2>
-      <p class="dek">Rosa Mire Peixoto, 54 anos, caminha quase 10 km por dia vendendo cheiro-verde no povoado de Cafezal (MA) para sustentar 4 filhos. Na quinta-feira, sofreu injúria racial na rua. A empresária Tatiara Mandu, cliente antiga, acolheu, denunciou ao Ministério Público e abriu uma vaquinha que já passa de R$ 20 mil — o plano inclui fogão novo, reforma da casa e um pequeno negócio de lanches para que ela pare de caminhar 10 km por dia.</p>
-      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/02/sofrer-racismo-vendendo-cheiro-verde-dona-rosa-recebe-onda-solidariedade-video">Só Notícia Boa</a> · 02/08/2026 (entrevista própria com Tatiara Mandu)</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>O racismo tentou tirar a dignidade; a comunidade respondeu com capital de giro. A vaquinha não é caridade — é investimento coletivo em uma microempreendedora que já trabalhava. Renda no lugar onde ela mora: isso é quebra de ciclo de verdade.</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div></div><span class="n">5/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (SNB, apuração própria; caso registrado no MP)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>A grande mídia cobre o crime; quase ninguém cobre a virada. A resposta coletiva transformou violência em ativo produtivo — e o desfecho (negócio próprio) é o que faz a diferença entre comoção passageira e mudança de vida.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Dona Rosa caminha 10 km por dia vendendo cheiro-verde no Maranhão. Semana passada, um homem a chamou de "macaca".
-
-Poderia terminar aí. Não terminou.
-
-Uma cliente antiga viu, acolheu, denunciou ao Ministério Público — e abriu uma vaquinha. Resultado: mais de R$ 20 mil, fogão novo, reforma da casa e um plano de negócio próprio pra ela vender lanches sem sair do povoado.
-
-Presta atenção no detalhe: ninguém deu esmola. Deram capital.
-
-Capital pra quem já trabalhava. Renda recorrente no lugar de caridade pontual. É assim que ciclo se quebra: com dignidade E fluxo de caixa.
-
-O ódio gritou. A comunidade investiu.
-
-#MePoupe #EducaçãoFinanceira #Empreendedorismo #DonaRosa #Maranhão #QuebraDeCiclo #Microempreendedor #RendaExtra #Solidariedade #BoasNotícias #NotíciaBoa #Brasil</div></details>
+  <div class="kpis">
+    <div class="kpi">
+      <div class="n">8</div>
+      <div class="l">Histórias</div>
+      <div class="s">3 nac · 5 int</div>
+    </div>
+    <div class="kpi">
+      <div class="n">8</div>
+      <div class="l">Verificadas ✅</div>
+      <div class="s">0 em ⚠️</div>
+    </div>
+    <div class="kpi">
+      <div class="n">16</div>
+      <div class="l">Descartadas 🚫</div>
+      <div class="s">janela, repetição, celebridade</div>
+    </div>
+    <div class="kpi">
+      <div class="n">4,1</div>
+      <div class="l">Fator MP médio</div>
+      <div class="s">escala 1–5</div>
     </div>
   </div>
-</section>
 
-<!-- DEMAIS NACIONAIS -->
-<section>
-  <div class="sec-title">Brasil — as demais histórias</div>
-  <div class="grid">
+  <!-- ================= HERO NACIONAL ================= -->
+  <div class="sec">
+    <p class="sec-title">Destaque nacional do dia</p>
+    <div class="hero">
+      <div class="ghost">01</div>
+      <div class="hero-in">
+        <p class="cat">Microempreendedorismo · Recomeço</p>
+        <h2 class="hl">Empresário que quebrou na pandemia e morou na rua vende 300 morangos no semáforo e fatura R$ 4,5 mil em um dia</h2>
+        <p class="dek">Márcio Rodrigues de Oliveira, nascido em Santos, manteve por 19 anos uma empresa de representação comercial na construção civil. Perdeu tudo na pandemia, passou por depressão, viveu nas ruas e recomeçou vendendo garrafas de água. Comprou num brechó camisa, colete e gravata-borboleta e virou o “Garçom do Semáforo”, em Itajaí (SC). Na sexta-feira, 4, vendeu 300 morangos cravejados a R$ 15 num sinal perto do Colégio São José: as primeiras 200 unidades acabaram em três horas, e um motoboy trouxe mais 100. Em quatro dias, 800 morangos. O detalhe que acelera a fila: cada doce leva um adesivo com a chave Pix e o cliente paga depois, com o carro parado. Ele trabalha assim há cinco anos.</p>
+        <p class="src">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/09/13/garcom-semaforo-morangos-cravejados-itajai">Só Notícia Boa, 13/09/2026</a> · apuração original ND Mais e Perfil Revista; perfil público @ogarcomdosemaforo</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>Ele não vende morango. Vende crédito na confiança, com inadimplência que o próprio cliente decide. Giro rápido, ticket de R$ 15, custo fixo zero e uma tendência de rede social convertida em caixa na mesma semana. É unit economics de rua.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+          <span class="mpn">5/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — Só Notícia Boa, matéria de Rinaldo de Oliveira, com base em entrevistas ao ND Mais e à Perfil Revista; vídeos e fotos de arquivo pessoal.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> a história é contada como “febre do morango cravejado”. O dado que importa é outro: um homem que já faturou R$ 5 mil num dia com morango do amor em 2025 e repetiu com um produto novo em 2026. Não foi sorte de tendência. Foi método repetido em dois ciclos, com o mesmo canal e a mesma regra de pagamento.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">Sinal fechou. Trinta segundos.
 
-    <div class="story">
-      <div class="num-item">02</div>
-      <div class="cat">Educação financeira · Nacional</div>
-      <h2>Desenrola Brasil 2.0 é prorrogado: dívidas bancárias podem ser renegociadas até 31 de agosto</h2>
-      <p class="dek">Portaria MF nº 2.302, publicada no Diário Oficial em 1º/08, estende o prazo do programa de renegociação. Regras inalteradas; sem novo aporte público ao FGO. Beneficia também quem quer trocar de veículo pelo Move Brasil — motoristas de app, taxistas, entregadores e caminhoneiros.</p>
-      <div class="fonte">Fonte: <a href="https://agenciabrasil.ebc.com.br/economia/noticia/2026-08/programa-de-renegociacao-de-dividas-e-prorrogado-ate-31-de-agosto">Agência Brasil</a> · 01/08/2026 (portaria no DOU)</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Um mês a mais para limpar o nome sem pagar juros de cheque especial pelo resto da vida. Prazo é ativo: quem negocia agora recupera acesso a crédito antes da alta de fim de ano.</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div></div><span class="n">5/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (Agência Brasil + Diário Oficial da União)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Saiu num sábado à noite e afundou no noticiário. Para o público da Me Poupe!, é a notícia mais acionável da semana: prazo concreto, regra clara, impacto direto no CPF.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Seu nome tá sujo? O governo acabou de te dar 30 dias a mais.
+Márcio entrega o morango e fala: paga depois. O Pix está no adesivo.
 
-O Desenrola Brasil 2.0 foi prorrogado: agora você tem até 31 DE AGOSTO pra renegociar dívidas bancárias.
+Ninguém para o trânsito pra digitar. Ele atende mais carros. O cliente paga em casa.
 
-Saiu no Diário Oficial no sábado à noite — horário em que ninguém lê nada. Por isso quase ninguém ficou sabendo.
+Sexta-feira: 300 morangos. R$ 4,5 mil.
+Quatro dias: 800.
 
-As regras não mudaram. O que mudou foi o seu prazo.
+Ele teve empresa por 19 anos. Quebrou na pandemia. Dormiu na rua. Vendeu água.
 
-E olha o bônus: quem é motorista de app, taxista, entregador ou caminhoneiro e quer trocar de veículo pelo Move Brasil também entra na janela.
+Comprou roupa de garçom num brechó.
 
-Nome limpo não é estética. É taxa de juros menor, crédito mais barato, respiro no orçamento.
+Cinco anos depois, o negócio dele roda em cima de uma coisa que banco nenhum vende: confiança.
 
-Corre. Agosto passa rápido.
+Capital de giro não é só dinheiro.
 
-#MePoupe #Desenrola #DívidaZero #NomeLimpo #EducaçãoFinanceira #Renegociação #Serasa #Crédito #DinheiroNaMão #FinançasPessoais #BoasNotícias</div></details>
-    </div>
-
-    <div class="story">
-      <div class="num-item">03</div>
-      <div class="cat">Educação · Goiás</div>
-      <h2>Vaquinha da família leva menino de 10 anos aos EUA — e ele volta com ouro em olimpíada internacional de matemática</h2>
-      <p class="dek">Pedro de Oliveira Farias, aluno do 5º ano em Goiânia, tirou a 2ª maior nota da Copernicus Mathematics Olympiad, na Universidade de Columbia (NY), e ganhou prêmio especial reservado aos 3 melhores. Um mês antes, não tinha dinheiro para a passagem: escola e família se mobilizaram. Bernardo Martini Mendes, 11, levou bronze. Pedro soma mais de 70 medalhas, 33 só em 2026.</p>
-      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/04/menino-brasileiro-ouro-olimpiada-internacional-matematica-premio-especial-veja">Só Notícia Boa</a> · 04/08/2026</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>O talento existia; faltava o capital. Uma vaquinha de família e escola destravou uma medalha internacional. Quantos Pedros o Brasil perde por ano por falta de uma passagem aérea?</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (SNB, com material da família e da organização)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Não é história de gênio isolado: é história de infraestrutura. A barreira entre um aluno de escola de Goiânia e o pódio em Columbia era financeira, não intelectual.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Um menino de 10 anos de Goiânia acabou de ganhar ouro em Nova York.
-
-Mas um mês antes, ele nem sabia se ia embarcar.
-
-Pedro tirou a 2ª maior nota da Copernicus Mathematics Olympiad, na Universidade de Columbia. Prêmio especial dado só aos 3 melhores do mundo. Ele tem mais de 70 medalhas — 33 só em 2026.
-
-O que quase impediu tudo isso? Dinheiro de passagem.
-
-A escola e a família fizeram uma mobilização pra bancar viagem e hospedagem. O talento já existia. Faltava o investimento.
-
-Genialidade sem capital fica em casa. Pensa nisso quando falarem que educação é gasto.
-
-#MePoupe #Educação #Matemática #OlimpíadaDeMatemática #Goiânia #TalentoBrasileiro #InvestimentoEmEducação #Vaquinha #FuturoDoBrasil #BoasNotícias #Brasil</div></details>
-    </div>
-
-    <div class="story">
-      <div class="num-item">04</div>
-      <div class="cat">Celebra o povo · Rio de Janeiro</div>
-      <h2>Bia, empregada doméstica e mãe solo, segurou o andaime com o próprio corpo e salvou 3 pintores na ventania do Rio</h2>
-      <p class="dek">Isabela Beatriz Rodrigues, a Bia, 1,50 m de altura, usou o corpo para travar o andaime que batia contra o prédio e orientou os três trabalhadores a pular para a varanda do 6º andar. Depois do resgate, deixou os pintores cobertos de tinta entrarem no apartamento: "Amanhã eu limpo". Ela sonha em fazer curso gratuito para ser cuidadora de idosos.</p>
-      <div class="fonte">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/08/03/conheca-heroina-salvou-3-pintores-presos-andaime-ventania-rio-video">Só Notícia Boa</a> · 03/08/2026 (entrevista em live no Instagram do SNB)</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>A grande imprensa mostrou o andaime; ninguém mostrou quem segurou. Trabalhadora invisível salva trabalhadores invisíveis — e o sonho dela custa um curso gratuito. O Brasil real se salva sozinho todos os dias.</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (SNB, entrevista própria com a protagonista)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>O vídeo do resgate rodou o país sem nome, sem rosto, sem história. A heroína tem nome, tem sonho profissional e tem um plano — só falta o acesso.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Você viu o vídeo dos 3 pintores pendurados no andaime na ventania do Rio.
-
-O que você não viu: quem salvou.
-
-Bia. Empregada doméstica. Mãe solo de 3. Um metro e meio de altura.
-
-Ela travou o andaime com o PRÓPRIO CORPO e gritou pros três pularem pra varanda do sexto andar. Depois, com os homens cobertos de tinta, mandou entrar: "Amanhã eu limpo".
-
-A empresa dos pintores prometeu "um presente". A Bia não pediu nada.
-
-O sonho dela? Um curso de cuidadora de idosos. Gratuito, porque pago não cabe no orçamento.
-
-O Brasil funciona porque gente assim segura o andaime. Tá na hora de segurar elas também.
-
-#MePoupe #BiaHeroína #RioDeJaneiro #MãeSolo #TrabalhadoraDoméstica #Coragem #BrasilReal #Qualificação #CursoGratuito #BoasNotícias #Heroína</div></details>
-    </div>
-
-  </div>
-</section>
-
-<!-- HERO INTERNACIONAL -->
-<section>
-  <div class="sec-title">Destaque internacional do dia</div>
-  <div class="hero">
-    <div class="ghost">01</div>
-    <div class="story">
-      <div class="cat"><span class="bandeira">🇬🇧</span>Quebra de ciclo · Reino Unido</div>
-      <h2>Aos 64 anos, imigrante nigeriano se forma enfermeiro — estudando na mesma universidade que o filho</h2>
-      <p class="dek">John Adesoye cresceu numa família pobre de agricultores na Nigéria, trabalhou como técnico de eletrônica na Grécia e migrou para o Reino Unido. Pai de 5, formou-se em Enfermagem pela University of the West of England após 4 anos entre programa de associate e aprendizagem no NHS — cruzando com o filho Daniel, aluno de tecnologia musical, no campus. Já tem emprego garantido no Southmead Hospital, onde fez o estágio.</p>
-      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/64-yo-father-of-5-graduates-as-a-nurse-after-studying-alongside-his-son/">Good News Network</a> · 04/08/2026, com release oficial da UWE Bristol</div>
-      <div class="orig">Título original: "64-yo Father of 5 Graduates as a Nurse After Studying Alongside His Son"</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Aos 64, quando o mercado manda aposentar, ele investiu em qualificação — e saiu formado com emprego garantido. Requalificação não tem idade; tem retorno.</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (release da University of the West of England)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Da roça na Nigéria ao diploma britânico aos 64: três países, cinco filhos e um ciclo quebrado em duas gerações ao mesmo tempo — pai e filho na mesma universidade.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Ele tem 64 anos, 5 filhos e acabou de se formar enfermeiro.
-
-Na mesma universidade que o FILHO.
-
-John Adesoye cresceu numa família pobre de agricultores na Nigéria. Virou técnico de eletrônica na Grécia. Migrou pro Reino Unido. E aos 60+, quando todo mundo manda "descansar", ele fez o contrário: 4 anos de estudo e aprendizado dentro do sistema público de saúde.
-
-Resultado? Diploma E emprego garantido no hospital onde estagiou.
-
-Frase dele: "Não escute quem diz que você é velho demais pra universidade."
-
-Requalificação não é custo. É o investimento com melhor prazo de retorno que existe — em qualquer idade.
-
-Aposentar o quê?
-
-#MePoupe #NuncaÉTarde #Requalificação #Enfermagem #60Mais #Educação #InvestimentoEmVocê #QuebraDeCiclo #Imigrante #BoasNotícias #Inspiração</div></details>
+Às vezes é reputação num semáforo.</div>
+          <span class="hash">#MePoupe #Empreendedorismo #Recomeco #Pix #MorangoCravejado #Itajai #EducacaoFinanceira #PequenoNegocio #Confianca #GarcomDoSemaforo</span>
+        </details>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- DEMAIS INTERNACIONAIS -->
-<section>
-  <div class="sec-title">Mundo — notícias internacionais</div>
-  <div class="grid">
+  <!-- ================= BRASIL — DEMAIS ================= -->
+  <div class="sec">
+    <p class="sec-title">Brasil — as demais histórias</p>
+    <div class="grid">
 
-    <div class="story">
-      <div class="num-item">02</div>
-      <div class="cat"><span class="bandeira">🇺🇸</span>Inclusão · Estados Unidos</div>
-      <h2>Estranho dá piano de US$ 15 mil a menino autista — e um talento "nível Mozart" transforma a vida da família</h2>
-      <p class="dek">Jude Kofie, filho de imigrante ganês no Colorado, descobriu aos 9 anos um talento raro num teclado esquecido no porão. O afinador de pianos Bill Magnuson leu a história no jornal local, foi vê-lo tocar e gastou parte da herança da família num piano de cauda novo — com afinação vitalícia e aulas profissionais. Hoje, aos 14, Jude faz turnês e lançou o álbum "Introducing: Jude Kofie".</p>
-      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/after-stranger-gives-boy-a-piano-a-mozart-level-is-revealed-in-spite-of-autism/">Good News Network</a> · 03/08/2026, via CBS News "On the Road"</div>
-      <div class="orig">Título original: "After Stranger Gives Boy a Piano, a 'Mozart Level' Is Revealed in Spite of Autism"</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Um estranho trocou herança parada por futuro em movimento. O piano não foi presente: foi capital semente com afinação vitalícia inclusa — e o retorno veio em forma de carreira.</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div></div><span class="n">4/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (reportagem CBS News, com os envolvidos nomeados)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>História de 5 anos de maturação: do teclado no porão ao álbum próprio. Mostra o que acontece quando talento atípico encontra mecenato de gente comum — não de fundação bilionária.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Um afinador de pianos gastou parte da herança da família num menino que ele nem conhecia.
+      <div class="item">
+        <p class="num">02</p>
+        <p class="cat">Educação · Dado que ninguém leu</p>
+        <h3 class="hl">Brasil cai abaixo de 5% de analfabetismo pela primeira vez na série do IBGE; 2,25 milhões voltaram a estudar pela EJA</h3>
+        <p class="dek">A taxa de analfabetismo entre pessoas de 15 anos ou mais caiu de 5,3% para 4,9% em 2025, o menor patamar da PNAD Contínua, iniciada em 2016 com 6,7%. São quase 600 mil analfabetos a menos em um ano. Na quinta-feira, 10, o MEC divulgou os números da Educação de Jovens e Adultos: 2.252.069 matrículas em 29.696 escolas, 1,2 milhão delas no Nordeste. A região ainda concentra 4,8 milhões dos 8,4 milhões de brasileiros que não leem um bilhete simples; 58% do total têm 60 anos ou mais. Entre 15 e 59 anos, a taxa nacional é de 2,6%.</p>
+        <p class="src">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/09/11/analfabetismo-brasil-menor-taxa">Só Notícia Boa, 11/09/2026</a> · dados IBGE (PNAD Contínua 2025, divulgados em junho) e MEC (EJA, 10/09)</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>Quem não lê um bilhete não lê um contrato, um boleto, uma taxa de juros. Cada décimo de ponto que cai nessa taxa é gente que passa a poder dizer não. Alfabetização é a primeira educação financeira.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+          <span class="mpn">5/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — IBGE e MEC como fontes primárias; cobertura ancorada na divulgação da EJA em 10/09. O dado de 4,9% foi publicado originalmente pelo IBGE em junho.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> o número nacional esconde duas populações distintas. Entre 15 e 59 anos, o Brasil está em 2,6%. O problema real tem endereço e idade: Nordeste, 60 anos ou mais, 13,8%. É o público que mais cai em golpe, mais assina o que não entende e menos aparece em campanha de educação financeira.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">4,9%.
 
-Loucura? Espera.
+Pela primeira vez, menos de 5% dos brasileiros com 15 anos ou mais não sabem ler um bilhete.
 
-Jude Kofie, autista, filho de imigrante ganês no Colorado, achou um teclado velho no porão aos 9 anos. Colocou as mãos. Saiu música de outro mundo — "nível Mozart", nas palavras de quem entende.
+Em 2016 eram 6,7%. Em um ano, quase 600 mil pessoas a menos nessa conta.
 
-Bill Magnuson leu a história no jornal, foi ver de perto e tomou uma decisão de 15 mil dólares: piano de cauda novo, afinação vitalícia e aulas profissionais.
+Mais de 2,2 milhões de adultos voltaram pra escola pela EJA em 2025.
 
-Cinco anos depois: Jude tem 14 anos, faz turnês e lançou o próprio álbum.
+Agora o resto do dado.
 
-Herança parada não muda vida nenhuma. Capital em movimento, sim.
+Dos 8,4 milhões que ainda não leem, 4,9 milhões têm mais de 60 anos. Mais da metade mora no Nordeste.
 
-#MePoupe #Inclusão #Autismo #Música #Talento #Generosidade #CapitalSemente #Mecenato #HistóriaReal #BoasNotícias #Inspiração</div></details>
+É exatamente quem mais recebe ligação de golpe. Quem mais assina sem entender.
+
+Educação financeira começa antes da planilha.
+
+Começa na primeira frase lida sozinho.</div>
+          <span class="hash">#MePoupe #Analfabetismo #EJA #IBGE #EducacaoFinanceira #Educacao #Brasil #Nordeste #Alfabetizacao #DadoQueNinguemLeu</span>
+        </details>
+      </div>
+
+      <div class="item">
+        <p class="num">03</p>
+        <p class="cat">Indústria · Tecnologia nacional</p>
+        <h3 class="hl">Fábrica do “carro voador” brasileiro em Taubaté conclui projeto executivo; produção em série até 2028</h3>
+        <p class="dek">A Eve Air Mobility, empresa criada pela Embraer, fechou o projeto executivo da unidade que vai produzir o Eve 100, aeronave elétrica de pouso e decolagem vertical para quatro passageiros e um piloto, autonomia de até 100 km. A fábrica, em área da Embraer em Taubaté (SP), começa com cerca de 300 trabalhadores e 120 aeronaves por ano, em quatro módulos que podem chegar a 480. Antes disso, seis aeronaves de conformidade serão feitas em São José dos Campos para a certificação da Anac. Primeiras entregas previstas para 2027, com a Revo como operadora inicial em São Paulo. O BNDES financiou R$ 500 milhões em 2024.</p>
+        <p class="src">Fonte: <a href="https://www.sonoticiaboa.com.br/2026/09/14/fabrica-carro-voador-brasil-taubate">Só Notícia Boa, 14/09/2026</a> · comunicados da Eve Air Mobility e da Embraer</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>Fábrica modular: quatro blocos de 120, instalados conforme a demanda. É a mesma lógica de quem começa pequeno e só escala com receita confirmada. Uma das maiores empresas do país fazendo o que a gente recomenda para MEI.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
+          <span class="mpn">3/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — Só Notícia Boa com base em comunicados oficiais da Eve e da Embraer; cronograma depende de certificação pela Anac.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> o número de 480 aeronaves por ano é capacidade máxima, não produção. A notícia real é menor e mais sólida: uma cadeia aeronáutica no Vale do Paraíba se preparando para um produto que ainda não existe comercialmente em lugar nenhum do mundo. Brasil como candidato a primeiro, não como seguidor.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">Carro voador brasileiro. Você já viu a manchete.
+
+Agora vê a estratégia.
+
+A fábrica em Taubaté não nasce com 480 aeronaves por ano. Nasce com 120. Quatro módulos. O próximo só entra quando tem pedido.
+
+Antes de produzir, seis aeronaves de teste. Antes de vender, certificação da Anac.
+
+Isso é a Embraer. Uma das maiores do país.
+
+Fazendo exatamente o que a gente fala pro MEI: começa pequeno, valida, escala com receita.
+
+Se a Embraer não pula etapa, você também não precisa.</div>
+          <span class="hash">#MePoupe #Embraer #Eve #eVTOL #CarroVoador #Taubate #IndustriaBrasileira #Empreendedorismo #Escala #Inovacao</span>
+        </details>
+      </div>
+
     </div>
-
-    <div class="story">
-      <div class="num-item">03</div>
-      <div class="cat"><span class="bandeira">🇺🇸</span>Meio ambiente · Estados Unidos</div>
-      <h2>Pântano de Okefenokee vira Patrimônio Mundial da UNESCO ao lado de Grand Canyon e Yellowstone</h2>
-      <p class="dek">O maior pantanal de água doce sobre turfa da zona subtropical do planeta, na Geórgia (EUA), entrou na lista da UNESCO: 163 mil hectares, 856 espécies de plantas, 238 de aves e uma população significativa de jacarés-americanos. A área é protegida desde 1936 e guarda turfeiras que funcionam como arquivo climático e estoque crítico de carbono.</p>
-      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/okefenokee-swamp-clinches-world-heritage-status-joining-ranks-of-top-natural-wonders/">Good News Network</a> · 03/08/2026, com a listagem oficial da UNESCO</div>
-      <div class="orig">Título original: "Okefenokee Swamp Clinches World Heritage Status, Joining Ranks of Top Natural Wonders"</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Um pântano que virou patrimônio da humanidade é a prova de que conservação é ativo de longo prazo: 90 anos de proteção pública viraram selo global — e turismo, pesquisa e carbono estocado.</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div><div class="barra"></div></div><span class="n">3/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (UNESCO, lista oficial)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>Pântanos são os patinhos feios da conservação — e estão entre os maiores estoques de carbono do planeta. O reconhecimento reposiciona um ecossistema inteiro que raramente ganha manchete.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Um PÂNTANO acabou de entrar pro mesmo clube do Grand Canyon e de Yellowstone.
-
-Sim, um pântano.
-
-Okefenokee, na Geórgia (EUA), virou Patrimônio Mundial da UNESCO: o maior pantanal de água doce sobre turfa da zona subtropical do planeta. 856 espécies de plantas. 238 de aves. Jacarés por todo lado.
-
-O detalhe que ninguém conta: as turfeiras dali são um cofre de carbono. Proteger isso desde 1936 foi o investimento — o selo da UNESCO é o dividendo.
-
-Conservação não é gasto bonito. É poupança de longuíssimo prazo que o planeta inteiro saca junto.
-
-#MePoupe #MeioAmbiente #UNESCO #PatrimônioMundial #Okefenokee #Carbono #Conservação #Natureza #LongoPrazo #BoasNotícias #Sustentabilidade</div></details>
-    </div>
-
-    <div class="story">
-      <div class="num-item">04</div>
-      <div class="cat"><span class="bandeira">🇨🇦</span>Inovação verde · Canadá</div>
-      <h2>Nova mina de níquel do Canadá vai capturar 1,5 milhão de toneladas de CO₂ por ano enquanto opera</h2>
-      <p class="dek">O projeto Crawford, da Canada Nickel, recebeu em 31/07 a aprovação final do governo de Ontário — a primeira sob a nova lei de avaliação de impacto do país. A tecnologia proprietária IPT Carbonization injeta CO₂ nos rejeitos ainda no circuito de processamento, fixando o carbono na rocha moída: efeito equivalente a tirar 350 mil carros das ruas por ano, durante os 41 anos de vida útil da mina.</p>
-      <div class="fonte">Fonte: <a href="https://www.goodnewsnetwork.org/canadas-newest-nickel-mine-will-store-1-5-millions-tons-of-carbon-every-year-during-operation/">Good News Network</a> · 03/08/2026, com anúncio oficial da Canada Nickel (31/07)</div>
-      <div class="orig">Título original: "Canada's Newest Nickel Mine Will Store 1.5 Millions Tons of Carbon Every Year During Operation"</div>
-      <div class="callout"><div class="tag">Proposta de leitura · Me Poupe!</div><p>Mineração que vira sumidouro de carbono e se financia em parte com créditos de CO₂: o custo ambiental deixou de ser externalidade e entrou no modelo de negócio. É o mercado precificando o que antes fingia não ver.</p></div>
-      <div class="fator"><div class="barras"><div class="barra on"></div><div class="barra on"></div><div class="barra on"></div><div class="barra"></div><div class="barra"></div></div><span class="n">3/5</span></div>
-      <div class="status">✅ Verificada — Nível 1 (anúncio da empresa + aprovação do governo de Ontário)</div>
-      <div class="porque"><div class="t">Por que merece mais atenção</div><p>67% do níquel mundial vem da Indonésia, com desmatamento documentado. Uma alternativa ocidental que estoca carbono em escala muda o tabuleiro do metal que alimenta as baterias dos carros elétricos.</p></div>
-      <details><summary>Copy Instagram · Me Poupe!</summary><div class="copy">Uma MINA que limpa o ar. Parece pegadinha, não é.
-
-O Canadá aprovou a mina de níquel Crawford — e ela vai capturar 1,5 MILHÃO de toneladas de CO₂ por ano enquanto opera.
-
-Como? A tecnologia injeta o carbono direto na rocha moída do rejeito, que vira uma esponja mineral. Efeito: o mesmo que tirar 350 mil carros das ruas. Todo ano. Por 41 anos.
-
-E o mais interessante: parte do financiamento vem da venda de créditos de carbono. O que era passivo ambiental virou linha de receita.
-
-Níquel é o metal das baterias dos elétricos. Hoje, 67% vem da Indonésia, com desmatamento na conta.
-
-Quando o mercado precifica o carbono, até mina muda de lado.
-
-#MePoupe #CréditoDeCarbono #Sustentabilidade #Inovação #Canadá #CarrosElétricos #ESG #EconomiaVerde #Níquel #BoasNotícias #MudançaClimática</div></details>
-    </div>
-
   </div>
-</section>
 
-<div class="descartes">🚫 <b>9 descartadas</b> — Homem-Aranha: bilheteria recorde (celebridade consagrada); Shakira e Ghetto Kids (celebridade); Mega-Sena R$ 135 mi (fora do universo MP); vídeo viral arrecada US$ 174 mil para veterano em aeroporto (já entregue em 20/07); campo de polígonos em Marte (já entregue em 04/08); chihuahua fareja câncer de mama (viral pet-saúde, fonte única SWNS — Nível 2); gata mais velha do mundo, 31 anos (trivia sem quebra de ciclo); brasileira de 114 anos em cirurgia de fêmur (29/07 — fora da janela de 5 dias); cabotegravir no SUS (29/07 — fora da janela).</div>
+  <!-- ================= HERO INTERNACIONAL ================= -->
+  <div class="sec">
+    <p class="sec-title">Destaque internacional do dia</p>
+    <div class="hero">
+      <div class="ghost">01</div>
+      <div class="hero-in">
+        <p class="cat"><span class="flag">🇰🇪</span>Quênia · Inovação social</p>
+        <h2 class="hl">Aos 22 anos, queniana cria mão robótica que traduz a voz do professor em língua de sinais para alunos surdos</h2>
+        <p class="dek">Norah Kimathi fundou a ZeroBionic, em Nairóbi, para resolver um problema de escala: cerca de 300 mil crianças surdas ou com deficiência auditiva no Quênia, poucas na escola e nenhuma língua de sinais padronizada no país. A mão robótica é impressa em 3D com plástico reciclado, custa US$ 350, dura três anos sem manutenção e converte fala em sinais com 92% de precisão. Já foram vendidas 78 unidades. Como não existia base de dados de sinais queniana ou africana, a equipe gravou professores surdos com um traje de eletrodos importado. Próximo passo: o Africa One, um torso robótico com vocabulário ampliado.</p>
+        <p class="src">Fonte: <a href="https://www.goodnewsnetwork.org/kenyan-startup-makes-robotic-hands-that-translate-teachers-voice-into-signs-for-deaf-students/">Good News Network, 11/09/2026</a> · apuração original AFP (via Japan Times, 10/09) e vídeo Reuters</p>
+        <p class="orig">Título original: “Kenyan Startup Makes Robotic Hands That Translate Teacher’s Voice into Signs for Deaf Students”</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>US$ 350 por unidade, plástico de lixo reciclado, três anos sem manutenção. Ela não esperou o Estado padronizar a língua de sinais: construiu o banco de dados com os próprios professores surdos. Produto barato, mercado ignorado, dado proprietário. Startup de manual, nascida onde ninguém olha.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span></div>
+          <span class="mpn">5/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — AFP e Reuters como fontes originais; fundadora, empresa, preço e unidades vendidas nomeados.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> a barreira no ensino de surdos no Quênia não é só falta de intérprete: é a inexistência de uma língua de sinais unificada. A ZeroBionic criou o conjunto de dados que o país não tinha. O ativo mais valioso da empresa não é a mão. É a base.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">300 mil crianças surdas no Quênia. Quase nenhuma na escola.
 
-<div class="fecho">
-  <p>O padrão do dia é desconfortável: em quase todas as histórias, o talento, a coragem e o trabalho já existiam. O que faltava era capital — uma passagem aérea para Pedro, um fogão para dona Rosa, um curso gratuito para Bia, um piano para Jude.</p>
-  <p class="uma-linha">A pergunta que fica para o feed: quanto potencial o Brasil deixa na mesa por falta de um empurrão de R$ 2 mil?</p>
-  <p class="uma-linha"><b>Exigência do dia:</b> se o Desenrola te alcança, negocie até 31/08. Prazo dado é prazo usado.</p>
-</div>
+Motivo: o professor não sabe língua de sinais. E o país nem tem uma língua de sinais padronizada.
 
-<footer>
-  <span>GoodNewsMP-05/08/26 · Curadoria automática diária · Me Poupe!</span>
-  <span>Fontes: Só Notícia Boa · Agência Brasil · Good News Network · UNESCO · UWE Bristol</span>
-</footer>
+Norah Kimathi tem 22 anos. Ela fez uma mão robótica.
+
+O professor fala. A mão sinaliza. 92% de precisão.
+
+Impressa em 3D com plástico do lixo. US$ 350. Três anos sem manutenção. 78 vendidas.
+
+Faltava o banco de dados de sinais? Ela gravou professores surdos com um traje de eletrodos.
+
+Não esperou ninguém.
+
+Mercado que ninguém quer. Produto que ninguém fazia. Dado que ninguém tinha.
+
+Isso é startup.</div>
+          <span class="hash">#MePoupe #ZeroBionic #Quenia #Inclusao #LinguaDeSinais #Robotica #Empreendedorismo #Startup #TecnologiaParaOPovo #Educacao</span>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MUNDO — DEMAIS ================= -->
+  <div class="sec">
+    <p class="sec-title">Mundo — notícias internacionais</p>
+    <div class="grid">
+
+      <div class="item">
+        <p class="num">02</p>
+        <p class="cat"><span class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>Inglaterra · Infância e telas</p>
+        <h3 class="hl">Estudo com 12 mil escolas: quando famílias combinam adiar o celular, a demanda por apoio psicológico infantil cai</h3>
+        <p class="dek">Pesquisa do economista Gregory Veramendi, da Universidade de Londres, publicada pelo Institute for Fiscal Studies, analisou escolas primárias inglesas onde ao menos um quinto das famílias aderiu a pactos para adiar o smartphone, movimento iniciado pela campanha Smartphone Free Childhood. Nessas escolas, as necessidades de apoio registradas caíram 8,2% e os pedidos de benefício por transtorno psiquiátrico infantil, 6%. O autor chama de “primeira evidência causal” de que o adiamento coordenado melhora a saúde mental. O trabalho ainda não passou por revisão por pares.</p>
+        <p class="src">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-37-of-2026/">Positive News, 11/09/2026</a> · working paper do IFS</p>
+        <p class="orig">Título original: “Delaying smartphone use ‘improves’ child wellbeing”</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>A palavra-chave é coordenado. Um pai sozinho perde. Vinte por cento da turma junta muda a norma. É o mesmo mecanismo que faz um grupo de amigos parar de gastar por pressão social: ninguém quer ser o único.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+          <span class="mpn">4/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — Positive News com autor, instituição e documento nomeados; ressalva declarada: sem revisão por pares.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> quase toda a discussão sobre celular e criança é opinião. Este é o primeiro desenho de pesquisa que compara escolas com e sem pacto e mede efeito em registros administrativos, não em questionário. Fraco ainda, mas é dado.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">“Todo mundo na turma já tem celular.”
+
+Pais ingleses decidiram testar essa frase.
+
+Combinaram entre si: ninguém dá smartphone antes da hora.
+
+Um economista olhou 12 mil escolas primárias. Onde pelo menos 20% das famílias fizeram o pacto, os pedidos de apoio psicológico caíram 8,2%.
+
+Ainda falta revisão por pares. Mas a lógica você já conhece.
+
+Sozinho, você é o pai chato.
+
+Em grupo, você é a norma.
+
+Funciona pra celular. Funciona pra gasto.
+
+Muda o grupo, muda a conta.</div>
+          <span class="hash">#MePoupe #Infancia #Celular #SaudeMental #Familia #EducacaoFinanceira #PressaoSocial #Inglaterra #SmartphoneFreeChildhood #Pais</span>
+        </details>
+      </div>
+
+      <div class="item">
+        <p class="num">03</p>
+        <p class="cat"><span class="flag">🇬🇧</span>Reino Unido · Quebra de ciclo</p>
+        <h3 class="hl">Morador de rua há dez anos tocou piano numa igreja aberta à noite; dois anos depois, tem casa e arrecadou 40 mil libras para caridade</h3>
+        <p class="dek">Rhys Wynne-Jones, 34, entrou numa noite fria de janeiro na St. Mary’s Church, em Penzance, uma das “Night Churches” britânicas abertas 24 horas a pessoas vulneráveis, e pediu para tocar o piano. Um voluntário filmou a versão de Bohemian Rhapsody e o vídeo viralizou. Desde então, ele tocou num show beneficente, mudou-se para um apartamento da Coastline Housing, no oeste da Cornualha, e arrecadou mais de 40 mil libras (cerca de US$ 54 mil) para instituições que atendem moradores de rua. “Só preciso do suficiente para cobrir minhas despesas”, disse à agência SWNS.</p>
+        <p class="src">Fonte: <a href="https://www.goodnewsnetwork.org/homeless-guy-famous-for-playing-piano-in-church-raising-50k/">Good News Network, 12/09/2026</a> · reportagem da agência SWNS</p>
+        <p class="orig">Título original: “Homeless Guy Got Famous Playing Amazing Piano in a Church–Now He’s Raised $50K for Charity”</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>A igreja aberta 24 horas é o que a Me Poupe! chama de reserva de emergência coletiva: existe antes da crise, não depende de mérito para entrar. O piano só apareceu porque a porta estava aberta.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+          <span class="mpn">4/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — SWNS via Good News Network; nome, idade, igreja, entidade habitacional e valor arrecadado citados; vídeo original disponível.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> a frase que ele mesmo escolheu: “a dor não acaba só porque você ganhou uma chave”. Ele recusou o papel de celebridade e definiu quanto precisa. Saber quanto basta é a decisão financeira mais difícil e a menos ensinada.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">Dez anos na rua.
+
+Uma igreja em Penzance fica aberta a noite inteira. Ele entrou pra fugir do frio. Pediu pra tocar o piano.
+
+Bohemian Rhapsody. Alguém filmou.
+
+Dois anos depois: casa própria alugada, shows, 40 mil libras arrecadadas pra quem ainda está na rua.
+
+Perguntaram se ele quer ser famoso.
+
+Resposta: “Só preciso do suficiente pra cobrir minhas despesas.”
+
+Sabe quanto é o seu suficiente?
+
+A maioria nunca fez essa conta. Ele fez depois de dez invernos.
+
+Faça antes.</div>
+          <span class="hash">#MePoupe #Suficiente #Recomeco #Piano #Penzance #QuebraDeCiclo #EducacaoFinanceira #ReservaDeEmergencia #ReinoUnido #Solidariedade</span>
+        </details>
+      </div>
+
+      <div class="item">
+        <p class="num">04</p>
+        <p class="cat"><span class="flag">🇹🇬</span>Togo / ONU · Reconhecimento não óbvio</p>
+        <h3 class="hl">ONU aprova, por 164 votos, trocar o mapa-múndi de Mercator por um que mostra a África no tamanho real</h3>
+        <p class="dek">A projeção de Mercator, usada desde o século 16, mostra a África do tamanho da Groenlândia; a África é cerca de 14 vezes maior. A resolução “correct the map”, patrocinada pelo Togo, aprovou a adoção do mapa Equal Earth, que preserva as áreas e sacrifica a precisão de distâncias, por isso não serve à navegação. França e Reino Unido votaram a favor; os Estados Unidos foram o único voto contrário. “Um mapa nunca é neutro. Ele molda percepções”, disse à Reuters o chanceler togolês Robert Dussey.</p>
+        <p class="src">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-37-of-2026/">Positive News, 11/09/2026</a> · declarações à Reuters</p>
+        <p class="orig">Título original: “New world map reflects Africa’s true size”</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>Durante quase 500 anos, o mundo olhou para um mapa distorcido e achou que era o mundo. Extrato bancário funciona igual: o que aparece grande nem sempre é o que pesa. Corrija a projeção antes de decidir.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span></div>
+          <span class="mpn">4/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — Positive News com votação, patrocinador e declaração oficial à Reuters; projeção Equal Earth nomeada.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> o Brasil também aparece menor do que é em Mercator. A troca de mapa não muda geografia; muda a percepção de quem cresce olhando para a parede da sala de aula. Uma das poucas decisões da ONU que cabem num post e entram numa escola no mesmo dia.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">O mapa da sua sala de aula mentia.
+
+A África parecia do tamanho da Groenlândia. É 14 vezes maior.
+
+Por quase 500 anos ninguém corrigiu.
+
+Semana passada, a ONU votou. 164 países a favor de um mapa com as áreas de verdade. Um contra.
+
+Quem propôs foi o Togo.
+
+O chanceler resumiu: um mapa nunca é neutro.
+
+Seu extrato também não.
+
+O que aparece grande nem sempre é o que pesa. Corrija a projeção antes de decidir.</div>
+          <span class="hash">#MePoupe #EqualEarth #Mapa #Africa #ONU #Togo #Percepcao #EducacaoFinanceira #Geografia #DadoQueNinguemLeu</span>
+        </details>
+      </div>
+
+      <div class="item">
+        <p class="num">05</p>
+        <p class="cat"><span class="flag">🇧🇹</span>Butão · Saúde pública</p>
+        <h3 class="hl">Butão é o primeiro país da região do Sudeste Asiático da OMS a eliminar a raiva transmitida por cães como problema de saúde pública</h3>
+        <p class="dek">A Organização Mundial da Saúde reconheceu nesta semana o resultado de mais de uma década de vacinação de cães, controle populacional e campanhas comunitárias, executadas por agentes de saúde, veterinários e voluntários em todo o território. A raiva é quase sempre fatal depois dos sintomas, mas totalmente evitável com vacinação animal e atendimento imediato após mordida. “A conquista do Butão é um exemplo para outros países da região”, disse o Dr. Nilesh Buddha, da OMS.</p>
+        <p class="src">Fonte: <a href="https://www.positive.news/society/good-news-stories-from-week-37-of-2026/">Positive News, 11/09/2026</a> · reconhecimento oficial da OMS</p>
+        <p class="orig">Título original: “Bhutan eliminated dog-transmitted rabies”</p>
+        <div class="callout">
+          <p class="ct">Proposta de leitura · Me Poupe!</p>
+          <p>Vacinar cachorro é mais barato que tratar gente. Dez anos de gasto pequeno, chato e invisível para zerar uma conta que nunca mais precisa ser paga. Prevenção é o único investimento cujo retorno é não acontecer nada.</p>
+        </div>
+        <div class="mp">
+          <div class="bars"><span class="bar on"></span><span class="bar on"></span><span class="bar on"></span><span class="bar"></span><span class="bar"></span></div>
+          <span class="mpn">3/5</span>
+        </div>
+        <p class="status">✅ Nível 1 — OMS como fonte primária, com porta-voz nomeado.</p>
+        <p class="why"><b>Por que merece mais atenção:</b> um país de menos de 800 mil habitantes, renda média, sem litoral, resolveu um problema que países muito mais ricos da região ainda carregam. A vantagem não foi dinheiro. Foi cobertura: chegar a cada aldeia, todo ano, sem pular.</p>
+        <details>
+          <summary>Copy Instagram</summary>
+          <div class="copy">Raiva mata quase 100% de quem desenvolve sintomas.
+
+E é 100% evitável.
+
+O Butão, país de 800 mil pessoas, passou dez anos vacinando cachorro. Aldeia por aldeia. Todo ano. Sem pular.
+
+Esta semana a OMS confirmou: primeiro país da região do Sudeste Asiático da OMS a eliminar a raiva transmitida por cães.
+
+Nada de tecnologia nova. Nada de milagre.
+
+Só constância num gasto pequeno e chato.
+
+Reserva de emergência funciona igual.
+
+O melhor resultado é aquele em que nada acontece.</div>
+          <span class="hash">#MePoupe #Butao #OMS #SaudePublica #Prevencao #Raiva #Vacinacao #Constancia #EducacaoFinanceira #ReservaDeEmergencia</span>
+        </details>
+      </div>
+
+    </div>
+  </div>
+
+  <p class="discard">🚫 <b>16 descartadas</b> — por repetição no ledger (Sudeste Asiático livre do tracoma após Timor-Leste, entregue em 08/09; remédio experimental para Lito Sousa, bloqueado; etapa paulista do Prêmio Sebrae Mulher de Negócios, série bloqueada; dados de abertura de MEIs, série bloqueada; chuva de meteoros Orionídeas, adjacente a duas entregas anteriores); por janela (pequenos negócios do turismo, ASN de 06/02; mãe da Cidade de Deus formada na UERJ, publicada em 09/09; aluna da EJA com nota 10, publicada em 10/09 na borda da janela e com fonte única em vídeo); por celebridade (Mick Jagger, Ana Hickmann, Lady Gaga); por resultado esportivo de rotina (Alison Piu no Mundial); por crime (faxineira que resolveu roubo de diamante); e por peso editorial insuficiente ou distante do universo Me Poupe! (pescador que solta baleia no Peru, doador de medula em casamento, torcedor que compra pipocas, penas em fezes de dinossauro, chegada da BepiColombo a Mercúrio).</p>
+
+  <div class="close">
+    <p>Um vendedor de semáforo em Itajaí entrega o morango e confia que o Pix chega. Uma queniana de 22 anos gravou professores surdos porque o país não tinha a base de dados. O Butão vacinou cachorro por dez anos sem que ninguém aplaudisse.<br><br>Nenhum dos três tinha capital.<br><br><span class="hi">Tinham sistema e repetição. O Brasil acabou de cair abaixo de 5% de analfabetismo pelo mesmo caminho: vinte anos de aporte pequeno, sem sacar. Constância não rende manchete. Rende resultado.</span></p>
+  </div>
+
+  <footer>
+    <span>GoodNewsMP-15/09/26 · Me Poupe! · Curadoria diária</span>
+    <span>Janela: últimos 5 dias · 3 nacionais · 5 internacionais</span>
+  </footer>
 
 </div>
 </body>
